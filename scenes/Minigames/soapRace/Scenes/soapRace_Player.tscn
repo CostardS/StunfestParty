@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c8p7k53h5878"]
+
+[ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_5weml"]
+
+[node name="SoapRacePlayer" type="Node" unique_id=1910448786]
+script = ExtResource("1_5weml")
+metadata/_custom_type_script = "uid://bagfxqurfa4bv"

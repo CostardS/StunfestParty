@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d04ei2gyowi4c"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_axyhl"]
+[ext_resource type="PackedScene" uid="uid://c8p7k53h5878" path="res://scenes/Minigames/soapRace/Scenes/soapRace_Player.tscn" id="2_7a6hj"]
+[ext_resource type="Script" uid="uid://cexd37xt5r65t" path="res://scenes/Minigames/soapRace/Script/soapRace_Manager.gd" id="3_10d2n"]
+[ext_resource type="PackedScene" uid="uid://c1cu7yhn2v5h7" path="res://scenes/Minigames/soapRace/Scenes/soapRace_playerMat.tscn" id="4_4g67m"]
+
+[node name="SoapRace" type="Node2D" unique_id=1830278531 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_axyhl")
+player_prefab = ExtResource("2_7a6hj")
+player_spawns = [NodePath("Spawns/spawn0"), NodePath("Spawns/spawn1"), NodePath("Spawns/spawn2"), NodePath("Spawns/spawn3")]
+fixed_spawns = true
+minigame_duration = 60
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1556213241]
+
+[node name="spawn0" type="Node2D" parent="Spawns" unique_id=1595601038]
+
+[node name="spawn1" type="Node2D" parent="Spawns" unique_id=547543664]
+position = Vector2(25, 0)
+
+[node name="spawn2" type="Node2D" parent="Spawns" unique_id=1272268025]
+position = Vector2(50, 0)
+
+[node name="spawn3" type="Node2D" parent="Spawns" unique_id=1599439305]
+position = Vector2(75, 0)
+
+[node name="[Manager]" type="Node2D" parent="." unique_id=1373469623 node_paths=PackedStringArray("minigame")]
+script = ExtResource("3_10d2n")
+minigame = NodePath("..")
+playerMat = ExtResource("4_4g67m")

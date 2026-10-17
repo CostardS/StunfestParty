@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c1cu7yhn2v5h7"]
+
+[ext_resource type="Texture2D" uid="uid://cuhqjviagpa7h" path="res://assets/sprites/seamlessNoise.png" id="1_jfngw"]
+
+[node name="SoapRacePlayerMat" type="Node2D" unique_id=290708601]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=92006432]
+scale = Vector2(25, 600)
+texture = ExtResource("1_jfngw")
