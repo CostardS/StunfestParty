@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bkcqpqlhkwil5"]
+
+[ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_xeycl"]
+[ext_resource type="Script" uid="uid://h37pmyvng5fc" path="res://scenes/Minigames/BBQMasterDX/Scripts/bbq_master_player.gd" id="2_44pq0"]
+[ext_resource type="AudioStream" uid="uid://dbk5y31o3g37g" path="res://scenes/Minigames/BBQMasterDX/sounds/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav" id="3_mtuow"]
+[ext_resource type="PackedScene" uid="uid://ch13x2co2mh5j" path="res://scenes/Minigames/BBQMasterDX/match.tscn" id="3_qptk4"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="3_wc6m0"]
+[ext_resource type="AudioStream" uid="uid://dhynlasfko7l8" path="res://scenes/Minigames/BBQMasterDX/sounds/error.wav" id="4_qhoag"]
+[ext_resource type="PackedScene" uid="uid://vb7y4c4jvnw7" path="res://scenes/Minigames/BBQMasterDX/ui_item_feedback.tscn" id="5_qgvgb"]
+
+[sub_resource type="Animation" id="Animation_n4s0s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.7484554e-07]
+}
+
+[sub_resource type="Animation" id="Animation_qgvgb"]
+resource_name = "extinguish_fire"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.16666667),
+"transitions": PackedFloat32Array(0.18946452, 0.18946452, 0.18946452),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qptk4"]
+resource_name = "sautiller"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.092333175, 0.20594938, 0.29828256),
+"transitions": PackedFloat32Array(0.12074207, 0.12940815, 0.18946458, 0.12940815),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20), Vector2(0, 0), Vector2(0, -25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(0.14865091, 0.088388346, 0.16493852, 0.14865094),
+"update": 0,
+"values": [-1.7484554e-07, 0.10814972, 0.0, -0.08520241]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qgvgb"]
+_data = {
+&"RESET": SubResource("Animation_n4s0s"),
+&"extinguish_fire": SubResource("Animation_qgvgb"),
+&"sautiller": SubResource("Animation_qptk4")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dh88x"]
+size = Vector2(60.5, 53)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dh88x"]
+radius = 41.303753
+
+[node name="BBQPlayerBase" type="CharacterBody2D" unique_id=641911429]
+script = ExtResource("1_xeycl")
+
+[node name="BBQPlayerMgr" type="Node" parent="." unique_id=1582068448 node_paths=PackedStringArray("_hub", "_root", "_sprite", "_ui_inventory")]
+unique_name_in_owner = true
+script = ExtResource("2_44pq0")
+_hub = NodePath("..")
+_root = NodePath("..")
+_sprite = NodePath("../Sprite")
+_max_slot_space = 8
+_matches_per_slot = 2
+_ui_inventory = NodePath("../Label")
+sfx_pickup = ExtResource("3_mtuow")
+sfx_error = ExtResource("4_qhoag")
+ui_item_feedback = ExtResource("5_qgvgb")
+match_file = ExtResource("3_qptk4")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=725159180]
+scale = Vector2(3, 3)
+texture = ExtResource("3_wc6m0")
+offset = Vector2(0, -40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1926035604]
+libraries/ = SubResource("AnimationLibrary_qgvgb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=52420395]
+position = Vector2(-2, -28.5)
+shape = SubResource("RectangleShape2D_dh88x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=118892794]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=181238674]
+position = Vector2(0, -25)
+shape = SubResource("CircleShape2D_dh88x")
+
+[node name="Label" type="Label" parent="." unique_id=781783271]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -28.0
+offset_right = 28.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "0s / 0m"
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="BBQPlayerMgr" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="BBQPlayerMgr" method="_on_area_2d_area_exited"]

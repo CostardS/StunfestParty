@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cv83arr5lvtwe"]
+
+[ext_resource type="Texture2D" uid="uid://cno5t0x7kpnxf" path="res://scenes/Minigames/BBQMasterDX/Assets/bear_zzz.png" id="1_gct4d"]
+[ext_resource type="Script" uid="uid://bgif3ftk1gnav" path="res://scenes/Minigames/BBQMasterDX/Scripts/smoky_movement.gd" id="1_onflv"]
+[ext_resource type="Texture2D" uid="uid://bk0j2wpvbay8i" path="res://scenes/Minigames/BBQMasterDX/Assets/Sprite-0003.png" id="2_y7jqw"]
+[ext_resource type="Texture2D" uid="uid://bb83kdi3mdeac" path="res://scenes/Minigames/BBQMasterDX/Assets/BearWithMe70x50.png" id="3_oblnq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1f5c"]
+atlas = ExtResource("3_oblnq")
+region = Rect2(0, 0, 70, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyv62"]
+atlas = ExtResource("3_oblnq")
+region = Rect2(70, 0, 70, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jk78"]
+atlas = ExtResource("3_oblnq")
+region = Rect2(140, 0, 70, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm6rc"]
+atlas = ExtResource("3_oblnq")
+region = Rect2(210, 0, 70, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7jqw"]
+atlas = ExtResource("1_gct4d")
+region = Rect2(0, 0, 72, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d30vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1f5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyv62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jk78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm6rc")
+}],
+"loop": 1,
+"name": &"moving",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7jqw")
+}],
+"loop": 1,
+"name": &"sleep",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_y7jqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(125, -47)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_onflv"]
+resource_name = "sleeping"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(125, -47), Vector2(107, -54), Vector2(113, -80), Vector2(87, -87)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.33333334, 0.8752652),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oblnq"]
+_data = {
+&"RESET": SubResource("Animation_y7jqw"),
+&"sleeping": SubResource("Animation_onflv")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq7q"]
+radius = 50.0
+
+[node name="smoky" type="Node2D" unique_id=1254990002]
+script = ExtResource("1_onflv")
+base_speed = 50.0
+attack_speed = 200.0
+bbq_min_distance = 25.0
+player_min_distance = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561856247]
+position = Vector2(125, -47)
+texture = ExtResource("2_y7jqw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1880118270]
+position = Vector2(8.000008, 11.000008)
+scale = Vector2(4.76, 4.76)
+sprite_frames = SubResource("SpriteFrames_d30vs")
+animation = &"sleep"
+frame_progress = 0.4109537
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=907423891]
+libraries/ = SubResource("AnimationLibrary_oblnq")
+autoplay = &"sleeping"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1823782458]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1715985137]
+shape = SubResource("CircleShape2D_wmq7q")

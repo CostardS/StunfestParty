@@ -10,8 +10,6 @@ func _ready() -> void:
 	await get_tree().create_timer(2.5).timeout
 	minigame.request_game_start()
 
-
-
 func _on_players_spawned() -> void:
 	for player in minigame.players:
 		var p:PlayerMasher = player.get_node("%MasherPlayerMgr") as PlayerMasher

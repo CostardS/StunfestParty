@@ -1,0 +1,261 @@
+[gd_scene format=3 uid="uid://v21015mkk4x3"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_bd2v0"]
+[ext_resource type="PackedScene" uid="uid://bkcqpqlhkwil5" path="res://scenes/Minigames/BBQMasterDX/bbq_master_player.tscn" id="2_gk4nu"]
+[ext_resource type="Script" uid="uid://tuv3lunn4mdk" path="res://scenes/Minigames/BBQMasterDX/Scripts/bbq_master_minigame.gd" id="3_o8c3j"]
+[ext_resource type="PackedScene" uid="uid://crl0odaruwhi2" path="res://scenes/Minigames/BBQMasterDX/bbq_scene.tscn" id="4_gk4nu"]
+[ext_resource type="PackedScene" uid="uid://53rkua7kpscu" path="res://scenes/Minigames/BBQMasterDX/small_fire.tscn" id="5_7gl4k"]
+[ext_resource type="Texture2D" uid="uid://cbegohd703i6y" path="res://scenes/Minigames/BBQMasterDX/Assets/sausage_raw.png" id="7_7gl4k"]
+[ext_resource type="Texture2D" uid="uid://bg18ywp05vq2r" path="res://scenes/Minigames/BBQMasterDX/Assets/match.png" id="7_kh2af"]
+[ext_resource type="Texture2D" uid="uid://bn021cpshwsqx" path="res://scenes/Minigames/BBQMasterDX/Assets/center_crate.png" id="8_v865p"]
+[ext_resource type="PackedScene" uid="uid://cv83arr5lvtwe" path="res://scenes/Minigames/BBQMasterDX/smoky.tscn" id="9_7gl4k"]
+[ext_resource type="Texture2D" uid="uid://bmuq7mfxiv5vg" path="res://scenes/Minigames/BBQMasterDX/Assets/no_item_added.png" id="9_nrktm"]
+[ext_resource type="PackedScene" uid="uid://boyofiij4ujog" path="res://scenes/Minigames/BBQMasterDX/tile_map.tscn" id="10_1qnbv"]
+[ext_resource type="PackedScene" uid="uid://666c8d8x7p1x" path="res://scenes/Minigames/BBQMasterDX/tile_map_2.tscn" id="11_bnh3c"]
+[ext_resource type="Texture2D" uid="uid://cmq2bfaj1olhq" path="res://scenes/Minigames/BBQMasterDX/Assets/tree_1.png" id="12_nyxvb"]
+[ext_resource type="Texture2D" uid="uid://djm743g5ispgq" path="res://scenes/Minigames/BBQMasterDX/Assets/tree_2.png" id="13_v865p"]
+
+[sub_resource type="Curve" id="Curve_7gl4k"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.8530023, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_count = 34
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmq7q"]
+font_size = 48
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq7q"]
+radius = 75.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wti3a"]
+radius = 150.0
+
+[node name="BBQMasterBase" type="Node2D" unique_id=1223414802 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_bd2v0")
+player_prefab = ExtResource("2_gk4nu")
+player_spawns = [NodePath("BBQMasterMgr/Spawns/Spawn1"), NodePath("BBQMasterMgr/Spawns/Spawn2"), NodePath("BBQMasterMgr/Spawns/Spawn3"), NodePath("BBQMasterMgr/Spawns/Spawn4")]
+minigame_duration = 45
+
+[node name="BBQMasterMgr" type="Node" parent="." unique_id=1747680110 node_paths=PackedStringArray("minigame", "origin_center", "debug_label", "smokey")]
+script = ExtResource("3_o8c3j")
+minigame = NodePath("..")
+bbq_prefab = ExtResource("4_gk4nu")
+fire_prefab = ExtResource("5_7gl4k")
+origin_center = NodePath("../CollectZone")
+smokey_max_value = 20.0
+smokey_base_incr = 1.0
+smokey_fire_incr = SubResource("Curve_7gl4k")
+smokey_fire_incr_max = 50.0
+smokey_fire_max_count = 35.0
+debug_label = NodePath("../CollectZone/Label")
+smokey = NodePath("../smoky")
+
+[node name="Spawns" type="Node2D" parent="BBQMasterMgr" unique_id=77636162]
+
+[node name="Spawn1" type="Node2D" parent="BBQMasterMgr/Spawns" unique_id=1858373808]
+position = Vector2(1620, 780)
+
+[node name="BBQSpawn" type="Node2D" parent="BBQMasterMgr/Spawns/Spawn1" unique_id=1381648968]
+position = Vector2(38, 83)
+
+[node name="Spawn2" type="Node2D" parent="BBQMasterMgr/Spawns" unique_id=991309943]
+position = Vector2(300, 780)
+
+[node name="BBQSpawn" type="Node2D" parent="BBQMasterMgr/Spawns/Spawn2" unique_id=1808768080]
+position = Vector2(-67, 109)
+
+[node name="Spawn3" type="Node2D" parent="BBQMasterMgr/Spawns" unique_id=32333320]
+position = Vector2(1620, 400)
+
+[node name="BBQSpawn" type="Node2D" parent="BBQMasterMgr/Spawns/Spawn3" unique_id=439748522]
+position = Vector2(15, -142)
+
+[node name="Spawn4" type="Node2D" parent="BBQMasterMgr/Spawns" unique_id=174773195]
+position = Vector2(300, 400)
+
+[node name="BBQSpawn" type="Node2D" parent="BBQMasterMgr/Spawns/Spawn4" unique_id=854299833]
+position = Vector2(-51, -150)
+
+[node name="TileMap" parent="." unique_id=1845788873 instance=ExtResource("10_1qnbv")]
+
+[node name="TileMap2" parent="." unique_id=2013986817 instance=ExtResource("11_bnh3c")]
+layer_0/tile_data = PackedInt32Array(851975, 196608, 23, 262165, 196608, 23, 327686, 65536, 24, 9, 262144, 22, 589844, 65536, 22, 655369, 196608, 22, 262155, 262144, 27, 65544, 327680, 22, 720915, 65536, 22, 196625, 196608, 22, 65555, 327680, 22, 983059, 196608, 24, 720905, 0, 22, 131078, 65536, 26, 262160, 262144, 25, 393234, 262144, 25, 131077, 0, 26, 196613, 0, 27, 196614, 65536, 27, 983044, 0, 26, 1048580, 0, 27, 983045, 65536, 26, 1048581, 65536, 27, 983064, 0, 26, 1048600, 0, 27, 983065, 65536, 26, 1048601, 65536, 27, 65561, 0, 26, 131097, 0, 27, 65562, 65536, 26, 131098, 65536, 27, 524299, 65536, 23, 65548, 262144, 27, 262163, 327680, 27, 524297, 327680, 27, 393219, 327680, 27, 458755, 262144, 24, 458756, 327680, 24, 524311, 262144, 27, 524312, 327680, 24, 786453, 262144, 24, 786454, 327680, 24, 131082, 262144, 24, 131083, 327680, 24, 131088, 327680, 23, 655370, 327680, 25, 786436, 0, 23, 458761, 131072, 22, 327689, 131072, 22, 262150, 131072, 22, 393225, 65536, 22, 393224, 0, 23, 262151, 0, 23, 262149, 65536, 25, 393235, 0, 23, 262166, 0, 23, 655379, 0, 23, 851988, 0, 23, 851990, 0, 23, 917527, 0, 23, 720916, 0, 23, 720906, 65536, 22, 786442, 0, 23, 851976, 0, 23, 851973, 65536, 22, 917511, 65536, 22, 786439, 65536, 22, 458772, 65536, 22, 393236, 65536, 22, 196632, 65536, 22, 327700, 0, 22, 786440, 0, 22, 917508, 0, 22, 655372, 131072, 23, 720909, 131072, 22, 655376, 196608, 23, 655377, 131072, 22, 524305, 65536, 23, 458769, 65536, 22, 393231, 131072, 22, 458764, 131072, 22, 589835, 65536, 22, 655371, 65536, 23, 720910, 65536, 22, 720913, 65536, 22, 393232, 65536, 22, 393230, 131072, 23, 720911, 65536, 24, 524292, 262144, 22, 589828, 262144, 23, 524293, 327680, 22, 589829, 327680, 23, 65549, 262144, 22, 131085, 262144, 23, 65550, 327680, 22, 131086, 327680, 23, 327707, 262144, 22, 393243, 262144, 23, 327708, 327680, 22, 393244, 327680, 23, 524313, 262144, 22, 589849, 262144, 23, 524314, 327680, 22, 589850, 327680, 23, 983050, 262144, 22, 1048586, 262144, 23, 983051, 327680, 22, 1048587, 327680, 23, 131074, 262144, 22, 196610, 262144, 23, 131075, 327680, 22, 196611, 327680, 23, 196617, 262144, 26, 720920, 262144, 26, -65533, 262144, 22, 3, 262144, 23, -65532, 327680, 22, 4, 327680, 23, 5, 262144, 22, 65541, 262144, 23, 6, 327680, 22, 65542, 327680, 23, -65529, 262144, 22, 7, 262144, 23, -65528, 327680, 22, 8, 327680, 23, 65543, 262144, 22, 131079, 262144, 23, 131080, 327680, 23, 65545, 262144, 23, 10, 327680, 22, 65546, 327680, 23, -65522, 262144, 22, 14, 262144, 23, -65521, 327680, 22, 15, 327680, 23, 65551, 262144, 22, 131087, 262144, 23, 65552, 327680, 22, -65518, 262144, 22, 18, 262144, 23, -65517, 327680, 22, 19, 327680, 23, 65554, 262144, 22, 131090, 262144, 23, 131091, 327680, 23, 65557, 262144, 22, 131093, 262144, 23, 65558, 327680, 22, 131094, 327680, 23, -65516, 262144, 22, 20, 262144, 23, -65515, 327680, 22, 21, 327680, 23, -65512, 262144, 22, 24, 262144, 23, -65511, 327680, 22, 25, 327680, 23, 28, 262144, 22, 65564, 262144, 23, 29, 327680, 22, 65565, 327680, 23, 589831, 131072, 24, 393238, 65536, 24, 655382, 196608, 22, -65525, 262144, 22, 11, 262144, 23, -65524, 327680, 22, 12, 327680, 23, 655366, 262144, 27, 393221, 262144, 27, 262159, 262144, 27, 917524, 262144, 27, 851995, 262144, 27, 327705, 262144, 27, 196634, 262144, 27, 720899, 262144, 27, 720901, 196608, 25, 851993, 196608, 25, 196618, 196608, 25, 327684, 196608, 25, 65560, 65536, 25, 983066, 0, 25, 196621, 262144, 25)
+
+[node name="CollectZone" type="StaticBody2D" parent="." unique_id=1871348944]
+position = Vector2(960, 615)
+
+[node name="Label" type="Label" parent="CollectZone" unique_id=1580262376]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 200.0
+offset_right = 76.0
+offset_bottom = 223.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+text = "SMOKEY : 25.25 / 50"
+label_settings = SubResource("LabelSettings_wmq7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectZone" unique_id=1671829015]
+shape = SubResource("CircleShape2D_wmq7q")
+
+[node name="Area2D" type="Area2D" parent="CollectZone" unique_id=681903045 groups=["collect"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectZone/Area2D" unique_id=1209923498]
+shape = SubResource("CircleShape2D_wti3a")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollectZone" unique_id=1639551560]
+scale = Vector2(2, 2)
+texture = ExtResource("8_v865p")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectZone" unique_id=2118283780]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_nrktm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CollectZone" unique_id=254855612]
+position = Vector2(-31.000004, -33.999985)
+rotation = 0.50693077
+scale = Vector2(2.135538, 2.135538)
+texture = ExtResource("7_7gl4k")
+
+[node name="Sprite2D6" type="Sprite2D" parent="CollectZone" unique_id=284080968]
+position = Vector2(21.00002, -37.99999)
+rotation = 1.16485
+scale = Vector2(2.0569422, 2.056942)
+texture = ExtResource("7_7gl4k")
+
+[node name="Sprite2D4" type="Sprite2D" parent="CollectZone" unique_id=746660447]
+position = Vector2(-14.000004, 9.279177)
+rotation = -0.39095375
+scale = Vector2(0.55555815, 0.5555581)
+texture = ExtResource("7_kh2af")
+
+[node name="Sprite2D5" type="Sprite2D" parent="CollectZone" unique_id=250604543]
+position = Vector2(7.9999967, -1.7208271)
+rotation = 0.4171337
+scale = Vector2(0.55555815, 0.5555581)
+texture = ExtResource("7_kh2af")
+
+[node name="smoky" parent="." unique_id=1254990002 instance=ExtResource("9_7gl4k")]
+position = Vector2(943, 952)
+base_speed = 300.0
+attack_speed = 1000.0
+bbq_min_distance = 50.0
+player_min_distance = 100.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1367662042]
+
+[node name="Tree1" type="Sprite2D" parent="." unique_id=844538244]
+position = Vector2(118, 1349)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree2" type="Sprite2D" parent="." unique_id=1604608029]
+position = Vector2(463, 1413)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree3" type="Sprite2D" parent="." unique_id=1350413416]
+position = Vector2(463, 1372)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree21" type="Sprite2D" parent="." unique_id=957121035]
+position = Vector2(683, 1402)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree22" type="Sprite2D" parent="." unique_id=1857800834]
+position = Vector2(1101, 1406)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree23" type="Sprite2D" parent="." unique_id=1228478676]
+position = Vector2(1595, 1414)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree15" type="Sprite2D" parent="." unique_id=296035773]
+position = Vector2(307, -281)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree16" type="Sprite2D" parent="." unique_id=349859808]
+position = Vector2(588, -342)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree17" type="Sprite2D" parent="." unique_id=587951266]
+position = Vector2(831, -300)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree18" type="Sprite2D" parent="." unique_id=928277203]
+position = Vector2(1101, -338)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree19" type="Sprite2D" parent="." unique_id=2049958863]
+position = Vector2(1792, -353)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree20" type="Sprite2D" parent="." unique_id=1649114989]
+position = Vector2(1950, 218)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree4" type="Sprite2D" parent="." unique_id=936204664]
+position = Vector2(919, 1361)
+scale = Vector2(4, 4)
+texture = ExtResource("12_nyxvb")
+
+[node name="Tree5" type="Sprite2D" parent="." unique_id=1311947725]
+position = Vector2(1356, 1385)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree6" type="Sprite2D" parent="." unique_id=1539407260]
+position = Vector2(1876, 1399)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree7" type="Sprite2D" parent="." unique_id=1521361255]
+position = Vector2(1876, 1358)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree8" type="Sprite2D" parent="." unique_id=1372237905]
+position = Vector2(1987, 1065)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree9" type="Sprite2D" parent="." unique_id=1832123242]
+position = Vector2(2055, 738)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree10" type="Sprite2D" parent="." unique_id=1254833187]
+position = Vector2(2007, 532)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree11" type="Sprite2D" parent="." unique_id=1224373924]
+position = Vector2(-107, 962)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree12" type="Sprite2D" parent="." unique_id=1708497237]
+position = Vector2(-90, 304)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree13" type="Sprite2D" parent="." unique_id=1766227271]
+position = Vector2(69, -318)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
+
+[node name="Tree14" type="Sprite2D" parent="." unique_id=214341469]
+position = Vector2(1379, -326)
+scale = Vector2(4, 4)
+texture = ExtResource("13_v865p")
