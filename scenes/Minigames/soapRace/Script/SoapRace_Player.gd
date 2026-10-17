@@ -37,6 +37,13 @@ func _physics_process(delta: float) -> void:
 	var movement:float = _hub.movement.x
 
 	current_lateral_speed = (movement * player_speed) + pushed_force
+
+
+	if global_position.x > 1780 and current_lateral_speed > 0:
+		current_lateral_speed = 0
+	if global_position.x < 220 and current_lateral_speed < 0:
+		current_lateral_speed = 0
+
 	var player_movement:Vector2 = Vector2(current_lateral_speed, int(is_accelerating) * player_acceleration) * delta
 
 	var collision = move_and_collide(player_movement, false, 0.08, true)
