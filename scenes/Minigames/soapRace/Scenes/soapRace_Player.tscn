@@ -9,14 +9,14 @@ size = Vector2(34, 64.93424)
 [node name="SoapRacePlayer" type="Node2D" unique_id=1554234562]
 script = ExtResource("1_5weml")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=264014958 node_paths=PackedStringArray("_hub", "_sprite")]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=264014958 node_paths=PackedStringArray("_hub", "_sprite")]
 script = ExtResource("2_s26g8")
 _hub = NodePath("..")
 _sprite = NodePath("Sprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1248197972]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1248197972]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1061603134]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1061603134]
 position = Vector2(0, 10)
 scale = Vector2(0.969, 1)
 shape = SubResource("RectangleShape2D_hhfpc")
