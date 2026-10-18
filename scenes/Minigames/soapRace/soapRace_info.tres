@@ -7,7 +7,9 @@
 script = ExtResource("1_xt0oe")
 name = "Soap Race"
 subtitle = "Soit le premier en bas de la montagne!"
-authors = "Dreca"
+authors = "game: Dreca
+Music: Alexis Lumière
+SFX: pixabay"
 prefab = ExtResource("1_t337n")
 action_btn1 = "Accélérer"
 action_horizontal = "Se déplacer"
