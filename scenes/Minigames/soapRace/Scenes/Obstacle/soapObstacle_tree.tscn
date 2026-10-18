@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://br7ox112a2p2h"]
+[gd_scene format=3 uid="uid://v0ngba8wosfm"]
 
 [ext_resource type="Texture2D" uid="uid://bpp0jbobwowqs" path="res://scenes/Minigames/Pyromane/Sprites/tree.png" id="1_qxhhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hmc0"]
-size = Vector2(61, 110)
+size = Vector2(52, 110)
 
 [node name="SoapObstacleTree" type="CollisionShape2D" unique_id=1470544400]
-position = Vector2(0.5, -3)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_3hmc0")
 
-[node name="CollisionShape2D" type="Sprite2D" parent="." unique_id=65204570]
-position = Vector2(0.5, -0.5)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944927678]
+z_index = 2
+position = Vector2(-0.49999964, 0)
+scale = Vector2(1.0925926, 1)
 texture = ExtResource("1_qxhhs")

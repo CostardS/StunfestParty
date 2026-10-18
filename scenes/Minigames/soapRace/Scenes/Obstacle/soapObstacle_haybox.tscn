@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://br7ox112a2p2h"]
+
+[ext_resource type="Texture2D" uid="uid://d0mb0n74y05fg" path="res://scenes/Minigames/soapRace/assets/hay.png" id="1_qxhhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hmc0"]
+size = Vector2(43, 24)
+
+[node name="SoapObstacleHay" type="CollisionShape2D" unique_id=1470544400]
+shape = SubResource("RectangleShape2D_3hmc0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944927678]
+z_index = 2
+position = Vector2(3.0994415e-06, 1.0000007)
+scale = Vector2(3.1250002, 2.625)
+texture = ExtResource("1_qxhhs")

@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cuhqjviagpa7h" path="res://assets/sprites/seamlessNoise.png" id="1_jfngw"]
 [ext_resource type="Texture2D" uid="uid://c4got42wmu0n6" path="res://assets/Checker.png" id="2_vwnxb"]
-[ext_resource type="PackedScene" uid="uid://br7ox112a2p2h" path="res://scenes/Minigames/soapRace/Scenes/Obstacle/soapObstacle_tree.tscn" id="3_pe6ay"]
+[ext_resource type="PackedScene" uid="uid://br7ox112a2p2h" path="res://scenes/Minigames/soapRace/Scenes/Obstacle/soapObstacle_haybox.tscn" id="3_pe6ay"]
 [ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="4_4a7fr"]
+[ext_resource type="PackedScene" uid="uid://chd8hwbia7cix" path="res://scenes/Minigames/soapRace/Scenes/Obstacle/soapObstacle_block.tscn" id="4_k3voo"]
+[ext_resource type="PackedScene" uid="uid://v0ngba8wosfm" path="res://scenes/Minigames/soapRace/Scenes/Obstacle/soapObstacle_tree.tscn" id="6_rhvtj"]
 
 [node name="SoapRacePlayerMat" type="CharacterBody2D" unique_id=99125998]
 
@@ -30,209 +32,266 @@ region_rect = Rect2(0, 0, 512, 128)
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=14374618]
 
-[node name="SoapObstacleTree" parent="." unique_id=1491386005 instance=ExtResource("3_pe6ay")]
-position = Vector2(-159, 272)
-
-[node name="SoapObstacleTree2" parent="." unique_id=1470544400 instance=ExtResource("3_pe6ay")]
-position = Vector2(106, 512)
-
-[node name="SoapObstacleTree3" parent="." unique_id=2118116357 instance=ExtResource("3_pe6ay")]
-position = Vector2(-97, 777)
-
-[node name="SoapObstacleTree4" parent="." unique_id=1133706870 instance=ExtResource("3_pe6ay")]
-position = Vector2(-9, 920)
-
-[node name="SoapObstacleTree5" parent="." unique_id=672665599 instance=ExtResource("3_pe6ay")]
-position = Vector2(48, 1034)
-
-[node name="SoapObstacleTree6" parent="." unique_id=1576478691 instance=ExtResource("3_pe6ay")]
-position = Vector2(134, 1393)
-
-[node name="SoapObstacleTree7" parent="." unique_id=1779304639 instance=ExtResource("3_pe6ay")]
-position = Vector2(-100, 1393)
-
-[node name="SoapObstacleTree8" parent="." unique_id=2083555768 instance=ExtResource("3_pe6ay")]
-position = Vector2(17, 1730)
-
-[node name="SoapObstacleTree9" parent="." unique_id=1254383671 instance=ExtResource("3_pe6ay")]
-position = Vector2(-94, 2089)
-
-[node name="SoapObstacleTree10" parent="." unique_id=1425206012 instance=ExtResource("3_pe6ay")]
-position = Vector2(103, 2314)
-
-[node name="SoapObstacleTree11" parent="." unique_id=1636845879 instance=ExtResource("3_pe6ay")]
-position = Vector2(-117, 2659)
-
-[node name="SoapObstacleTree12" parent="." unique_id=603920496 instance=ExtResource("3_pe6ay")]
-position = Vector2(29, 2659)
-
-[node name="SoapObstacleTree13" parent="." unique_id=396790724 instance=ExtResource("3_pe6ay")]
-position = Vector2(146, 2659)
-
-[node name="SoapObstacleTree14" parent="." unique_id=1668652188 instance=ExtResource("3_pe6ay")]
-position = Vector2(-48, 3113)
-
-[node name="SoapObstacleTree15" parent="." unique_id=1105962288 instance=ExtResource("3_pe6ay")]
-position = Vector2(109, 3438)
-
-[node name="SoapObstacleTree16" parent="." unique_id=1748406745 instance=ExtResource("3_pe6ay")]
-position = Vector2(-94, 3683)
-
-[node name="SoapObstacleTree17" parent="." unique_id=467519873 instance=ExtResource("3_pe6ay")]
-position = Vector2(94, 4080)
-
-[node name="SoapObstacleTree18" parent="." unique_id=1871565973 instance=ExtResource("3_pe6ay")]
-position = Vector2(91, 4565)
-
-[node name="SoapObstacleTree19" parent="." unique_id=751889651 instance=ExtResource("3_pe6ay")]
-position = Vector2(-77, 4839)
-
-[node name="SoapObstacleTree20" parent="." unique_id=906828389 instance=ExtResource("3_pe6ay")]
-position = Vector2(11, 5121)
-
-[node name="SoapObstacleTree21" parent="." unique_id=934909276 instance=ExtResource("3_pe6ay")]
-position = Vector2(117, 5512)
-
-[node name="SoapObstacleTree22" parent="." unique_id=1152853050 instance=ExtResource("3_pe6ay")]
-position = Vector2(-117, 5623)
-
-[node name="SoapObstacleTree23" parent="." unique_id=1623202304 instance=ExtResource("3_pe6ay")]
-position = Vector2(-57, 5968)
-
-[node name="SoapObstacleTree24" parent="." unique_id=1780381064 instance=ExtResource("3_pe6ay")]
-position = Vector2(106, 6256)
-
-[node name="SoapObstacleTree25" parent="." unique_id=1711384147 instance=ExtResource("3_pe6ay")]
-position = Vector2(-77, 6630)
-
-[node name="SoapObstacleTree26" parent="." unique_id=1566955477 instance=ExtResource("3_pe6ay")]
-position = Vector2(117, 6944)
-
-[node name="SoapObstacleTree27" parent="." unique_id=60333505 instance=ExtResource("3_pe6ay")]
-position = Vector2(-108, 7381)
-
-[node name="SoapObstacleTree28" parent="." unique_id=220141902 instance=ExtResource("3_pe6ay")]
-position = Vector2(86, 7381)
-
-[node name="SoapObstacleTree29" parent="." unique_id=888624808 instance=ExtResource("3_pe6ay")]
-position = Vector2(154, 7826)
-
-[node name="SoapObstacleTree30" parent="." unique_id=1473648283 instance=ExtResource("3_pe6ay")]
-position = Vector2(86, 7826)
-
-[node name="SoapObstacleTree31" parent="." unique_id=528136847 instance=ExtResource("3_pe6ay")]
-position = Vector2(12, 7820)
-
-[node name="SoapObstacleTree32" parent="." unique_id=1610314871 instance=ExtResource("3_pe6ay")]
-position = Vector2(-134, 8217)
-
-[node name="SoapObstacleTree33" parent="." unique_id=1908531455 instance=ExtResource("3_pe6ay")]
-position = Vector2(-40, 8468)
-
-[node name="SoapObstacleTree34" parent="." unique_id=836012237 instance=ExtResource("3_pe6ay")]
-position = Vector2(114, 8750)
-
-[node name="SoapObstacleTree35" parent="." unique_id=316199768 instance=ExtResource("3_pe6ay")]
-position = Vector2(-94, 8804)
-
-[node name="SoapObstacleTree36" parent="." unique_id=489457747 instance=ExtResource("3_pe6ay")]
-position = Vector2(6, 9106)
-
-[node name="SoapObstacleTree37" parent="." unique_id=1467752958 instance=ExtResource("3_pe6ay")]
-position = Vector2(129, 9334)
-
-[node name="SoapObstacleTree38" parent="." unique_id=1940585077 instance=ExtResource("3_pe6ay")]
-position = Vector2(-96, 9531)
-
-[node name="SoapObstacleTree39" parent="." unique_id=1856540766 instance=ExtResource("3_pe6ay")]
-position = Vector2(-28, 9788)
-
-[node name="SoapObstacleTree40" parent="." unique_id=876964687 instance=ExtResource("3_pe6ay")]
-position = Vector2(98, 9936)
-
-[node name="SoapObstacleTree41" parent="." unique_id=473593035 instance=ExtResource("3_pe6ay")]
-position = Vector2(-87, 10227)
-
-[node name="SoapObstacleTree42" parent="." unique_id=562391522 instance=ExtResource("3_pe6ay")]
-position = Vector2(-81, 10569)
-
-[node name="SoapObstacleTree43" parent="." unique_id=1918901637 instance=ExtResource("3_pe6ay")]
-position = Vector2(93, 10569)
-
-[node name="SoapObstacleTree44" parent="." unique_id=1839962658 instance=ExtResource("3_pe6ay")]
-position = Vector2(-64, 10934)
-
-[node name="SoapObstacleTree45" parent="." unique_id=1998078921 instance=ExtResource("3_pe6ay")]
-position = Vector2(90, 11008)
-
-[node name="SoapObstacleTree46" parent="." unique_id=1758662577 instance=ExtResource("3_pe6ay")]
-position = Vector2(-81, 11348)
-
-[node name="SoapObstacleTree47" parent="." unique_id=1758766565 instance=ExtResource("3_pe6ay")]
-position = Vector2(-90, 11699)
-
-[node name="SoapObstacleTree48" parent="." unique_id=1367051656 instance=ExtResource("3_pe6ay")]
-position = Vector2(-27, 11785)
-
-[node name="SoapObstacleTree49" parent="." unique_id=1238811936 instance=ExtResource("3_pe6ay")]
-position = Vector2(33, 11865)
-
-[node name="SoapObstacleTree50" parent="." unique_id=804758284 instance=ExtResource("3_pe6ay")]
-position = Vector2(24, 12068)
-
-[node name="SoapObstacleTree51" parent="." unique_id=951072786 instance=ExtResource("3_pe6ay")]
-position = Vector2(-93, 12325)
-
-[node name="SoapObstacleTree52" parent="." unique_id=1315243865 instance=ExtResource("3_pe6ay")]
-position = Vector2(87, 12630)
-
-[node name="SoapObstacleTree53" parent="." unique_id=295518793 instance=ExtResource("3_pe6ay")]
-position = Vector2(93, 12967)
-
-[node name="SoapObstacleTree54" parent="." unique_id=216342229 instance=ExtResource("3_pe6ay")]
-position = Vector2(-33, 13218)
-
-[node name="SoapObstacleTree55" parent="." unique_id=8832719 instance=ExtResource("3_pe6ay")]
-position = Vector2(107, 13318)
-
-[node name="SoapObstacleTree56" parent="." unique_id=1143743597 instance=ExtResource("3_pe6ay")]
-position = Vector2(-78, 13521)
-
-[node name="SoapObstacleTree57" parent="." unique_id=846386770 instance=ExtResource("3_pe6ay")]
-position = Vector2(96, 13607)
-
-[node name="SoapObstacleTree58" parent="." unique_id=2026920364 instance=ExtResource("3_pe6ay")]
-position = Vector2(-44, 13932)
-
-[node name="SoapObstacleTree59" parent="." unique_id=657121153 instance=ExtResource("3_pe6ay")]
-position = Vector2(-50, 14286)
-
-[node name="SoapObstacleTree60" parent="." unique_id=1404443901 instance=ExtResource("3_pe6ay")]
-position = Vector2(107, 14426)
-
-[node name="SoapObstacleTree61" parent="." unique_id=1829698169 instance=ExtResource("3_pe6ay")]
-position = Vector2(107, 14731)
-
-[node name="SoapObstacleTree62" parent="." unique_id=1283285108 instance=ExtResource("3_pe6ay")]
-position = Vector2(-67, 14831)
-
-[node name="SoapObstacleTree63" parent="." unique_id=350251422 instance=ExtResource("3_pe6ay")]
-position = Vector2(96, 15005)
-
-[node name="SoapObstacleTree64" parent="." unique_id=2025268812 instance=ExtResource("3_pe6ay")]
-position = Vector2(-15, 15190)
-
-[node name="SoapObstacleTree65" parent="." unique_id=823715554 instance=ExtResource("3_pe6ay")]
-position = Vector2(-118, 15458)
-
-[node name="SoapObstacleTree66" parent="." unique_id=1713197717 instance=ExtResource("3_pe6ay")]
-position = Vector2(-7, 15458)
-
-[node name="SoapObstacleTree67" parent="." unique_id=1332863534 instance=ExtResource("3_pe6ay")]
-position = Vector2(107, 15692)
-
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=915193870]
 z_index = -1
 position = Vector2(0, 8000.999)
 scale = Vector2(0.85, 31.476559)
 texture = ExtResource("4_4a7fr")
+
+[node name="SoapObstacleTree" parent="." unique_id=1470544400 instance=ExtResource("6_rhvtj")]
+position = Vector2(-122, 342)
+
+[node name="SoapObstacleTree3" parent="." unique_id=1634982634 instance=ExtResource("6_rhvtj")]
+position = Vector2(-192, 1566)
+
+[node name="SoapObstacleTree4" parent="." unique_id=674972593 instance=ExtResource("6_rhvtj")]
+position = Vector2(-194, 2040)
+
+[node name="SoapObstacleTree5" parent="." unique_id=1143624600 instance=ExtResource("6_rhvtj")]
+position = Vector2(193, 2481)
+
+[node name="SoapObstacleTree6" parent="." unique_id=666426554 instance=ExtResource("6_rhvtj")]
+position = Vector2(-191, 2872)
+
+[node name="SoapObstacleTree7" parent="." unique_id=172446273 instance=ExtResource("6_rhvtj")]
+position = Vector2(-104, 3294)
+
+[node name="SoapObstacleTree8" parent="." unique_id=1545695365 instance=ExtResource("6_rhvtj")]
+position = Vector2(89, 3294)
+
+[node name="SoapObstacleTree9" parent="." unique_id=1155718858 instance=ExtResource("6_rhvtj")]
+position = Vector2(-104, 5032)
+
+[node name="SoapObstacleTree10" parent="." unique_id=1042914476 instance=ExtResource("6_rhvtj")]
+position = Vector2(192, 5909)
+
+[node name="SoapObstacleTree11" parent="." unique_id=1691879386 instance=ExtResource("6_rhvtj")]
+position = Vector2(196, 6832)
+
+[node name="SoapObstacleTree12" parent="." unique_id=2026928162 instance=ExtResource("6_rhvtj")]
+position = Vector2(-203, 7554)
+
+[node name="SoapObstacleTree13" parent="." unique_id=1264113095 instance=ExtResource("6_rhvtj")]
+position = Vector2(-211, 7983)
+
+[node name="SoapObstacleTree14" parent="." unique_id=102744271 instance=ExtResource("6_rhvtj")]
+position = Vector2(207, 8093)
+
+[node name="SoapObstacleTree15" parent="." unique_id=400040530 instance=ExtResource("6_rhvtj")]
+position = Vector2(-85, 8826)
+
+[node name="SoapObstacleTree16" parent="." unique_id=353439933 instance=ExtResource("6_rhvtj")]
+position = Vector2(104, 9832)
+
+[node name="SoapObstacleTree17" parent="." unique_id=395804478 instance=ExtResource("6_rhvtj")]
+position = Vector2(-113, 11015)
+
+[node name="SoapObstacleTree18" parent="." unique_id=512418176 instance=ExtResource("6_rhvtj")]
+position = Vector2(0, 12173)
+
+[node name="SoapObstacleTree22" parent="." unique_id=785047458 instance=ExtResource("6_rhvtj")]
+position = Vector2(103, 13046)
+
+[node name="SoapObstacleTree19" parent="." unique_id=738733012 instance=ExtResource("6_rhvtj")]
+position = Vector2(185, 13638)
+
+[node name="SoapObstacleTree20" parent="." unique_id=874377921 instance=ExtResource("6_rhvtj")]
+position = Vector2(176, 14934)
+
+[node name="SoapObstacleTree21" parent="." unique_id=1219427303 instance=ExtResource("6_rhvtj")]
+position = Vector2(-191, 14934)
+
+[node name="SoapObstacleTree2" parent="." unique_id=1068992300 instance=ExtResource("6_rhvtj")]
+position = Vector2(125, 340)
+
+[node name="SoapObstacleHay" parent="." unique_id=1091815089 instance=ExtResource("3_pe6ay")]
+position = Vector2(-32, 671)
+
+[node name="SoapObstacleHay3" parent="." unique_id=148514552 instance=ExtResource("3_pe6ay")]
+position = Vector2(86, 1903)
+
+[node name="SoapObstacleHay4" parent="." unique_id=1719386454 instance=ExtResource("3_pe6ay")]
+position = Vector2(76, 2300)
+
+[node name="SoapObstacleHay5" parent="." unique_id=1369298168 instance=ExtResource("3_pe6ay")]
+position = Vector2(-92, 3935)
+
+[node name="SoapObstacleHay6" parent="." unique_id=1764024448 instance=ExtResource("3_pe6ay")]
+position = Vector2(97, 4355)
+
+[node name="SoapObstacleHay7" parent="." unique_id=478297592 instance=ExtResource("3_pe6ay")]
+position = Vector2(119, 5273)
+
+[node name="SoapObstacleHay8" parent="." unique_id=1043401129 instance=ExtResource("3_pe6ay")]
+position = Vector2(-89, 5838)
+
+[node name="SoapObstacleHay9" parent="." unique_id=1210422837 instance=ExtResource("3_pe6ay")]
+position = Vector2(-159, 6446)
+
+[node name="SoapObstacleHay10" parent="." unique_id=1056779026 instance=ExtResource("3_pe6ay")]
+position = Vector2(-144, 7207)
+
+[node name="SoapObstacleHay11" parent="." unique_id=179463852 instance=ExtResource("3_pe6ay")]
+position = Vector2(199, 7676)
+
+[node name="SoapObstacleHay12" parent="." unique_id=2145480127 instance=ExtResource("3_pe6ay")]
+position = Vector2(6, 8002)
+
+[node name="SoapObstacleHay13" parent="." unique_id=1378783520 instance=ExtResource("3_pe6ay")]
+position = Vector2(90, 8422)
+
+[node name="SoapObstacleHay14" parent="." unique_id=1283193886 instance=ExtResource("3_pe6ay")]
+position = Vector2(108, 9380)
+
+[node name="SoapObstacleHay15" parent="." unique_id=693608569 instance=ExtResource("3_pe6ay")]
+position = Vector2(-142, 10493)
+
+[node name="SoapObstacleHay16" parent="." unique_id=1641619547 instance=ExtResource("3_pe6ay")]
+position = Vector2(110, 10703)
+
+[node name="SoapObstacleHay17" parent="." unique_id=734497764 instance=ExtResource("3_pe6ay")]
+position = Vector2(-201, 11297)
+
+[node name="SoapObstacleHay18" parent="." unique_id=787773211 instance=ExtResource("3_pe6ay")]
+position = Vector2(65, 11637)
+
+[node name="SoapObstacleHay19" parent="." unique_id=1758332449 instance=ExtResource("3_pe6ay")]
+position = Vector2(-145, 11948)
+
+[node name="SoapObstacleHay20" parent="." unique_id=1133822072 instance=ExtResource("3_pe6ay")]
+position = Vector2(-103, 13939)
+
+[node name="SoapObstacleHay21" parent="." unique_id=82252951 instance=ExtResource("3_pe6ay")]
+position = Vector2(208, 14399)
+
+[node name="SoapObstacleHay22" parent="." unique_id=1527371676 instance=ExtResource("3_pe6ay")]
+position = Vector2(-199, 14661)
+
+[node name="SoapObstacleHay2" parent="." unique_id=1068865887 instance=ExtResource("3_pe6ay")]
+position = Vector2(52, 770)
+
+[node name="SoapObstacleBlock" parent="." unique_id=157547695 instance=ExtResource("4_k3voo")]
+position = Vector2(192.99998, 1322)
+
+[node name="SoapObstacleBlock4" parent="." unique_id=200715481 instance=ExtResource("4_k3voo")]
+position = Vector2(-192, 2591)
+
+[node name="SoapObstacleBlock5" parent="." unique_id=2107852288 instance=ExtResource("4_k3voo")]
+position = Vector2(-135, 2643)
+
+[node name="SoapObstacleBlock6" parent="." unique_id=1820863221 instance=ExtResource("4_k3voo")]
+position = Vector2(-76, 2695.0002)
+
+[node name="SoapObstacleBlock7" parent="." unique_id=858464378 instance=ExtResource("4_k3voo")]
+position = Vector2(84, 3764.0002)
+
+[node name="SoapObstacleBlock8" parent="." unique_id=111210665 instance=ExtResource("4_k3voo")]
+position = Vector2(141, 3987)
+
+[node name="SoapObstacleBlock9" parent="." unique_id=2031974181 instance=ExtResource("4_k3voo")]
+position = Vector2(198.00002, 4182)
+
+[node name="SoapObstacleBlock10" parent="." unique_id=2083544193 instance=ExtResource("4_k3voo")]
+position = Vector2(0.9999962, 4627)
+
+[node name="SoapObstacleBlock11" parent="." unique_id=1415606044 instance=ExtResource("4_k3voo")]
+position = Vector2(59.999996, 4627.0005)
+
+[node name="SoapObstacleBlock12" parent="." unique_id=253030581 instance=ExtResource("4_k3voo")]
+position = Vector2(-105.999985, 5468.0005)
+
+[node name="SoapObstacleBlock13" parent="." unique_id=757872060 instance=ExtResource("4_k3voo")]
+position = Vector2(-206, 5832)
+
+[node name="SoapObstacleBlock14" parent="." unique_id=1494021329 instance=ExtResource("4_k3voo")]
+position = Vector2(-5.0000153, 6218)
+
+[node name="SoapObstacleBlock15" parent="." unique_id=1809760229 instance=ExtResource("4_k3voo")]
+position = Vector2(88.99999, 6340.0005)
+
+[node name="SoapObstacleBlock16" parent="." unique_id=1527430077 instance=ExtResource("4_k3voo")]
+position = Vector2(193, 6494)
+
+[node name="SoapObstacleBlock17" parent="." unique_id=364842770 instance=ExtResource("4_k3voo")]
+position = Vector2(-92.99997, 6811)
+
+[node name="SoapObstacleBlock18" parent="." unique_id=213812821 instance=ExtResource("4_k3voo")]
+position = Vector2(-2.0000076, 7338.0005)
+
+[node name="SoapObstacleBlock19" parent="." unique_id=1070592312 instance=ExtResource("4_k3voo")]
+position = Vector2(0.99999976, 7696)
+
+[node name="SoapObstacleBlock20" parent="." unique_id=2075154744 instance=ExtResource("4_k3voo")]
+position = Vector2(-105.99999, 8292)
+
+[node name="SoapObstacleBlock21" parent="." unique_id=1887437735 instance=ExtResource("4_k3voo")]
+position = Vector2(-184, 8537.001)
+
+[node name="SoapObstacleBlock22" parent="." unique_id=1216898546 instance=ExtResource("4_k3voo")]
+position = Vector2(195.99997, 8892.001)
+
+[node name="SoapObstacleBlock23" parent="." unique_id=1746526195 instance=ExtResource("4_k3voo")]
+position = Vector2(-189.99994, 9275.001)
+
+[node name="SoapObstacleBlock24" parent="." unique_id=136732108 instance=ExtResource("4_k3voo")]
+position = Vector2(-127, 9275.001)
+
+[node name="SoapObstacleBlock25" parent="." unique_id=524920044 instance=ExtResource("4_k3voo")]
+position = Vector2(-61, 9275.001)
+
+[node name="SoapObstacleBlock26" parent="." unique_id=1232413248 instance=ExtResource("4_k3voo")]
+position = Vector2(-116.99999, 9755.001)
+
+[node name="SoapObstacleBlock27" parent="." unique_id=1287557443 instance=ExtResource("4_k3voo")]
+position = Vector2(99.99999, 10204.001)
+
+[node name="SoapObstacleBlock28" parent="." unique_id=1692490838 instance=ExtResource("4_k3voo")]
+position = Vector2(-87.99998, 10119)
+
+[node name="SoapObstacleBlock29" parent="." unique_id=735087765 instance=ExtResource("4_k3voo")]
+position = Vector2(110, 11284.001)
+
+[node name="SoapObstacleBlock30" parent="." unique_id=1559282866 instance=ExtResource("4_k3voo")]
+position = Vector2(-112.999985, 11582)
+
+[node name="SoapObstacleBlock31" parent="." unique_id=87332442 instance=ExtResource("4_k3voo")]
+position = Vector2(-32.000004, 12619)
+
+[node name="SoapObstacleBlock32" parent="." unique_id=584846755 instance=ExtResource("4_k3voo")]
+position = Vector2(-92, 12622)
+
+[node name="SoapObstacleBlock33" parent="." unique_id=363634394 instance=ExtResource("4_k3voo")]
+position = Vector2(-154, 12619.001)
+
+[node name="SoapObstacleBlock34" parent="." unique_id=793297666 instance=ExtResource("4_k3voo")]
+position = Vector2(-187, 13284)
+
+[node name="SoapObstacleBlock35" parent="." unique_id=322072724 instance=ExtResource("4_k3voo")]
+position = Vector2(-125, 13346)
+
+[node name="SoapObstacleBlock36" parent="." unique_id=225714719 instance=ExtResource("4_k3voo")]
+position = Vector2(-55.000008, 13434.001)
+
+[node name="SoapObstacleBlock37" parent="." unique_id=715027780 instance=ExtResource("4_k3voo")]
+position = Vector2(-130, 13709)
+
+[node name="SoapObstacleBlock38" parent="." unique_id=1114312647 instance=ExtResource("4_k3voo")]
+position = Vector2(191.99997, 14046)
+
+[node name="SoapObstacleBlock39" parent="." unique_id=884033702 instance=ExtResource("4_k3voo")]
+position = Vector2(-64.99997, 14295.001)
+
+[node name="SoapObstacleBlock40" parent="." unique_id=1804493898 instance=ExtResource("4_k3voo")]
+position = Vector2(14.999985, 14435)
+
+[node name="SoapObstacleBlock41" parent="." unique_id=328838987 instance=ExtResource("4_k3voo")]
+position = Vector2(105.99999, 14630)
+
+[node name="SoapObstacleBlock42" parent="." unique_id=1245133782 instance=ExtResource("4_k3voo")]
+position = Vector2(105.99999, 14630)
+
+[node name="SoapObstacleBlock2" parent="." unique_id=711614737 instance=ExtResource("4_k3voo")]
+position = Vector2(130.99998, 1322)
+
+[node name="SoapObstacleBlock3" parent="." unique_id=588674404 instance=ExtResource("4_k3voo")]
+position = Vector2(60, 1322)
