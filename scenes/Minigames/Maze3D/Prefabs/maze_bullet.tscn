@@ -5,9 +5,11 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l5vmu"]
 
-[node name="Bullet" type="Node3D" unique_id=171105403 node_paths=PackedStringArray("_rigidbody")]
+[node name="Bullet" type="Node3D" unique_id=171105403 node_paths=PackedStringArray("_rigidbody", "_sprite", "_light")]
 script = ExtResource("1_iv2gs")
 _rigidbody = NodePath("RigidBody3D")
+_sprite = NodePath("RigidBody3D/Sprite3D")
+_light = NodePath("RigidBody3D/Sprite3D/OmniLight3D")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1844234496]
 collision_layer = 2

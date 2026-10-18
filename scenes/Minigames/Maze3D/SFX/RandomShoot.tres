@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cgndsq1a60nn2"]
+
+[ext_resource type="AudioStream" uid="uid://dukgnbvggras3" path="res://scenes/Minigames/Maze3D/SFX/Laser_shoot1.wav" id="1_2eoq5"]
+[ext_resource type="AudioStream" uid="uid://qknundkynypn" path="res://scenes/Minigames/Maze3D/SFX/Laser_Shoot2.wav" id="2_1n0f0"]
+[ext_resource type="AudioStream" uid="uid://dnh53i15lkcwn" path="res://scenes/Minigames/Maze3D/SFX/Laser_Shoot3.wav" id="3_gv8hu"]
+[ext_resource type="AudioStream" uid="uid://p8l2jbssy1kl" path="res://scenes/Minigames/Maze3D/SFX/Laser_shoot4.wav" id="4_dc8sf"]
+[ext_resource type="AudioStream" uid="uid://brqmloblaww17" path="res://scenes/Minigames/Maze3D/SFX/Laser_Shoot5.wav" id="5_2jl26"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_2eoq5")
+stream_1/stream = ExtResource("2_1n0f0")
+stream_2/stream = ExtResource("3_gv8hu")
+stream_3/stream = ExtResource("4_dc8sf")
+stream_4/stream = ExtResource("5_2jl26")

@@ -11,7 +11,9 @@ class_name MazePlayer
 @export var _turningSpeed: float = 10
 @export var _shootCooldown: float = 0.2
 @export var _bulletPrefab: PackedScene
-@export var _deadLabel : Label
+@export var _deadLabel: Label
+@export var shootSFX: AudioStream
+@export var deathSFX: AudioStream
 
 signal _onDeath
 
@@ -20,6 +22,9 @@ var velocity: Vector3
 var turningAngle: int
 var isDead: bool = false
 var shootCD: float = 0
+var shooting: bool = false
+
+var portrait: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,6 +41,11 @@ func _process(delta):
 		_camera.rotate_y(-_hub.movement.x * _turningSpeed * delta)
 	if shootCD > 0:
 		shootCD -= delta
+	elif _hub.btn2_hold:
+		_sprite.texture = _hub.get_character().action1_sprite
+	else:
+		_sprite.texture = _hub.get_character().idle_sprite
+	portrait.texture = _sprite.texture
 		
 func _physics_process(delta):
 	if isDead:
@@ -44,7 +54,7 @@ func _physics_process(delta):
 		velocity.x = _hub.movement.x;
 	else:
 		velocity.x = 0;
-	velocity.z = -_hub.movement.y
+	velocity.z = _hub.movement.y
 	var movementSpeed = velocity.rotated(Vector3.UP, _camera.basis.get_euler().y)
 	movementSpeed.y = 0
 	movementSpeed = movementSpeed.normalized() * _speed
@@ -59,6 +69,7 @@ func lose() -> void :
 	var tween = get_tree().create_tween()
 	tween.tween_property(_sprite, "modulate", Color.TRANSPARENT, 1.0)
 	(get_parent() as CharacterBody3D).collision_layer = 4
+	SFXPlayer.play(deathSFX)
 	
 func _on_shoot_pressed() -> void :
 	if shootCD > 0:
@@ -71,5 +82,16 @@ func _on_shoot_pressed() -> void :
 	bulletInstance.position.y = 1
 	forward.y = 0
 	bulletInstance.setVelocity(forward * _bulletSpeed)
-	bulletInstance.setOriginPlayer(get_parent() as CharacterBody3D)
+	bulletInstance.setOriginPlayer(get_parent() as CharacterBody3D, _hub.get_player_color())
+	SFXPlayer.play(shootSFX)
+	_sprite.texture = _hub.get_character().action2_sprite
 	
+func init_rotation() -> void:
+	var rootRotation:Vector3 = _hub.rotation
+	_hub.rotation = Vector3.ZERO
+	_camera.rotate(Vector3.UP, rootRotation.y)
+
+func assign_portrait(tex: TextureRect) -> void:
+	portrait = tex
+	portrait.texture = _hub.get_character().idle_sprite
+	portrait.self_modulate = Color.WHITE

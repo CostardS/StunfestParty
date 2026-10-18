@@ -2,6 +2,8 @@ extends Node
 
 @export var minigame: MinigameBase
 @export var viewports: Array[SubViewport]
+@export var portraits: Array[TextureRect]
+@export var portraits_BG: Array[TextureRect]
 
 var finished : bool  = false
 # Called when the node enters the scene tree for the first time.
@@ -14,8 +16,11 @@ func _on_players_spawned() -> void:
 	var i = 0;
 	for player in minigame.players:
 		player.reparent(viewports[i])
+		portraits_BG[i].modulate = player.get_player_color()
 		for child in player.get_child(0).get_children():
 			if child is MazePlayer:
+				(child as MazePlayer).assign_portrait(portraits[i])
+				(child as MazePlayer).init_rotation()
 				(child as MazePlayer)._onDeath.connect(_onPlayerDeath)
 		i += 1
 			
