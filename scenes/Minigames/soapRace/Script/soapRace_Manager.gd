@@ -23,8 +23,8 @@ func _on_time_start() -> void:
 func _on_game_initialized() -> void:
 	var idx:int = 0
 	var player_count:int = minigame.players.size()
-	var min_x = 220  if player_count > 2 else 620
-	var max_x = 980 if player_count == 1 else 1780 if player_count == 4 else 1380
+	var min_x = 207  if player_count > 2 else 605
+	var max_x = 995 if player_count == 1 else 1795 if player_count == 4 else 1395
 
 
 	for player in minigame.players:

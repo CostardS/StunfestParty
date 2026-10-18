@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		var obj = collision.get_collider()
 		if obj is SoapRace_Player:
 			if hitSound:
-				SFXPlayer.play(hitSound)
+				SFXPlayer.play(hitSound, -10)
 			var hit_back:float = (obj as SoapRace_Player).get_hit(self,sign(current_lateral_speed) * player_speed)
 			get_hit(obj, hit_back)
 		else:
@@ -68,7 +68,7 @@ func _physics_process(delta: float) -> void:
 			_hub.score = 0
 			player_speed = start_player_speed
 			if crashSound:
-				SFXPlayer.play(crashSound)
+				SFXPlayer.play(crashSound, -10)
 
 	if abs(pushed_force) > 0.1:
 		pushed_force =  move_toward(pushed_force, 0, recover)

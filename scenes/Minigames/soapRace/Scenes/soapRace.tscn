@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c8p7k53h5878" path="res://scenes/Minigames/soapRace/Scenes/soapRace_Player.tscn" id="2_7a6hj"]
 [ext_resource type="Script" uid="uid://cexd37xt5r65t" path="res://scenes/Minigames/soapRace/Script/soapRace_Manager.gd" id="3_10d2n"]
 [ext_resource type="PackedScene" uid="uid://c1cu7yhn2v5h7" path="res://scenes/Minigames/soapRace/Scenes/soapRace_playerMat.tscn" id="4_4g67m"]
+[ext_resource type="Texture2D" uid="uid://bbpvjhh6h30d8" path="res://scenes/Minigames/BBQMasterDX/Assets/grass_tile.png" id="5_4g67m"]
+[ext_resource type="AudioStream" uid="uid://bc7qbmoir1051" path="res://scenes/Minigames/soapRace/assets/Soap Kart.mp3" id="5_r0adc"]
 
 [node name="SoapRace" type="Node2D" unique_id=1830278531 node_paths=PackedStringArray("player_spawns")]
 script = ExtResource("1_axyhl")
@@ -16,6 +18,13 @@ minigame_duration = 60
 script = ExtResource("3_10d2n")
 minigame = NodePath("..")
 playerMat = ExtResource("4_4g67m")
+gameMusic = ExtResource("5_r0adc")
+
+[node name="Sprite2D" type="Sprite2D" parent="[Manager]" unique_id=53712186]
+z_index = -5
+position = Vector2(1104.5, 8052.2495)
+scale = Vector2(62.515617, 265.49216)
+texture = ExtResource("5_4g67m")
 
 [node name="Spawns" type="Node2D" parent="." unique_id=1556213241]
 position = Vector2(1000, 250)
