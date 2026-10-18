@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b2eefjdf8wvcb" path="res://scenes/Minigames/Maze3D/Scripts/maze_manager.gd" id="3_wxs55"]
 [ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="6_iedjs"]
 [ext_resource type="Texture2D" uid="uid://c2w7ssj1ng3nv" path="res://assets/characters/Wuki Chan/wukichan-2.png" id="7_lsbwh"]
+[ext_resource type="Texture2D" uid="uid://gxcw45p0ndyd" path="res://scenes/Minigames/Maze3D/sky.jpg" id="8_lsbwh"]
 
 [node name="Maze3d" type="Node" unique_id=1402244751 node_paths=PackedStringArray("player_spawns")]
 script = ExtResource("1_3hxt8")
@@ -441,3 +442,7 @@ stretch_mode = 5
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=733962681]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 1.3990908, 8.116628, 0)
 light_bake_mode = 1
+
+[node name="Ceiling" type="Sprite3D" parent="." unique_id=645873662]
+transform = Transform3D(0.65, 0, 0, 0, -2.8412401e-08, 0.65, 0, -0.65, -2.8412401e-08, 0, 2.001, 0)
+texture = ExtResource("8_lsbwh")

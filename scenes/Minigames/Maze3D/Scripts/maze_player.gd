@@ -72,7 +72,7 @@ func lose() -> void :
 	SFXPlayer.play(deathSFX)
 	
 func _on_shoot_pressed() -> void :
-	if shootCD > 0:
+	if shootCD > 0 or isDead:
 		return
 	shootCD = _shootCooldown
 	var bulletInstance = _bulletPrefab.instantiate() as MazeBullet

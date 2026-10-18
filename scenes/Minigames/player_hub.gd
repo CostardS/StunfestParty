@@ -64,6 +64,9 @@ func _process(_delta: float) -> void:
 		var input_btn1: bool = MultiplayerInput.is_action_pressed(device, "action_one")
 		var input_btn2: bool = MultiplayerInput.is_action_pressed(device, "action_two")
 		
+		if input_movement.abs().x < 0.05: input_movement.x = 0
+		if input_movement.abs().y < 0.05: input_movement.y = 0
+
 		if input_movement.x != movement.x:
 			if (movement.x + 0.25) * (input_movement.x + 0.25) < 0 && movement.x > input_movement.x :
 				move_right.emit()
@@ -82,6 +85,8 @@ func _process(_delta: float) -> void:
 		movement = input_movement
 		btn1_hold = input_btn1
 		btn2_hold = input_btn2
+
+
 	else :
 		movement = Vector2.ZERO
 		btn1_hold = false
