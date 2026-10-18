@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var minigame: MinigameBase
 @export var playerMat: PackedScene
+@export var gameMusic:AudioStream
 
 var world_speed:float = 250
 var timer_end:bool = false
@@ -12,8 +13,12 @@ func _ready() -> void:
 	minigame.game_initialized.connect(_on_game_initialized)
 	minigame.players_spawned.connect(_on_player_spawned)
 	minigame.game_timer_timeout.connect(_on_time_end)
+	minigame.game_timer_started.connect(_on_time_start)
 
 
+func _on_time_start() -> void:
+	if gameMusic:
+		MusicPlayer.play(gameMusic)
 
 func _on_game_initialized() -> void:
 	var idx:int = 0

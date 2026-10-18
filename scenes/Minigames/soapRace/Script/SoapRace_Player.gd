@@ -3,11 +3,13 @@ class_name SoapRace_Player
 
 @export var _hub:PlayerHub
 @export var _sprite:Sprite2D
+@export var crashSound:AudioStream
+@export var hitSound:AudioStream
 
 var start_player_speed:float = 75
 var player_speed:float = 0
-var player_acceleration:float = 30
-var player_speed_inc:int = 12
+var player_acceleration:float = 40
+var player_speed_inc:int = 20
 var base_speed:float = 10
 
 var previous_lateral_pos:float = 0
@@ -25,6 +27,7 @@ var max_x:int = 0
 func _ready() -> void:
 	initialize_display()
 	player_speed = start_player_speed
+	_hub.score = 2.5
 
 
 func initialize_display() -> void:
@@ -40,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		return
 	var is_accelerating:bool = _hub.btn1_hold and global_position.y < 1000
 	var movement:float = _hub.movement.x
-
+	
 	current_lateral_speed = (movement * player_speed) + pushed_force
 
 	if global_position.x > max_x and current_lateral_speed > 0:
@@ -54,6 +57,8 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var obj = collision.get_collider()
 		if obj is SoapRace_Player:
+			if hitSound:
+				SFXPlayer.play(hitSound)
 			var hit_back:float = (obj as SoapRace_Player).get_hit(self,sign(current_lateral_speed) * player_speed)
 			get_hit(obj, hit_back)
 		else:
@@ -62,6 +67,8 @@ func _physics_process(delta: float) -> void:
 			global_position.y = 10
 			_hub.score = 0
 			player_speed = start_player_speed
+			if crashSound:
+				SFXPlayer.play(crashSound)
 
 	if abs(pushed_force) > 0.1:
 		pushed_force =  move_toward(pushed_force, 0, recover)
