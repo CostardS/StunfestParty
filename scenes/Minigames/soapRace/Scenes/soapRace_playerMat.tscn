@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cuhqjviagpa7h" path="res://assets/sprites/seamlessNoise.png" id="1_jfngw"]
 [ext_resource type="Texture2D" uid="uid://c4got42wmu0n6" path="res://assets/Checker.png" id="2_vwnxb"]
 [ext_resource type="PackedScene" uid="uid://br7ox112a2p2h" path="res://scenes/Minigames/soapRace/Scenes/Obstacle/soapObstacle_tree.tscn" id="3_pe6ay"]
+[ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="4_4a7fr"]
 
 [node name="SoapRacePlayerMat" type="CharacterBody2D" unique_id=99125998]
 
@@ -10,14 +11,6 @@
 position = Vector2(0, 8000)
 scale = Vector2(1.5, 63)
 texture = ExtResource("1_jfngw")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=564769975]
-texture_repeat = 2
-position = Vector2(0, 16014)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_vwnxb")
-region_enabled = true
-region_rect = Rect2(0, 0, 512, 128)
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1214526511]
 texture_repeat = 2
@@ -237,3 +230,9 @@ position = Vector2(-7, 15458)
 
 [node name="SoapObstacleTree67" parent="." unique_id=1332863534 instance=ExtResource("3_pe6ay")]
 position = Vector2(107, 15692)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=915193870]
+z_index = -1
+position = Vector2(0, 8000.999)
+scale = Vector2(0.85, 31.476559)
+texture = ExtResource("4_4a7fr")

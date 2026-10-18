@@ -28,7 +28,7 @@ func _ready() -> void:
 
 
 func initialize_display() -> void:
-	_sprite.texture = _hub.get_character().idle_sprite
+	_sprite.texture = _hub.get_character().action1_sprite
 
 func get_hit(contact:SoapRace_Player, lateral_force:float) -> float:
 	if current_lateral_speed * lateral_force <= 0:
@@ -42,7 +42,6 @@ func _physics_process(delta: float) -> void:
 	var movement:float = _hub.movement.x
 
 	current_lateral_speed = (movement * player_speed) + pushed_force
-
 
 	if global_position.x > max_x and current_lateral_speed > 0:
 		current_lateral_speed = 0

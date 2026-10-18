@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_5weml"]
 [ext_resource type="Script" uid="uid://brwkw5nsx34rs" path="res://scenes/Minigames/soapRace/Script/SoapRace_Player.gd" id="2_s26g8"]
+[ext_resource type="Texture2D" uid="uid://brdj6pcgs51ry" path="res://scenes/Minigames/soapRace/assets/soap_cart.png" id="3_4lsos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhfpc"]
-size = Vector2(34, 64.93424)
+size = Vector2(34, 81.46712)
 
 [node name="SoapRacePlayer" type="Node2D" unique_id=1554234562]
 script = ExtResource("1_5weml")
@@ -15,8 +16,13 @@ _hub = NodePath("..")
 _sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1248197972]
+z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1061603134]
-position = Vector2(0, 10)
+position = Vector2(0, 18.266438)
 scale = Vector2(0.969, 1)
 shape = SubResource("RectangleShape2D_hhfpc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Player" unique_id=1297348536]
+position = Vector2(0, 21)
+texture = ExtResource("3_4lsos")
