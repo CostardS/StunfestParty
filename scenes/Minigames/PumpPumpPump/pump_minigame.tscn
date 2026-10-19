@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c4pngqo1ld2rf"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_bna6f"]
+[ext_resource type="Texture2D" uid="uid://buc3bkr0vbuw4" path="res://scenes/Minigames/PumpPumpPump/assets/windows_xp_bliss-wide.jpg" id="1_n8sig"]
+[ext_resource type="PackedScene" uid="uid://du55xiki4c087" path="res://scenes/Minigames/PumpPumpPump/pump_player.tscn" id="2_gnus4"]
+[ext_resource type="Script" uid="uid://bhqk0jrg1ceer" path="res://scenes/Minigames/PumpPumpPump/pump_minigame.gd" id="3_1wfoh"]
+[ext_resource type="AudioStream" uid="uid://cvxyuysuruf7" path="res://scenes/Minigames/PumpPumpPump/assets/Pumpitup_Music.ogg" id="3_gnus4"]
+[ext_resource type="AudioStream" uid="uid://wlcfcbc8c1nw" path="res://scenes/Minigames/PumpPumpPump/assets/Drumroll.ogg" id="5_spa8t"]
+[ext_resource type="AudioStream" uid="uid://b52rd43d0127q" path="res://scenes/Minigames/PumpPumpPump/assets/DrumrollEnd.ogg" id="6_43sds"]
+
+[node name="PumpMinigame" type="Node2D" unique_id=181641628 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_bna6f")
+player_prefab = ExtResource("2_gnus4")
+player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
+fixed_spawns = true
+music = ExtResource("3_gnus4")
+minigame_duration = 15
+
+[node name="PumpMinigameMgr" type="Node2D" parent="." unique_id=1745122090 node_paths=PackedStringArray("minigame")]
+script = ExtResource("3_1wfoh")
+ball_max_sizes = Vector2(20, 18)
+minigame = NodePath("..")
+drumroll = ExtResource("5_spa8t")
+drumroll_end = ExtResource("6_43sds")
+
+[node name="WindowsXpBlissWide" type="Sprite2D" parent="." unique_id=210186763]
+self_modulate = Color(0.75, 0.75, 0.75, 1)
+texture = ExtResource("1_n8sig")
+centered = false
+
+[node name="Spawners" type="Node2D" parent="." unique_id=1749991679]
+position = Vector2(200, 540)
+
+[node name="Spawn1" type="Node2D" parent="Spawners" unique_id=1483471068]
+position = Vector2(100, 400)
+
+[node name="Spawn2" type="Node2D" parent="Spawners" unique_id=664178037]
+position = Vector2(520, 400)
+
+[node name="Spawn3" type="Node2D" parent="Spawners" unique_id=551332971]
+position = Vector2(940, 400)
+
+[node name="Spawn4" type="Node2D" parent="Spawners" unique_id=1399916245]
+position = Vector2(1360, 400)

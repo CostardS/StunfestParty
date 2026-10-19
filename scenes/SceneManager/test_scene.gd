@@ -89,4 +89,5 @@ func _on_minigame_end(winners: Array[int]) -> void:
 
 
 func _show_minigame_end() -> void:
+	_end_after_finish = false
 	minigame_ui.show_game_end()

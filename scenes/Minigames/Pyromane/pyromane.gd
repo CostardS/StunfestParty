@@ -30,10 +30,13 @@ func _on_game_timeout() -> void:
 
 	var scores = grid.computeScores()
 	var maxScore = max(scores[0], scores[1], scores[2], scores[3])
-	print("max", maxScore)
 	for player in minigame.players:
 		player.score = scores[player.get_player_index()]
 
+	minigame.show_finish_and_lock()
+	
+	await get_tree().create_timer(1).timeout
+	
 	var scoreNode = get_node("%Score") as Control
 	scoreNode.visible = true
 	for player in minigame.players:
@@ -42,7 +45,6 @@ func _on_game_timeout() -> void:
 		label.maxScore = maxScore
 		label.modulate = PlayerInfo.get_color(player.get_player_index())
 
-	minigame.show_finish_and_lock()
 	await get_tree().create_timer(4).timeout
 	minigame.end_game(minigame.get_winners_from_score(true))
 

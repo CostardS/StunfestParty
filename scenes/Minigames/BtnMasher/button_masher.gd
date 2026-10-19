@@ -18,8 +18,8 @@ var current_ends: int = 0
 func _ready() -> void:
 	minigame.players_spawned.connect(_on_players_spawned)
 	minigame.game_timer_timeout.connect(_on_game_timeout)
-	await get_tree().create_timer(2.5).timeout
-	minigame.request_game_start()
+	# await get_tree().create_timer(2.5).timeout
+	# minigame.request_game_start()
 
 func _on_players_spawned() -> void:
 	for player in minigame.players:
