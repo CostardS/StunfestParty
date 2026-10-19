@@ -3,7 +3,191 @@
 [ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_271ia"]
 [ext_resource type="PackedScene" uid="uid://cnj5qw7x1sxey" path="res://scenes/Minigames/BtnMasher/masher_player.tscn" id="2_47uwu"]
 [ext_resource type="AudioStream" uid="uid://dtorvhkuachd0" path="res://assets/music/Default_Music.ogg" id="3_271ia"]
+[ext_resource type="Texture2D" uid="uid://b0xpkai5ofjx6" path="res://scenes/Minigames/BtnMasher/SalleDanse.jpg" id="4_8uplv"]
 [ext_resource type="Script" uid="uid://du4w8dmq50bbc" path="res://scenes/Minigames/BtnMasher/button_masher.gd" id="4_ghdmc"]
+[ext_resource type="Texture2D" uid="uid://kere7xeqxw7j" path="res://scenes/Minigames/BtnMasher/SalleDisco.png" id="5_ghdmc"]
+[ext_resource type="AudioStream" uid="uid://c3jf70d5yq02y" path="res://scenes/Minigames/BtnMasher/Whistle.ogg" id="7_dbblu"]
+[ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="7_ghdmc"]
+[ext_resource type="AudioStream" uid="uid://dqa7y8c7hq27a" path="res://scenes/Minigames/BtnMasher/DanceMusic.ogg" id="8_t5uhc"]
+[ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="10_t5uhc"]
+
+[sub_resource type="Animation" id="Animation_t5uhc"]
+resource_name = "DancePulse"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGDance:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.8, 0.8, 0.8, 1), Color(0.7, 0.7, 0.7, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_345q8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BGDance:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BGTrain:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BGDance:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.5, 0.5, 0.5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dbblu"]
+resource_name = "phase_transition"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGTrain:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BGDance:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.375, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Transition:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.375, 0.75),
+"transitions": PackedFloat32Array(2, 0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BGDance:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.36666667, 0.75, 0.9, 1.449435, 1.599435, 2.1811633, 2.3311634, 2.8824773, 3.0324774, 3.121368, 3.3634624, 3.6028967, 4.0764446, 4.3333335),
+"transitions": PackedFloat32Array(0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0),
+"update": 0,
+"values": [Color(0.5, 0.5, 0.5, 1), Color(0.8, 0.8, 0.8, 1), Color(0.5, 0.5, 0.5, 1), Color(0.8, 0.8, 0.8, 1), Color(0.5, 0.5, 0.5, 1), Color(0.8, 0.8, 0.8, 1), Color(0.5, 0.5, 0.5, 1), Color(0.8, 0.8, 0.8, 1), Color(0.5, 0.5, 0.5, 1), Color(0.55, 0.55, 0.55, 1), Color(0.62, 0.62, 0.62, 1), Color(0.7, 0.7, 0.7, 1), Color(0.8, 0.8, 0.8, 1), Color(0.75, 0.75, 0.75, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ButtonMasherManager")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.375, 0.75, 0.76, 1.45, 2.18, 2.88, 2.885, 3.12, 3.36, 3.6, 3.9333334, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"move_players"
+}, {
+"args": [],
+"method": &"dance_music_start"
+}, {
+"args": [0],
+"method": &"dance_player_reveal"
+}, {
+"args": [1],
+"method": &"dance_player_reveal"
+}, {
+"args": [2],
+"method": &"dance_player_reveal"
+}, {
+"args": [3],
+"method": &"dance_player_reveal"
+}, {
+"args": [0],
+"method": &"dance_player_reaveal_2"
+}, {
+"args": [1],
+"method": &"dance_player_reaveal_2"
+}, {
+"args": [2],
+"method": &"dance_player_reaveal_2"
+}, {
+"args": [3],
+"method": &"dance_player_reaveal_2"
+}, {
+"args": [],
+"method": &"dance_player_jump"
+}, {
+"args": [],
+"method": &"dance_player_bind_rhythm"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t5uhc"]
+_data = {
+&"DancePulse": SubResource("Animation_t5uhc"),
+&"RESET": SubResource("Animation_345q8"),
+&"phase_transition": SubResource("Animation_dbblu")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmq7q"]
+font = ExtResource("10_t5uhc")
+font_size = 75
+font_color = Color(1, 0.62, 0.62, 1)
 
 [node name="ButtonMasher" type="Node2D" unique_id=319501980 node_paths=PackedStringArray("player_spawns")]
 script = ExtResource("1_271ia")
@@ -13,21 +197,80 @@ fixed_spawns = true
 music = ExtResource("3_271ia")
 minigame_duration = 5
 
-[node name="ButtonMasherManager" type="Node" parent="." unique_id=826713093 node_paths=PackedStringArray("minigame")]
+[node name="BGTrain" type="Sprite2D" parent="." unique_id=1112495500]
+modulate = Color(0.5, 0.5, 0.5, 1)
+texture = ExtResource("4_8uplv")
+centered = false
+
+[node name="BGDance" type="Sprite2D" parent="." unique_id=1756976005]
+modulate = Color(0.5, 0.5, 0.5, 0)
+texture = ExtResource("5_ghdmc")
+centered = false
+
+[node name="ButtonMasherManager" type="Node" parent="." unique_id=826713093 node_paths=PackedStringArray("minigame", "_dance_positions", "_animator", "mash_label")]
 script = ExtResource("4_ghdmc")
 minigame = NodePath("..")
-target_score = 60
+target_score = 200
+_SFX_whistle = ExtResource("7_dbblu")
+_dance_music = ExtResource("8_t5uhc")
+_dance_positions = [NodePath("../DanceSpawns/Spawn1"), NodePath("../DanceSpawns/Spawn2"), NodePath("../DanceSpawns/Spawn3"), NodePath("../DanceSpawns/Spawn4")]
+_animator = NodePath("../AnimationPlayer")
+mash_label = NodePath("../Label")
 
 [node name="Spawners" type="Node2D" parent="." unique_id=451747632]
 position = Vector2(200, 540)
 
 [node name="Spawn1" type="Node2D" parent="Spawners" unique_id=1850746195]
-position = Vector2(0, 340)
+position = Vector2(100, 300)
 
 [node name="Spawn2" type="Node2D" parent="Spawners" unique_id=30439092]
-position = Vector2(0, 170)
+position = Vector2(520, 250)
 
 [node name="Spawn3" type="Node2D" parent="Spawners" unique_id=1723776947]
+position = Vector2(940, 200)
 
 [node name="Spawn4" type="Node2D" parent="Spawners" unique_id=617607757]
-position = Vector2(0, -170)
+position = Vector2(1360, 150)
+
+[node name="DanceSpawns" type="Node2D" parent="." unique_id=1985274057]
+position = Vector2(200, 540)
+
+[node name="Spawn1" type="Node2D" parent="DanceSpawns" unique_id=487636759]
+position = Vector2(1082, 404)
+
+[node name="Spawn2" type="Node2D" parent="DanceSpawns" unique_id=1724939412]
+position = Vector2(804, 279)
+
+[node name="Spawn3" type="Node2D" parent="DanceSpawns" unique_id=1044773857]
+position = Vector2(560, 150)
+
+[node name="Spawn4" type="Node2D" parent="DanceSpawns" unique_id=597591004]
+position = Vector2(357, 46)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2074365543]
+libraries/ = SubResource("AnimationLibrary_t5uhc")
+
+[node name="Transition" type="Sprite2D" parent="." unique_id=1697957762]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(4, 2.2)
+texture = ExtResource("7_ghdmc")
+centered = false
+
+[node name="Label" type="Label" parent="." unique_id=13819644]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 476.0
+offset_top = 862.0
+offset_right = 1460.0
+offset_bottom = 1039.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SPAMMEZ LES BOUTONS
+POUR VOUS CHAUFFER !"
+label_settings = SubResource("LabelSettings_wmq7q")
+horizontal_alignment = 1
+vertical_alignment = 1

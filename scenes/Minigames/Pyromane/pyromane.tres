@@ -6,7 +6,10 @@
 [resource]
 script = ExtResource("1_p31v0")
 name = "Total Arson"
+subtitle = "Splatoon, mais par la terre brulée"
+authors = "zriL"
 prefab = ExtResource("1_ucvl0")
-action_btn1 = "Throw"
-action_btn2 = "Counter"
+action_btn1 = "Lancer"
+action_btn2 = "Contrer"
+action_movement = "Déplacement"
 metadata/_custom_type_script = "uid://dkhmc06h3n7cg"
