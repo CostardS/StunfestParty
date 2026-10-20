@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cqjyb3ffdny7f"]
+
+[ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_qjiim"]
+[ext_resource type="Script" uid="uid://ckguwc83viwln" path="res://scenes/Minigames/Drift/drift_player.gd" id="2_wo342"]
+[ext_resource type="Texture2D" uid="uid://dfw77d8pt50k7" path="res://scenes/Minigames/Drift/assets/spritesheet voiture.png" id="3_1u4b2"]
+[ext_resource type="AudioStream" uid="uid://cmjwbpwn2gwg6" path="res://scenes/Minigames/Drift/assets/Hits.tres" id="4_c3a4o"]
+[ext_resource type="AudioStream" uid="uid://bktei7vsewng8" path="res://scenes/Minigames/Drift/assets/Bonk.ogg" id="4_eb047"]
+[ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="5_1u4b2"]
+[ext_resource type="AudioStream" uid="uid://cn0fv6582vjpc" path="res://scenes/Minigames/Drift/assets/drift.ogg" id="7_c3a4o"]
+[ext_resource type="AudioStream" uid="uid://dlrlccomi28aq" path="res://scenes/Minigames/Drift/assets/engine.ogg" id="8_51rjb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1u4b2"]
+friction = 0.0
+
+[sub_resource type="Gradient" id="Gradient_eb047"]
+offsets = PackedFloat32Array(0, 0.60678643, 1)
+colors = PackedColorArray(0, 0, 0, 0.09803922, 0, 0, 0, 0.09803922, 1, 1, 1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmq7q"]
+font = ExtResource("5_1u4b2")
+font_size = 32
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmq7q"]
+radius = 15.0
+
+[node name="DriftPlayer" type="Node2D" unique_id=1674545130]
+script = ExtResource("1_qjiim")
+
+[node name="DriftPlayerMgr" type="RigidBody2D" parent="." unique_id=1437555976 node_paths=PackedStringArray("_hub", "_display", "_sprite", "_lap_label", "_drift_particle", "_audio_drift", "_audio_engine")]
+unique_name_in_owner = true
+physics_material_override = SubResource("PhysicsMaterial_1u4b2")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 6
+script = ExtResource("2_wo342")
+_hub = NodePath("..")
+_display = NodePath("Display")
+_sprite = NodePath("Display/Sprite")
+_lap_label = NodePath("Display/Label")
+_drift_particle = NodePath("DriftParticles")
+car_regions = Array[Rect2]([Rect2(38, 20, 32, 35), Rect2(99, 20, 36, 36), Rect2(157, 20, 43, 36), Rect2(213, 20, 50, 35), Rect2(274, 21, 55, 33), Rect2(337, 21, 59, 32), Rect2(404, 22, 61, 29), Rect2(471, 23, 61, 26), Rect2(23, 71, 61, 25), Rect2(89, 69, 60, 30), Rect2(155, 67, 61, 34), Rect2(221, 65, 58, 38), Rect2(286, 63, 55, 41), Rect2(351, 63, 50, 42), Rect2(416, 63, 44, 42), Rect2(484, 63, 36, 43), Rect2(39, 113, 30, 43), Rect2(100, 113, 36, 43), Rect2(160, 113, 44, 42), Rect2(221, 113, 50, 42), Rect2(283, 113, 55, 41), Rect2(345, 115, 58, 38), Rect2(408, 117, 61, 34), Rect2(473, 119, 60, 30), Rect2(24, 171, 61, 25), Rect2(91, 173, 61, 26), Rect2(157, 172, 61, 29), Rect2(224, 171, 59, 32), Rect2(291, 171, 55, 33), Rect2(354, 170, 50, 35), Rect2(419, 170, 43, 36), Rect2(485, 170, 36, 36)])
+_acceleration_max = 600.0
+_acceleration_increment = 1200.0
+_acceleration_on_collision = 100.0
+_speed_collision_mult_factor = 0.5
+_deceleration_factor = 2.0
+_move_speed_cap = 425.0
+_rotate_speed = 5.0
+_audio_drift = NodePath("../DriftPlayer")
+_audio_engine = NodePath("../EnginePlayer")
+_SFX_bonk = ExtResource("4_eb047")
+_SFX_hit = ExtResource("4_c3a4o")
+
+[node name="DriftParticles" type="CPUParticles2D" parent="DriftPlayerMgr" unique_id=1803867911]
+position = Vector2(-20, 0)
+emitting = false
+amount = 120
+lifetime = 1.5
+particle_flag_align_y = true
+gravity = Vector2(0, 0)
+scale_amount_min = 25.0
+scale_amount_max = 25.0
+color_ramp = SubResource("Gradient_eb047")
+
+[node name="Display" type="Node2D" parent="DriftPlayerMgr" unique_id=1401113037]
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite" type="Sprite2D" parent="DriftPlayerMgr/Display" unique_id=193640930]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("3_1u4b2")
+region_enabled = true
+region_rect = Rect2(23, 71, 61, 25)
+
+[node name="Label" type="Label" parent="DriftPlayerMgr/Display" unique_id=970935898]
+custom_minimum_size = Vector2(150, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -65.0
+offset_right = 75.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Tour 1/3"
+label_settings = SubResource("LabelSettings_wmq7q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DriftPlayerMgr" unique_id=1556951759]
+shape = SubResource("CircleShape2D_wmq7q")
+
+[node name="DriftPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1189110869]
+stream = ExtResource("7_c3a4o")
+
+[node name="EnginePlayer" type="AudioStreamPlayer2D" parent="." unique_id=1511037325]
+stream = ExtResource("8_51rjb")
+autoplay = true

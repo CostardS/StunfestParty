@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://cv5nlg02mr8kq"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_0iyvg"]
+[ext_resource type="Texture2D" uid="uid://bhst544jbkfx7" path="res://scenes/Minigames/Drift/assets/RacetrackDecor.png" id="1_leaxc"]
+[ext_resource type="PackedScene" uid="uid://cqjyb3ffdny7f" path="res://scenes/Minigames/Drift/drift_player.tscn" id="2_beooa"]
+[ext_resource type="AudioStream" uid="uid://omyeduqtef8x" path="res://scenes/Minigames/Drift/assets/DejaVu.ogg" id="3_8xaxm"]
+[ext_resource type="Script" uid="uid://dr36hhtc4s65a" path="res://scenes/Minigames/Drift/drift_game.gd" id="3_gl5au"]
+[ext_resource type="Script" uid="uid://dyhfuv70nhh1i" path="res://scenes/Minigames/Drift/checkpoint.gd" id="3_rrmic"]
+[ext_resource type="Texture2D" uid="uid://c4got42wmu0n6" path="res://assets/Checker.png" id="4_u2y1h"]
+[ext_resource type="AudioStream" uid="uid://0srpfwmkqb1u" path="res://scenes/Minigames/Drift/assets/Lap.wav" id="5_3gtxu"]
+[ext_resource type="PackedScene" uid="uid://dxa6dcr7pwu6t" path="res://scenes/Minigames/Drift/drift_npc.tscn" id="7_3gtxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmq7q"]
+size = Vector2(18, 222)
+
+[node name="DriftGame" type="Node2D" unique_id=941177127 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_0iyvg")
+player_prefab = ExtResource("2_beooa")
+player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
+music = ExtResource("3_8xaxm")
+
+[node name="DriftGameMgr" type="Node2D" parent="." unique_id=1681571043 node_paths=PackedStringArray("minigame", "npc_holder")]
+script = ExtResource("3_gl5au")
+minigame = NodePath("..")
+_SFX_lap = ExtResource("5_3gtxu")
+npc_holder = NodePath("../NPCS")
+
+[node name="RacetrackDecor" type="Sprite2D" parent="." unique_id=1944129794]
+texture = ExtResource("1_leaxc")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=756687813]
+metadata/is_world = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1489324754]
+polygon = PackedVector2Array(1, 1, 1, 1079, 963, 1079, 963, 1055, 813, 1060.1, 813, 1060.9, 658, 1057, 643.4, 1057, 515.2, 1041, 509.3, 1041, 418.4, 1019, 414.6, 1019, 324.5, 985, 321.8, 985, 247.8, 944, 246.1, 944, 180, 892, 178.3, 892, 127.3, 835, 126.7, 835, 81.7, 756, 81.1, 756, 52.2, 668, 37.6, 563, 37, 563, 37, 497.3, 42, 452.2, 42, 444.2, 65, 345.3, 65, 341.5, 85, 290.6, 85, 287.8, 107, 244.7, 107, 242.8, 135, 199.9, 135, 198, 161, 167.1, 161, 165.2, 222, 110.3, 222, 109.7, 259, 87.7, 259, 87, 297, 71, 297, 70.3, 343, 58.3, 343, 57.7, 383, 53.7, 383, 53, 417, 54, 429.9, 54, 478.7, 64, 482.4, 64, 518.4, 78, 521.2, 78, 557.2, 98, 559, 98, 608.9, 138, 610.7, 138, 643.7, 174, 644.5, 174, 671.5, 211, 672.3, 211, 707.3, 269, 708.3, 269, 791, 424.6, 791, 427, 835, 487.9, 835, 490.4, 875, 523.3, 875, 525.1, 901, 535, 901, 536.5, 931.7, 542, 962.3, 542, 991.1, 536, 995.6, 536, 1016.7, 527, 1019, 527, 1046.9, 507, 1049.2, 507, 1076.2, 480, 1077.5, 480, 1128.5, 410, 1129.7, 410, 1209, 279.8, 1209, 277.9, 1250, 218.9, 1250, 217, 1293, 166.1, 1293, 164.3, 1341, 119.3, 1341, 118.6, 1398, 80.6, 1398, 79.9, 1450, 57, 1450, 56.3, 1505, 42.3, 1505, 41.7, 1558, 36.7, 1558, 36, 1589, 37, 1605.5, 37, 1647.8, 44, 1652.4, 44, 1692.5, 57, 1695.2, 57, 1735.3, 78, 1737, 78, 1773.9, 108, 1775.6, 108, 1801.6, 138, 1802.3, 138, 1831.3, 189, 1831.9, 189, 1845.9, 229, 1861.5, 317, 1862, 443, 1845.2, 638, 1844.1, 638, 1839, 762.9, 1839, 771.7, 1829, 813.6, 1829, 817.4, 1808, 864.4, 1808, 865.9, 1769, 917, 1769, 918.4, 1711, 964.6, 1648, 996.1, 1648, 996.7, 1564, 1021.8, 1564, 1022.4, 1471, 1037.4, 1471, 1038.2, 1378, 1045.2, 1378, 1046, 995.9, 1054, 979, 1055, 975, 1055, 964, 1055, 964, 1079, 1919, 1079, 1919, 1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1174855887]
+polygon = PackedVector2Array(1556, 237.9, 1556, 239.3, 1531.6, 243, 1527.4, 243, 1503.3, 253, 1500.1, 253, 1473, 272, 1470.8, 272, 1439.8, 303, 1438.5, 303, 1392.5, 366, 1391.3, 366, 1277, 549.1, 1277, 550.9, 1237, 600.9, 1237, 602.8, 1197, 643.8, 1197, 644.4, 1150, 681.5, 1150, 682.2, 1112, 704.3, 1112, 704.9, 1072, 722, 1072, 722.6, 1020, 736.7, 1020, 737.3, 965.6, 744, 928.5, 744, 864.2, 734, 859.4, 734, 817.5, 719, 814.8, 719, 781.7, 702, 779.9, 702, 731, 667, 729.2, 667, 677.3, 614, 676.5, 614, 634.5, 555, 633.7, 555, 535, 373.3, 535, 371.1, 504, 323.1, 504, 320.9, 470, 282.8, 470, 281.2, 434, 261.2, 434, 259.5, 411.3, 255, 385.6, 255, 364.6, 261, 361.1, 261, 331.1, 281, 328.6, 281, 302.6, 311, 301.2, 311, 274.3, 360, 272.9, 360, 256.9, 407, 255.5, 407, 243.6, 469, 242.2, 469, 239.2, 523, 237.8, 523, 241, 574.2, 241, 583.3, 252, 634, 252, 638.6, 275, 692.7, 275, 695, 295, 721.9, 295, 724.4, 341, 764.4, 341, 765.7, 382, 789.7, 382, 791, 433, 812, 433, 813.3, 501, 832.2, 501, 833.6, 603, 849.6, 603, 850.8, 733.9, 859, 821.1, 859, 1037, 849.9, 1037, 848.9, 1337, 845, 1359.1, 845, 1437.3, 838, 1446.3, 838, 1509.5, 827, 1514.4, 827, 1567.6, 811, 1570.7, 811, 1603.8, 794, 1606.2, 794, 1629.2, 771, 1631.3, 771, 1637.3, 747, 1638.9, 747, 1641, 669, 1641, 650.2, 1659.8, 424, 1661.1, 424, 1658, 314.9, 1658, 307.6, 1648, 273.5, 1648, 270, 1636, 254, 1636, 251.9, 1607, 241.8, 1607, 240.1)
+
+[node name="NPCS" type="Node2D" parent="." unique_id=1626773646]
+
+[node name="DriftNpc" parent="NPCS" unique_id=1754800395 instance=ExtResource("7_3gtxu")]
+position = Vector2(750, 799)
+
+[node name="DriftNpc14" parent="NPCS" unique_id=952462297 instance=ExtResource("7_3gtxu")]
+position = Vector2(541, 1050)
+
+[node name="DriftNpc15" parent="NPCS" unique_id=1238105437 instance=ExtResource("7_3gtxu")]
+position = Vector2(412, 1022)
+
+[node name="DriftNpc16" parent="NPCS" unique_id=712276173 instance=ExtResource("7_3gtxu")]
+position = Vector2(310, 999)
+
+[node name="DriftNpc17" parent="NPCS" unique_id=897198244 instance=ExtResource("7_3gtxu")]
+position = Vector2(222, 951)
+
+[node name="DriftNpc18" parent="NPCS" unique_id=1293507572 instance=ExtResource("7_3gtxu")]
+position = Vector2(98, 996)
+
+[node name="DriftNpc19" parent="NPCS" unique_id=973044114 instance=ExtResource("7_3gtxu")]
+position = Vector2(136, 902)
+
+[node name="DriftNpc20" parent="NPCS" unique_id=735846341 instance=ExtResource("7_3gtxu")]
+position = Vector2(55, 800)
+
+[node name="DriftNpc21" parent="NPCS" unique_id=1292642640 instance=ExtResource("7_3gtxu")]
+position = Vector2(49, 897)
+
+[node name="DriftNpc22" parent="NPCS" unique_id=53567309 instance=ExtResource("7_3gtxu")]
+position = Vector2(673, 755)
+
+[node name="DriftNpc23" parent="NPCS" unique_id=81679145 instance=ExtResource("7_3gtxu")]
+position = Vector2(565, 761)
+
+[node name="DriftNpc24" parent="NPCS" unique_id=1698817074 instance=ExtResource("7_3gtxu")]
+position = Vector2(452, 697)
+
+[node name="DriftNpc25" parent="NPCS" unique_id=189240694 instance=ExtResource("7_3gtxu")]
+position = Vector2(328, 653)
+
+[node name="DriftNpc26" parent="NPCS" unique_id=222000968 instance=ExtResource("7_3gtxu")]
+position = Vector2(284, 545)
+
+[node name="DriftNpc27" parent="NPCS" unique_id=1667722389 instance=ExtResource("7_3gtxu")]
+position = Vector2(287, 441)
+
+[node name="DriftNpc28" parent="NPCS" unique_id=1588206194 instance=ExtResource("7_3gtxu")]
+position = Vector2(287, 441)
+
+[node name="DriftNpc29" parent="NPCS" unique_id=893222934 instance=ExtResource("7_3gtxu")]
+position = Vector2(9, 625)
+
+[node name="DriftNpc30" parent="NPCS" unique_id=937943813 instance=ExtResource("7_3gtxu")]
+position = Vector2(21, 549)
+
+[node name="DriftNpc31" parent="NPCS" unique_id=851361386 instance=ExtResource("7_3gtxu")]
+position = Vector2(11, 473)
+
+[node name="DriftNpc32" parent="NPCS" unique_id=693232661 instance=ExtResource("7_3gtxu")]
+position = Vector2(28, 264)
+
+[node name="DriftNpc33" parent="NPCS" unique_id=1117052788 instance=ExtResource("7_3gtxu")]
+position = Vector2(76, 191)
+
+[node name="DriftNpc34" parent="NPCS" unique_id=2102147563 instance=ExtResource("7_3gtxu")]
+position = Vector2(120, 113)
+
+[node name="DriftNpc35" parent="NPCS" unique_id=182032855 instance=ExtResource("7_3gtxu")]
+position = Vector2(59, 120)
+
+[node name="DriftNpc36" parent="NPCS" unique_id=1007375070 instance=ExtResource("7_3gtxu")]
+position = Vector2(216, 60)
+
+[node name="DriftNpc37" parent="NPCS" unique_id=350754075 instance=ExtResource("7_3gtxu")]
+position = Vector2(286, 31)
+
+[node name="DriftNpc38" parent="NPCS" unique_id=1351962008 instance=ExtResource("7_3gtxu")]
+position = Vector2(249, 46)
+
+[node name="DriftNpc39" parent="NPCS" unique_id=882500492 instance=ExtResource("7_3gtxu")]
+position = Vector2(495, 27)
+
+[node name="DriftNpc40" parent="NPCS" unique_id=9713547 instance=ExtResource("7_3gtxu")]
+position = Vector2(393, 26)
+
+[node name="DriftNpc41" parent="NPCS" unique_id=454381284 instance=ExtResource("7_3gtxu")]
+position = Vector2(333, 23)
+
+[node name="DriftNpc42" parent="NPCS" unique_id=12594448 instance=ExtResource("7_3gtxu")]
+position = Vector2(639, 118)
+
+[node name="DriftNpc43" parent="NPCS" unique_id=2003296015 instance=ExtResource("7_3gtxu")]
+position = Vector2(639, 118)
+
+[node name="DriftNpc44" parent="NPCS" unique_id=806432246 instance=ExtResource("7_3gtxu")]
+position = Vector2(663, 151)
+
+[node name="DriftNpc45" parent="NPCS" unique_id=1951306637 instance=ExtResource("7_3gtxu")]
+position = Vector2(705, 196)
+
+[node name="DriftNpc46" parent="NPCS" unique_id=1262282255 instance=ExtResource("7_3gtxu")]
+position = Vector2(705, 196)
+
+[node name="DriftNpc47" parent="NPCS" unique_id=180782647 instance=ExtResource("7_3gtxu")]
+position = Vector2(902, 473)
+
+[node name="DriftNpc48" parent="NPCS" unique_id=1070193919 instance=ExtResource("7_3gtxu")]
+position = Vector2(971, 505)
+
+[node name="DriftNpc49" parent="NPCS" unique_id=1540672162 instance=ExtResource("7_3gtxu")]
+position = Vector2(924, 494)
+
+[node name="DriftNpc50" parent="NPCS" unique_id=338689710 instance=ExtResource("7_3gtxu")]
+position = Vector2(1016, 462)
+
+[node name="DriftNpc51" parent="NPCS" unique_id=104006451 instance=ExtResource("7_3gtxu")]
+position = Vector2(845, 432)
+
+[node name="DriftNpc52" parent="NPCS" unique_id=812983996 instance=ExtResource("7_3gtxu")]
+position = Vector2(586, 531)
+
+[node name="DriftNpc53" parent="NPCS" unique_id=2063970586 instance=ExtResource("7_3gtxu")]
+position = Vector2(543, 402)
+
+[node name="DriftNpc54" parent="NPCS" unique_id=726858165 instance=ExtResource("7_3gtxu")]
+position = Vector2(485, 346)
+
+[node name="DriftNpc55" parent="NPCS" unique_id=512399070 instance=ExtResource("7_3gtxu")]
+position = Vector2(554, 473)
+
+[node name="DriftNpc56" parent="NPCS" unique_id=1725495073 instance=ExtResource("7_3gtxu")]
+position = Vector2(1051, 762)
+
+[node name="DriftNpc57" parent="NPCS" unique_id=973982335 instance=ExtResource("7_3gtxu")]
+position = Vector2(1000, 783)
+
+[node name="DriftNpc58" parent="NPCS" unique_id=1160434564 instance=ExtResource("7_3gtxu")]
+position = Vector2(923, 785)
+
+[node name="DriftNpc59" parent="NPCS" unique_id=938192579 instance=ExtResource("7_3gtxu")]
+position = Vector2(857, 768)
+
+[node name="DriftNpc60" parent="NPCS" unique_id=1438934704 instance=ExtResource("7_3gtxu")]
+position = Vector2(801, 755)
+
+[node name="DriftNpc61" parent="NPCS" unique_id=1300373844 instance=ExtResource("7_3gtxu")]
+position = Vector2(1011, 729)
+
+[node name="DriftNpc62" parent="NPCS" unique_id=1013623230 instance=ExtResource("7_3gtxu")]
+position = Vector2(1163, 768)
+
+[node name="DriftNpc63" parent="NPCS" unique_id=1450880394 instance=ExtResource("7_3gtxu")]
+position = Vector2(1163, 768)
+
+[node name="DriftNpc64" parent="NPCS" unique_id=256008661 instance=ExtResource("7_3gtxu")]
+position = Vector2(1570, 723)
+
+[node name="DriftNpc65" parent="NPCS" unique_id=1852362500 instance=ExtResource("7_3gtxu")]
+position = Vector2(1510, 762)
+
+[node name="DriftNpc66" parent="NPCS" unique_id=707761609 instance=ExtResource("7_3gtxu")]
+position = Vector2(1626, 642)
+
+[node name="DriftNpc67" parent="NPCS" unique_id=612636800 instance=ExtResource("7_3gtxu")]
+position = Vector2(1712, 970)
+
+[node name="DriftNpc68" parent="NPCS" unique_id=1731770688 instance=ExtResource("7_3gtxu")]
+position = Vector2(1785, 912)
+
+[node name="DriftNpc69" parent="NPCS" unique_id=1468175394 instance=ExtResource("7_3gtxu")]
+position = Vector2(1845, 841)
+
+[node name="DriftNpc70" parent="NPCS" unique_id=978789890 instance=ExtResource("7_3gtxu")]
+position = Vector2(1862, 742)
+
+[node name="DriftNpc71" parent="NPCS" unique_id=848439384 instance=ExtResource("7_3gtxu")]
+position = Vector2(1838, 933)
+
+[node name="DriftNpc72" parent="NPCS" unique_id=1177375017 instance=ExtResource("7_3gtxu")]
+position = Vector2(1759, 967)
+
+[node name="DriftNpc73" parent="NPCS" unique_id=321445009 instance=ExtResource("7_3gtxu")]
+position = Vector2(1870, 397)
+
+[node name="DriftNpc74" parent="NPCS" unique_id=926844903 instance=ExtResource("7_3gtxu")]
+position = Vector2(1870, 335)
+
+[node name="DriftNpc75" parent="NPCS" unique_id=1472853632 instance=ExtResource("7_3gtxu")]
+position = Vector2(1810, 80)
+
+[node name="DriftNpc76" parent="NPCS" unique_id=2096602642 instance=ExtResource("7_3gtxu")]
+position = Vector2(1752, 37)
+
+[node name="DriftNpc77" parent="NPCS" unique_id=1006850739 instance=ExtResource("7_3gtxu")]
+position = Vector2(1678, 8)
+
+[node name="DriftNpc78" parent="NPCS" unique_id=83919303 instance=ExtResource("7_3gtxu")]
+position = Vector2(1635, 318)
+
+[node name="DriftNpc79" parent="NPCS" unique_id=1461884040 instance=ExtResource("7_3gtxu")]
+position = Vector2(1610, 256)
+
+[node name="DriftNpc80" parent="NPCS" unique_id=1333461328 instance=ExtResource("7_3gtxu")]
+position = Vector2(1532, 275)
+
+[node name="DriftNpc81" parent="NPCS" unique_id=730186722 instance=ExtResource("7_3gtxu")]
+position = Vector2(1481, 314)
+
+[node name="DriftNpc82" parent="NPCS" unique_id=94537263 instance=ExtResource("7_3gtxu")]
+position = Vector2(1179, 220)
+
+[node name="DriftNpc83" parent="NPCS" unique_id=1837648527 instance=ExtResource("7_3gtxu")]
+position = Vector2(1290, 78)
+
+[node name="DriftNpc84" parent="NPCS" unique_id=1119272300 instance=ExtResource("7_3gtxu")]
+position = Vector2(1299, 544)
+
+[node name="DriftNpc85" parent="NPCS" unique_id=1525483286 instance=ExtResource("7_3gtxu")]
+position = Vector2(1350, 478)
+
+[node name="DriftNpc86" parent="NPCS" unique_id=1610895321 instance=ExtResource("7_3gtxu")]
+position = Vector2(1239, 782)
+
+[node name="DriftNpc87" parent="NPCS" unique_id=1484940545 instance=ExtResource("7_3gtxu")]
+position = Vector2(1299, 800)
+
+[node name="DriftNpc88" parent="NPCS" unique_id=1987866762 instance=ExtResource("7_3gtxu")]
+position = Vector2(1367, 777)
+
+[node name="DriftNpc89" parent="NPCS" unique_id=1456587349 instance=ExtResource("7_3gtxu")]
+position = Vector2(1198, 798)
+
+[node name="DriftNpc2" parent="NPCS" unique_id=1588145626 instance=ExtResource("7_3gtxu")]
+position = Vector2(814, 1082)
+
+[node name="DriftNpc3" parent="NPCS" unique_id=1211007316 instance=ExtResource("7_3gtxu")]
+position = Vector2(864, 1082)
+
+[node name="DriftNpc4" parent="NPCS" unique_id=1969606654 instance=ExtResource("7_3gtxu")]
+position = Vector2(903, 1093)
+
+[node name="DriftNpc5" parent="NPCS" unique_id=630808552 instance=ExtResource("7_3gtxu")]
+position = Vector2(938, 1084)
+
+[node name="DriftNpc6" parent="NPCS" unique_id=202957129 instance=ExtResource("7_3gtxu")]
+position = Vector2(975, 1089)
+
+[node name="DriftNpc7" parent="NPCS" unique_id=81067552 instance=ExtResource("7_3gtxu")]
+position = Vector2(1019, 1084)
+
+[node name="DriftNpc8" parent="NPCS" unique_id=1760176396 instance=ExtResource("7_3gtxu")]
+position = Vector2(1176, 1088)
+
+[node name="DriftNpc9" parent="NPCS" unique_id=1902841330 instance=ExtResource("7_3gtxu")]
+position = Vector2(1215, 1081)
+
+[node name="DriftNpc10" parent="NPCS" unique_id=295812534 instance=ExtResource("7_3gtxu")]
+position = Vector2(1255, 1079)
+
+[node name="DriftNpc11" parent="NPCS" unique_id=2113410603 instance=ExtResource("7_3gtxu")]
+position = Vector2(1288, 1092)
+
+[node name="DriftNpc12" parent="NPCS" unique_id=904329232 instance=ExtResource("7_3gtxu")]
+position = Vector2(1326, 1081)
+
+[node name="DriftNpc13" parent="NPCS" unique_id=1809179304 instance=ExtResource("7_3gtxu")]
+position = Vector2(1374, 1079)
+
+[node name="Start" type="Area2D" parent="." unique_id=91578799]
+position = Vector2(1130, 948)
+script = ExtResource("3_rrmic")
+starting_line = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Start" unique_id=1890141328]
+shape = SubResource("RectangleShape2D_wmq7q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Start" unique_id=1694607917]
+position = Vector2(-0.4999981, 0.5000057)
+scale = Vector2(0.14843747, 1.4609381)
+texture = ExtResource("4_u2y1h")
+
+[node name="CP" type="Area2D" parent="." unique_id=77920917]
+position = Vector2(1274, 948)
+script = ExtResource("3_rrmic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CP" unique_id=172165364]
+shape = SubResource("RectangleShape2D_wmq7q")
+
+[node name="LastCP" type="Area2D" parent="." unique_id=215582385]
+position = Vector2(1002, 948)
+script = ExtResource("3_rrmic")
+last_checkpoint = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LastCP" unique_id=557242617]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_wmq7q")
+
+[node name="Spawners" type="Node2D" parent="." unique_id=1065594613]
+position = Vector2(200, 540)
+
+[node name="Spawn1" type="Node2D" parent="Spawners" unique_id=897841570]
+position = Vector2(800, 470)
+
+[node name="Spawn2" type="Node2D" parent="Spawners" unique_id=983524881]
+position = Vector2(800, 430)
+
+[node name="Spawn3" type="Node2D" parent="Spawners" unique_id=1038201003]
+position = Vector2(800, 390)
+
+[node name="Spawn4" type="Node2D" parent="Spawners" unique_id=1780636050]
+position = Vector2(800, 350)

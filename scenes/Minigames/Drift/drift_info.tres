@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MinigameInfo" format=3 uid="uid://bkty05byil53k"]
+
+[ext_resource type="Script" uid="uid://dkhmc06h3n7cg" path="res://scenes/Minigames/minigame_info.gd" id="1_dogxv"]
+[ext_resource type="PackedScene" uid="uid://cv5nlg02mr8kq" path="res://scenes/Minigames/Drift/drift_game.tscn" id="1_xmwks"]
+
+[resource]
+script = ExtResource("1_dogxv")
+name = "StunDrift"
+subtitle = "C'est l'heure de drifter"
+authors = "Sushi"
+prefab = ExtResource("1_xmwks")
+action_btn1 = "Accélérer"
+action_horizontal = "Tourner"
+metadata/_custom_type_script = "uid://dkhmc06h3n7cg"

@@ -31,7 +31,14 @@ var controls_enabled: bool = true ## active / désactive les controles. Utilisé
 
 var _player_info: PlayerInfo ## PlayerInfo rattachée au joueur.
 
+signal debug_init
+@export var debug_mode: bool = false
+@export var debug_device: int = -1
+@export var debug_index: int = 1
 
+func _ready() -> void:
+	if debug_mode:
+		_debug_generate_player()
 
 func set_player_info(info:PlayerInfo) -> void:
 	_player_info = info
@@ -91,6 +98,17 @@ func _process(_delta: float) -> void:
 		movement = Vector2.ZERO
 		btn1_hold = false
 		btn2_hold = false
+
+func _debug_generate_player() -> void :
+	var characters = CharacterRepository.get_all_characters()
+	var info: PlayerInfo = PlayerInfo.new()
+	info.device_number = debug_device
+	info.player_index = debug_index
+	info.character_info = characters[debug_index]
+	set_player_info(info)
+	controls_enabled = true
+	_global_controls_enabled = true
+	debug_init.emit()
 
 ## ne pas utiliser. Uniquement pour l'utilisation globale. Utiliser la variable controls_enabled
 func change_global_control_status(enable: bool) -> void : 

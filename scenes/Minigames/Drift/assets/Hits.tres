@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cmjwbpwn2gwg6"]
+
+[ext_resource type="AudioStream" uid="uid://b1ctyy0cj4th6" path="res://scenes/Minigames/Drift/assets/Hit.wav" id="1_sbteo"]
+
+[resource]
+random_pitch = 1.122462
+random_volume_offset_db = 5.0
+streams_count = 1
+stream_0/stream = ExtResource("1_sbteo")
