@@ -3,6 +3,7 @@ class_name SoapRace_Player
 
 @export var _hub:PlayerHub
 @export var _sprite:Sprite2D
+@export var _car_sprite:Sprite2D
 @export var crashSound:AudioStream
 @export var hitSound:AudioStream
 @export var animPlayer:AnimationPlayer
@@ -22,6 +23,7 @@ var pushed_force:float = 0
 var force_multiplier:float =2
 var recover:float = 10
 var current_lateral_speed:float = 0
+@export var crashing:bool = false
 
 var min_x:int = 0
 var max_x:int = 0
@@ -46,8 +48,9 @@ func get_hit( lateral_force:float) -> float:
 func _physics_process(delta: float) -> void:
 	if not _hub._global_controls_enabled:
 		return
-	var is_accelerating:bool = _hub.btn1_hold and global_position.y < 900
+	var is_accelerating:bool = _hub.btn1_hold and global_position.y < 900 # and !crashing
 	var movement:float = _hub.movement.x
+	# if crashing : movement = 0
 
 	_hub.score = global_position.y
 	player_speed = start_player_speed + global_position.y  * player_speed_inc
@@ -62,6 +65,10 @@ func _physics_process(delta: float) -> void:
 	var player_movement:Vector2 = Vector2(current_lateral_speed, int(is_accelerating) * player_acceleration) * delta
 
 	var collision = move_and_collide(player_movement, false, 0.08, true)
+	if !crashing :
+		if current_lateral_speed > 0  : _car_sprite.rotation_degrees = -7.5
+		elif current_lateral_speed < 0 : _car_sprite.rotation_degrees = 7.5
+		else: _car_sprite.rotation_degrees = 0
 	if collision:
 		var obj = collision.get_collider()
 		if obj is SoapRace_Player:
@@ -72,7 +79,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			obj = collision.get_collider_shape()
 			obj.free()
-			global_position.y = max(global_position.y - 200, 10)
+			var target_position = Vector2(global_position.x, max(global_position.y - 200, 10))
+			get_tree().create_tween().tween_property(self, "global_position", target_position, 0.6)
 			animPlayer.play('crash')
 			if crashSound:
 				SFXPlayer.play(crashSound, -10)
