@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://chd8hwbia7cix"]
+
+[ext_resource type="Texture2D" uid="uid://cp828oplme4ee" path="res://scenes/Minigames/soapRace/assets/block.png" id="1_b7tew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u14hs"]
+
+[node name="SoapObstacleBlock" type="CollisionShape2D" unique_id=1470544400]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_u14hs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1944927678]
+z_index = 3
+position = Vector2(-5.9604645e-07, 0)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("1_b7tew")

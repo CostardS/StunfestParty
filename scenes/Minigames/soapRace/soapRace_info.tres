@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MinigameInfo" format=3 uid="uid://88x5iaqccrru"]
+
+[ext_resource type="PackedScene" uid="uid://d04ei2gyowi4c" path="res://scenes/Minigames/soapRace/Scenes/soapRace.tscn" id="1_t337n"]
+[ext_resource type="Script" uid="uid://dkhmc06h3n7cg" path="res://scenes/Minigames/minigame_info.gd" id="1_xt0oe"]
+
+[resource]
+script = ExtResource("1_xt0oe")
+name = "Soap Race"
+subtitle = "Soit le premier en bas de la montagne!"
+authors = "game: Dreca
+Music: Alexis Lumière
+SFX: pixabay"
+prefab = ExtResource("1_t337n")
+action_btn1 = "Accélérer"
+action_horizontal = "Se déplacer"
+metadata/_custom_type_script = "uid://dkhmc06h3n7cg"
