@@ -10,8 +10,8 @@ func _load_minigames() -> void :
 		var game_dir := DirAccess.open("res://scenes/Minigames/" + game_str)
 		game_dir.list_dir_begin()
 		for file: String in game_dir.get_files():
-			if(file.ends_with(".tres")):
-				var info:MinigameInfo = ResourceLoader.load("res://scenes/Minigames/" + game_str + "/" + file) as MinigameInfo
+			if(file.replace('.import', '').ends_with(".tres")):
+				var info:MinigameInfo = ResourceLoader.load("res://scenes/Minigames/" + game_str + "/" + file.replace('.import', '')) as MinigameInfo
 				if info != null: _minigames.append(info)
 		game_dir.list_dir_end()
 	dir.list_dir_end()
