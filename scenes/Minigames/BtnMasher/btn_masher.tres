@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_bja5s")
-name = "Button Masher"
-subtitle = "C'est l'heure de détruire la manette"
+name = "Enduro Disco"
+subtitle = "Spammez vos move pour la piste de danse"
+authors = "Sushi"
 prefab = ExtResource("1_nve7n")
-action_btn1 = "Avancer"
-action_btn2 = "Avancer"
+action_btn1 = "S'echauffer"
+action_btn2 = "pour danser"
 metadata/_custom_type_script = "uid://dkhmc06h3n7cg"

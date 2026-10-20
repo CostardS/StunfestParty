@@ -4,7 +4,7 @@ class_name PlayerJumpRace
 @export var _hub: PlayerHub
 @export var _sprite: Sprite2D
 @export var _score_label: Label
-@export var _steps: AudioStream
+@export var _jumps: AudioStream
 @onready var _playerBody: CharacterBody2D = $"../PlayerBody"
 
 var target_score: int
@@ -15,7 +15,6 @@ const SPEED = 150.0
 func _ready() -> void:
 	_hub.btn1_pressed.connect(_on_btn_pressed)
 	_hub.btn2_pressed.connect(_on_btn_pressed)
-	
 	initialize_display()
 
 func initialize_display() -> void :
@@ -23,11 +22,11 @@ func initialize_display() -> void :
 	_sprite.texture = _hub.get_character().idle_sprite
 
 func _on_btn_pressed() -> void :
-	SFXPlayer.play(_steps)
-	_sprite.texture = _hub.get_character().get_random_sprite([_sprite.texture])
 	
 	if _playerBody.is_on_floor():
+		SFXPlayer.play(_jumps)
 		_playerBody.velocity.y = JUMP_VELOCITY
+		_sprite.texture = _hub.get_character().get_random_sprite([_hub.get_character().idle_sprite])
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,3 +42,8 @@ func _process(_delta: float) -> void:
 		_playerBody.velocity.x = move_toward(_playerBody.velocity.x, 0, SPEED)
 		
 	_playerBody.move_and_slide()
+
+	if _playerBody.velocity.x > 0.25: _sprite.flip_h = false;
+	if _playerBody.velocity.x < -0.25: _sprite.flip_h = true;
+
+	if _playerBody.is_on_floor(): _sprite.texture = _hub.get_character().idle_sprite

@@ -1,0 +1,19 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://qdcwip6viqf"]
+
+[ext_resource type="AudioStream" uid="uid://drxhgjmul88nt" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump.ogg" id="1_ioqim"]
+[ext_resource type="AudioStream" uid="uid://ble8g4s2lx454" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump2.ogg" id="2_xtac1"]
+[ext_resource type="AudioStream" uid="uid://cn26efrykymfv" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump3.ogg" id="3_eh5l3"]
+[ext_resource type="AudioStream" uid="uid://btghqkbnxym2r" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump4.ogg" id="4_rmk5g"]
+[ext_resource type="AudioStream" uid="uid://b285v03ti5cef" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump5.ogg" id="5_oyyi1"]
+[ext_resource type="AudioStream" uid="uid://dsfnudgkosnho" path="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump6.ogg" id="6_yc66e"]
+
+[resource]
+random_pitch = 1.0293022
+random_volume_offset_db = 0.5
+streams_count = 6
+stream_0/stream = ExtResource("1_ioqim")
+stream_1/stream = ExtResource("2_xtac1")
+stream_2/stream = ExtResource("3_eh5l3")
+stream_3/stream = ExtResource("4_rmk5g")
+stream_4/stream = ExtResource("5_oyyi1")
+stream_5/stream = ExtResource("6_yc66e")

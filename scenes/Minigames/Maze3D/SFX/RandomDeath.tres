@@ -1,0 +1,19 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bmcyejja0rer4"]
+
+[ext_resource type="AudioStream" uid="uid://b4g0gnk162e8j" path="res://scenes/Minigames/Maze3D/SFX/death1.mp3" id="1_p28a0"]
+[ext_resource type="AudioStream" uid="uid://c0mlbolnmsm6j" path="res://scenes/Minigames/Maze3D/SFX/death2.mp3" id="2_llm1u"]
+[ext_resource type="AudioStream" uid="uid://cmt6jcj5jqk7a" path="res://scenes/Minigames/Maze3D/SFX/death3.mp3" id="3_wmi3q"]
+[ext_resource type="AudioStream" uid="uid://chxg85cnli2la" path="res://scenes/Minigames/Maze3D/SFX/death4.mp3" id="4_7goei"]
+[ext_resource type="AudioStream" uid="uid://cxb1vmkdocxu7" path="res://scenes/Minigames/Maze3D/SFX/death5.mp3" id="5_r1n3q"]
+[ext_resource type="AudioStream" uid="uid://cl843w2y6vd8g" path="res://scenes/Minigames/Maze3D/SFX/death6.mp3" id="6_60rni"]
+[ext_resource type="AudioStream" uid="uid://cagtx2xidugya" path="res://scenes/Minigames/Maze3D/SFX/death7.mp3" id="7_7yd17"]
+
+[resource]
+streams_count = 7
+stream_0/stream = ExtResource("1_p28a0")
+stream_1/stream = ExtResource("2_llm1u")
+stream_2/stream = ExtResource("3_wmi3q")
+stream_3/stream = ExtResource("4_7goei")
+stream_4/stream = ExtResource("5_r1n3q")
+stream_5/stream = ExtResource("6_60rni")
+stream_6/stream = ExtResource("7_7yd17")

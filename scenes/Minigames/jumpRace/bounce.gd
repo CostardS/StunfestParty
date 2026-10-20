@@ -1,11 +1,15 @@
 extends Node2D
 
-const BOUNCE_VELOCITY = -500.0
+@export var bounce_velocity = -500.0
+@export var sfx: AudioStream;
+@export var probability: float = 1
 @onready var anim = $Area2D/Animation
+
+var _rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if _rng.randf() > probability : queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,5 +18,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	body.velocity.y = BOUNCE_VELOCITY
+	body.velocity.y = bounce_velocity
 	anim.play("default")
+	if sfx != null: SFXPlayer.play(sfx);

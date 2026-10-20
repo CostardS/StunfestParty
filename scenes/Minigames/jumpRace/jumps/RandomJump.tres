@@ -1,0 +1,21 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://ca63dkivwg21u"]
+
+[ext_resource type="AudioStream" uid="uid://d2vckbq1vc7x8" path="res://scenes/Minigames/jumpRace/jumps/jump1.mp3" id="1_26jn4"]
+[ext_resource type="AudioStream" uid="uid://bym1xq40kpmgs" path="res://scenes/Minigames/jumpRace/jumps/jump2.mp3" id="2_gqaj8"]
+[ext_resource type="AudioStream" uid="uid://cmwiex0yx2w7i" path="res://scenes/Minigames/jumpRace/jumps/jump3.mp3" id="3_n2ug8"]
+[ext_resource type="AudioStream" uid="uid://ccfpulx23y500" path="res://scenes/Minigames/jumpRace/jumps/jump4.mp3" id="4_n76bh"]
+[ext_resource type="AudioStream" uid="uid://ctopy31i8pcn" path="res://scenes/Minigames/jumpRace/jumps/jump5.mp3" id="5_4labl"]
+[ext_resource type="AudioStream" uid="uid://ytd5lpv5s8b" path="res://scenes/Minigames/jumpRace/jumps/jump6.mp3" id="6_2mtgn"]
+[ext_resource type="AudioStream" uid="uid://d1yclrt0nart8" path="res://scenes/Minigames/jumpRace/jumps/jump7.mp3" id="7_8s8ig"]
+[ext_resource type="AudioStream" uid="uid://ddsfh4ln8hmwy" path="res://scenes/Minigames/jumpRace/jumps/jump8.mp3" id="8_5mjkp"]
+
+[resource]
+streams_count = 8
+stream_0/stream = ExtResource("1_26jn4")
+stream_1/stream = ExtResource("2_gqaj8")
+stream_2/stream = ExtResource("3_n2ug8")
+stream_3/stream = ExtResource("4_n76bh")
+stream_4/stream = ExtResource("5_4labl")
+stream_5/stream = ExtResource("6_2mtgn")
+stream_6/stream = ExtResource("7_8s8ig")
+stream_7/stream = ExtResource("8_5mjkp")

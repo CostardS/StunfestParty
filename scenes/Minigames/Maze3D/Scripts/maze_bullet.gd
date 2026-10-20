@@ -2,6 +2,7 @@ extends Node3D
 
 class_name MazeBullet
 @export var _rigidbody : RigidBody3D
+@export var _sprite : Sprite3D
 @export var _light : OmniLight3D
 var originPlayer : CharacterBody3D
 
@@ -28,12 +29,16 @@ func _onBodyEntered(body: Node) -> void:
 	_rigidbody.freeze = true
 	
 	var tween = get_tree().create_tween()
-	tween.tween_property(_light, "light_energy", 0, .2)
-	tween.tween_property(self, "scale", Vector3.ZERO, .3)
+	# tween.tween_property(_light, "light_energy", 0, .2)
+	tween.tween_property(self, "scale", Vector3(0.01,0.01,0.01), .3)
 	tween.tween_callback(self.queue_free)
 
-func setOriginPlayer(body: CharacterBody3D) -> void:
+func setOriginPlayer(body: CharacterBody3D, color: Color) -> void:
 	originPlayer = body
+	_light.light_color = color
+	var sprite_color = color
+	sprite_color.a = .75
+	_sprite.modulate = sprite_color
 		
 func setVelocity(velocity: Vector3) -> void:
 	_rigidbody.linear_velocity = velocity

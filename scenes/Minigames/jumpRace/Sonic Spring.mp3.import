@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ei56m8hmtq15"
+path="res://.godot/imported/Sonic Spring.mp3-bb82a578a043e8b40ea6549b6628fd39.mp3str"
+
+[deps]
+
+source_file="res://scenes/Minigames/jumpRace/Sonic Spring.mp3"
+dest_files=["res://.godot/imported/Sonic Spring.mp3-bb82a578a043e8b40ea6549b6628fd39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

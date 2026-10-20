@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_ngtlc"]
 [ext_resource type="Script" uid="uid://dqykn34enygy5" path="res://scenes/Minigames/jumpRace/jump_race_player.gd" id="2_i0gnt"]
+[ext_resource type="AudioStream" uid="uid://ca63dkivwg21u" path="res://scenes/Minigames/jumpRace/jumps/RandomJump.tres" id="3_1bb48"]
 [ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="3_rfd8x"]
 [ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="4_frfj6"]
 [ext_resource type="Script" uid="uid://v64x6oest8wn" path="res://scenes/Minigames/jumpRace/player_body.gd" id="5_1bb48"]
@@ -22,9 +23,10 @@ script = ExtResource("2_i0gnt")
 _hub = NodePath("..")
 _sprite = NodePath("../PlayerBody/Sprite")
 _score_label = NodePath("../PlayerBody/Score")
+_jumps = ExtResource("3_1bb48")
 
 [node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=320220926]
-collision_layer = 10
+collision_layer = 11
 script = ExtResource("5_1bb48")
 
 [node name="Sprite" type="Sprite2D" parent="PlayerBody" unique_id=187330654]
@@ -38,6 +40,7 @@ position = Vector2(0, -38.5)
 shape = SubResource("RectangleShape2D_frfj6")
 
 [node name="Score" type="Label" parent="PlayerBody" unique_id=1583519552]
+visible = false
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5

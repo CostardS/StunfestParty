@@ -3,77 +3,446 @@
 [ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_3hxt8"]
 [ext_resource type="PackedScene" uid="uid://dmhosg5movicg" path="res://scenes/Minigames/Maze3D/Prefabs/maze_player.tscn" id="2_wxs55"]
 [ext_resource type="PackedScene" uid="uid://d1o31u5uqekqd" path="res://scenes/Minigames/Maze3D/Levels/TestMaze.tscn" id="3_5aafu"]
+[ext_resource type="AudioStream" uid="uid://k62qjoip1i0p" path="res://scenes/Minigames/Maze3D/MusicMaze.ogg" id="3_l5vmu"]
 [ext_resource type="Script" uid="uid://b2eefjdf8wvcb" path="res://scenes/Minigames/Maze3D/Scripts/maze_manager.gd" id="3_wxs55"]
+[ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="6_iedjs"]
+[ext_resource type="Texture2D" uid="uid://c2w7ssj1ng3nv" path="res://assets/characters/Wuki Chan/wukichan-2.png" id="7_lsbwh"]
+[ext_resource type="Texture2D" uid="uid://gxcw45p0ndyd" path="res://scenes/Minigames/Maze3D/sky.jpg" id="8_lsbwh"]
 
 [node name="Maze3d" type="Node" unique_id=1402244751 node_paths=PackedStringArray("player_spawns")]
 script = ExtResource("1_3hxt8")
 player_prefab = ExtResource("2_wxs55")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
-start_countdown = false
+music = ExtResource("3_l5vmu")
 metadata/_custom_type_script = "uid://ff7sc7bijvlc"
 
-[node name="MazeManager" type="Node3D" parent="." unique_id=520634819 node_paths=PackedStringArray("minigame", "viewports")]
+[node name="MazeManager" type="Node3D" parent="." unique_id=520634819 node_paths=PackedStringArray("minigame", "viewports", "portraits", "portraits_BG")]
 script = ExtResource("3_wxs55")
 minigame = NodePath("..")
-viewports = [NodePath("../HBoxContainer/SubViewportContainer/SubViewport"), NodePath("../HBoxContainer2/SubViewportContainer2/SubViewport"), NodePath("../HBoxContainer/SubViewportContainer3/SubViewport"), NodePath("../HBoxContainer2/SubViewportContainer4/SubViewport")]
+viewports = [NodePath("../VBoxContainer/HBoxContainer/Player1/SubViewportContainer/SubViewport"), NodePath("../VBoxContainer/HBoxContainer2/Player2/SubViewportContainer2/SubViewport"), NodePath("../VBoxContainer/HBoxContainer/Player3/SubViewportContainer3/SubViewport"), NodePath("../VBoxContainer/HBoxContainer2/Player4/SubViewportContainer4/SubViewport")]
+portraits = [NodePath("../VBoxContainer/HBoxContainer/Player1/Portrait/Mask/TextureRect"), NodePath("../VBoxContainer/HBoxContainer2/Player2/Portrait/Mask/TextureRect"), NodePath("../VBoxContainer/HBoxContainer/Player3/Portrait/Mask/TextureRect"), NodePath("../VBoxContainer/HBoxContainer2/Player4/Portrait/Mask/TextureRect")]
+portraits_BG = [NodePath("../VBoxContainer/HBoxContainer/Player1/Portrait/PortraitBG"), NodePath("../VBoxContainer/HBoxContainer2/Player2/Portrait/PortraitBG"), NodePath("../VBoxContainer/HBoxContainer/Player3/Portrait/PortraitBG"), NodePath("../VBoxContainer/HBoxContainer2/Player4/Portrait/PortraitBG")]
 
 [node name="Level" parent="." unique_id=497900438 instance=ExtResource("3_5aafu")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Level" unique_id=998602058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+light_color = Color(1, 0, 1, 1)
+light_energy = 2.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Level" unique_id=39983785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -8)
+light_color = Color(0, 0, 1, 1)
+light_energy = 2.0
+light_specular = 2.5
+omni_range = 7.5
+omni_attenuation = 1.25
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Level" unique_id=1734287628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, 0)
+light_color = Color(0, 1, 0, 1)
+light_energy = 2.0
+light_specular = 2.5
+omni_range = 7.5
+omni_attenuation = 1.25
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Level" unique_id=1091834953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 8)
+light_color = Color(1, 0, 0, 1)
+light_energy = 2.0
+light_specular = 2.5
+omni_range = 7.5
+omni_attenuation = 1.25
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Level" unique_id=996241632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 2.0
+light_specular = 2.5
+omni_range = 7.5
+omni_attenuation = 1.25
 
 [node name="Spawners" type="Node3D" parent="." unique_id=232420180]
 
 [node name="Spawn1" type="Node3D" parent="Spawners" unique_id=470740070]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.528, 1, 1.764)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 1, 5.5)
 
 [node name="Spawn2" type="Node3D" parent="Spawners" unique_id=949442297]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.806, 1, 3.528)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.5, 1, -5.5)
 
 [node name="Spawn3" type="Node3D" parent="Spawners" unique_id=517751368]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9413848, 1, 8.20746)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.5, 1, 8.5)
 
 [node name="Spawn4" type="Node3D" parent="Spawners" unique_id=125564717]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7169552, 1, -8.829174)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.5, 1, -8.5)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=561238094]
-offset_right = 1920.0
-offset_bottom = 540.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=990903948]
+offset_right = 1924.0
+offset_bottom = 1084.0
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=1459174802]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=561238094]
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer" unique_id=1849854215]
+[node name="Player1" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=341336940]
+custom_minimum_size = Vector2(960, 540)
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/HBoxContainer/Player1" unique_id=1459174802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/HBoxContainer/Player1/SubViewportContainer" unique_id=1849854215]
 handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer3" type="SubViewportContainer" parent="HBoxContainer" unique_id=1903744493]
+[node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player1" unique_id=764979769]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("6_iedjs")
+
+[node name="PortraitBG" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player1/Portrait" unique_id=1725313960]
+modulate = Color(0.49919996, 0.5928, 0.78, 0)
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="Mask" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player1/Portrait" unique_id=1871553193]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+clip_children = 1
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player1/Portrait/Mask" unique_id=1037849797]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_lsbwh")
+expand_mode = 3
+stretch_mode = 5
+flip_h = true
+
+[node name="Player3" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1345975930]
+custom_minimum_size = Vector2(960, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer3" unique_id=320681860]
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="VBoxContainer/HBoxContainer/Player3" unique_id=1853266134]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/HBoxContainer/Player3/SubViewportContainer3" unique_id=1231053300]
 handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1574660357]
-offset_top = 540.0
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player3" unique_id=133318077]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 150.0
+grow_vertical = 0
+texture = ExtResource("6_iedjs")
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer2" unique_id=1544912940]
+[node name="PortraitBG" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player3/Portrait" unique_id=668055053]
+modulate = Color(0.49919996, 0.5928, 0.78, 0)
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="Mask" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player3/Portrait" unique_id=556584500]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+clip_children = 1
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Player3/Portrait/Mask" unique_id=214808893]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_lsbwh")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1615517727]
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer2/SubViewportContainer2" unique_id=411197536]
+[node name="Player2" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=834033619]
+custom_minimum_size = Vector2(960, 540)
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer/HBoxContainer2/Player2" unique_id=1294124935]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/HBoxContainer2/Player2/SubViewportContainer2" unique_id=780471285]
 handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer4" type="SubViewportContainer" parent="HBoxContainer2" unique_id=1441495304]
+[node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player2" unique_id=1704315153]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 150.0
+grow_horizontal = 0
+texture = ExtResource("6_iedjs")
+
+[node name="PortraitBG" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player2/Portrait" unique_id=345024141]
+modulate = Color(0.49919996, 0.5928, 0.78, 0)
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="Mask" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player2/Portrait" unique_id=2038243450]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+clip_children = 1
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player2/Portrait/Mask" unique_id=874727916]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_lsbwh")
+expand_mode = 3
+stretch_mode = 5
+flip_h = true
+
+[node name="Player4" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=673633072]
+custom_minimum_size = Vector2(960, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer2/SubViewportContainer4" unique_id=1543983659]
+[node name="SubViewportContainer4" type="SubViewportContainer" parent="VBoxContainer/HBoxContainer2/Player4" unique_id=1517810733]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/HBoxContainer2/Player4/SubViewportContainer4" unique_id=690643914]
 handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
+
+[node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player4" unique_id=827002080]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("6_iedjs")
+
+[node name="PortraitBG" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player4/Portrait" unique_id=372059051]
+modulate = Color(0.49919996, 0.5928, 0.78, 0)
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="Mask" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player4/Portrait" unique_id=501580960]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
+clip_children = 1
+custom_minimum_size = Vector2(130, 130)
+custom_maximum_size = Vector2(130, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_iedjs")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2/Player4/Portrait/Mask" unique_id=1309457081]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_lsbwh")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=733962681]
 transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 1.3990908, 8.116628, 0)
 light_bake_mode = 1
+
+[node name="Ceiling" type="Sprite3D" parent="." unique_id=645873662]
+transform = Transform3D(0.65, 0, 0, 0, -2.8412401e-08, 0.65, 0, -0.65, -2.8412401e-08, 0, 2.001, 0)
+texture = ExtResource("8_lsbwh")

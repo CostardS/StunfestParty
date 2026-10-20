@@ -83,6 +83,7 @@ func _on_minigame_end(winners: Array[int]) -> void:
 	else : _show_minigame_end()
 
 func _show_minigame_end() -> void:
+	_end_after_finish = false
 	minigame_ui.show_game_end()
 
 func _on_win_animation_end() -> void:

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_bd2v0"]
 [ext_resource type="PackedScene" uid="uid://bkcqpqlhkwil5" path="res://scenes/Minigames/BBQMasterDX/bbq_master_player.tscn" id="2_gk4nu"]
 [ext_resource type="Script" uid="uid://tuv3lunn4mdk" path="res://scenes/Minigames/BBQMasterDX/Scripts/bbq_master_minigame.gd" id="3_o8c3j"]
+[ext_resource type="AudioStream" uid="uid://btvlvhe1rtmtb" path="res://scenes/Minigames/BBQMasterDX/sounds/normal_boucle.ogg" id="3_w20i3"]
 [ext_resource type="PackedScene" uid="uid://crl0odaruwhi2" path="res://scenes/Minigames/BBQMasterDX/bbq_scene.tscn" id="4_gk4nu"]
 [ext_resource type="PackedScene" uid="uid://53rkua7kpscu" path="res://scenes/Minigames/BBQMasterDX/small_fire.tscn" id="5_7gl4k"]
 [ext_resource type="Texture2D" uid="uid://cbegohd703i6y" path="res://scenes/Minigames/BBQMasterDX/Assets/sausage_raw.png" id="7_7gl4k"]
@@ -14,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://666c8d8x7p1x" path="res://scenes/Minigames/BBQMasterDX/tile_map_2.tscn" id="11_bnh3c"]
 [ext_resource type="Texture2D" uid="uid://cmq2bfaj1olhq" path="res://scenes/Minigames/BBQMasterDX/Assets/tree_1.png" id="12_nyxvb"]
 [ext_resource type="Texture2D" uid="uid://djm743g5ispgq" path="res://scenes/Minigames/BBQMasterDX/Assets/tree_2.png" id="13_v865p"]
+[ext_resource type="AudioStream" uid="uid://bpekte82du1w" path="res://scenes/Minigames/BBQMasterDX/sounds/Réveil.wav" id="14_52pss"]
+[ext_resource type="AudioStream" uid="uid://tlg3hemyjtgy" path="res://scenes/Minigames/BBQMasterDX/sounds/Colère boucle.ogg" id="15_ptgpd"]
 
 [sub_resource type="Curve" id="Curve_7gl4k"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.8530023, 0.0, 0, 0]
@@ -33,6 +36,7 @@ radius = 150.0
 script = ExtResource("1_bd2v0")
 player_prefab = ExtResource("2_gk4nu")
 player_spawns = [NodePath("BBQMasterMgr/Spawns/Spawn1"), NodePath("BBQMasterMgr/Spawns/Spawn2"), NodePath("BBQMasterMgr/Spawns/Spawn3"), NodePath("BBQMasterMgr/Spawns/Spawn4")]
+music = ExtResource("3_w20i3")
 minigame_duration = 45
 
 [node name="BBQMasterMgr" type="Node" parent="." unique_id=1747680110 node_paths=PackedStringArray("minigame", "origin_center", "debug_label", "smokey")]
@@ -142,120 +146,145 @@ base_speed = 300.0
 attack_speed = 1000.0
 bbq_min_distance = 50.0
 player_min_distance = 100.0
+sfx_wake_up = ExtResource("14_52pss")
+wake_up_music = ExtResource("15_ptgpd")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1367662042]
 
 [node name="Tree1" type="Sprite2D" parent="." unique_id=844538244]
+y_sort_enabled = true
 position = Vector2(118, 1349)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree2" type="Sprite2D" parent="." unique_id=1604608029]
+y_sort_enabled = true
 position = Vector2(463, 1413)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree3" type="Sprite2D" parent="." unique_id=1350413416]
+y_sort_enabled = true
 position = Vector2(463, 1372)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree21" type="Sprite2D" parent="." unique_id=957121035]
+y_sort_enabled = true
 position = Vector2(683, 1402)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree22" type="Sprite2D" parent="." unique_id=1857800834]
+y_sort_enabled = true
 position = Vector2(1101, 1406)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree23" type="Sprite2D" parent="." unique_id=1228478676]
+y_sort_enabled = true
 position = Vector2(1595, 1414)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree15" type="Sprite2D" parent="." unique_id=296035773]
+y_sort_enabled = true
 position = Vector2(307, -281)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree16" type="Sprite2D" parent="." unique_id=349859808]
+y_sort_enabled = true
 position = Vector2(588, -342)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree17" type="Sprite2D" parent="." unique_id=587951266]
+y_sort_enabled = true
 position = Vector2(831, -300)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree18" type="Sprite2D" parent="." unique_id=928277203]
+y_sort_enabled = true
 position = Vector2(1101, -338)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree19" type="Sprite2D" parent="." unique_id=2049958863]
+y_sort_enabled = true
 position = Vector2(1792, -353)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree20" type="Sprite2D" parent="." unique_id=1649114989]
+y_sort_enabled = true
 position = Vector2(1950, 218)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree4" type="Sprite2D" parent="." unique_id=936204664]
+y_sort_enabled = true
 position = Vector2(919, 1361)
 scale = Vector2(4, 4)
 texture = ExtResource("12_nyxvb")
 
 [node name="Tree5" type="Sprite2D" parent="." unique_id=1311947725]
+y_sort_enabled = true
 position = Vector2(1356, 1385)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree6" type="Sprite2D" parent="." unique_id=1539407260]
+y_sort_enabled = true
 position = Vector2(1876, 1399)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree7" type="Sprite2D" parent="." unique_id=1521361255]
+y_sort_enabled = true
 position = Vector2(1876, 1358)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree8" type="Sprite2D" parent="." unique_id=1372237905]
+y_sort_enabled = true
 position = Vector2(1987, 1065)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree9" type="Sprite2D" parent="." unique_id=1832123242]
+y_sort_enabled = true
 position = Vector2(2055, 738)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree10" type="Sprite2D" parent="." unique_id=1254833187]
+y_sort_enabled = true
 position = Vector2(2007, 532)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree11" type="Sprite2D" parent="." unique_id=1224373924]
+y_sort_enabled = true
 position = Vector2(-107, 962)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree12" type="Sprite2D" parent="." unique_id=1708497237]
+y_sort_enabled = true
 position = Vector2(-90, 304)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree13" type="Sprite2D" parent="." unique_id=1766227271]
+y_sort_enabled = true
 position = Vector2(69, -318)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")
 
 [node name="Tree14" type="Sprite2D" parent="." unique_id=214341469]
+y_sort_enabled = true
 position = Vector2(1379, -326)
 scale = Vector2(4, 4)
 texture = ExtResource("13_v865p")

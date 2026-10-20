@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MinigameInfo" format=3 uid="uid://bct6tquglummf"]
+
+[ext_resource type="PackedScene" uid="uid://c4pngqo1ld2rf" path="res://scenes/Minigames/PumpPumpPump/pump_minigame.tscn" id="1_hng10"]
+[ext_resource type="Script" uid="uid://dkhmc06h3n7cg" path="res://scenes/Minigames/minigame_info.gd" id="1_ya7w1"]
+
+[resource]
+script = ExtResource("1_ya7w1")
+name = "Pump Pump Pump !"
+subtitle = "C'est l'heure de Pomper ! (Attention à l'explosion)"
+authors = "Sushi"
+prefab = ExtResource("1_hng10")
+action_btn1 = "Pomper (maintenir)"
+action_btn2 = "Pomper plus vite"
+metadata/_custom_type_script = "uid://dkhmc06h3n7cg"

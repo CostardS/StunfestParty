@@ -97,7 +97,7 @@ func _process(delta: float) -> void:
 
 	if (_hub.movement.x != 0 || _hub.movement.y != 0):
 		_root.position.x += _hub.movement.x * movespeed * delta
-		_root.position.y -= _hub.movement.y * movespeed * delta
+		_root.position.y += _hub.movement.y * movespeed * delta
 		if (_root.global_position.x >= _game.grid.width * _game.grid.resolution):
 			_root.global_position.x = _game.grid.width * _game.grid.resolution - 1
 		if (_root.global_position.x < 0):
@@ -106,7 +106,7 @@ func _process(delta: float) -> void:
 			_root.global_position.y = _game.grid.height * _game.grid.resolution - 1
 		if (_root.global_position.y < 100):
 			_root.global_position.y = 100
-		direction = atan2(-_hub.movement.y, _hub.movement.x)
+		direction = atan2(_hub.movement.y, _hub.movement.x)
 
 		spriteNode.flip_h = _hub.movement.x <= 0
 		moving = true

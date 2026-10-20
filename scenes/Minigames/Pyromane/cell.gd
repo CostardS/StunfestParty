@@ -14,7 +14,7 @@ var updateTimer: float
 var baseGrowth = 0.003
 var baseSpread = 0.5
 var baseReGrowth = 0.018
-var cellTickRate = 0.5
+var cellTickRate = 2
 
 func _init(x: int, y: int, grid: PyromaneGrid) -> void:
 	self._x = x

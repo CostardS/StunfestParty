@@ -58,7 +58,7 @@ func wake_up():
 	SFXPlayer.play(sfx_wake_up)
 	wake_up_timer.wait_time = music_delay
 	wake_up_timer.start()
-	pass
+	
 
 func is_awake() -> bool:
 	return status != SmokeyStatus.ATTACKING
