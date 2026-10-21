@@ -103,7 +103,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_ece41"]
 resource_name = "drowsy"
-length = 2.0
+length = 1.8044
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -112,7 +112,7 @@ tracks/0/path = NodePath("InterroPlayerMgr/Character:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.99858385, 1.5, 2),
+"times": PackedFloat32Array(0, 0.4511, 0.9022, 1.3533, 1.8044),
 "transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
 "update": 0,
 "values": [0.0, -0.2617993877991494, 0.0, 0.2617993877991494, 0.0]
@@ -124,7 +124,7 @@ tracks/1/path = NodePath("InterroPlayerMgr/Character:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"times": PackedFloat32Array(0, 0.4511, 0.9022, 1.3533, 1.8044),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0.01666665, 1, 0, 1), Color(1, 0.9666667, 0, 1), Color(1, 1, 1, 1)]
@@ -136,7 +136,7 @@ tracks/2/path = NodePath("InterroPlayerMgr/Character:skew")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 2),
+"times": PackedFloat32Array(0, 0.9022, 1.8044),
 "transitions": PackedFloat32Array(2, 2, 1),
 "update": 0,
 "values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]

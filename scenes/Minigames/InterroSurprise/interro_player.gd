@@ -71,7 +71,7 @@ func _answer_false() -> void:
 
 func dim_player() -> void:
 	scale_pulser.enabled = false
-	if !_answering: _sprite.self_modulate = Color(255,255,255,.25)
+	if !_answering: _sprite.modulate = Color(255,255,255,.25)
 
 func reset_player() -> void:
 	if hp <= 0: return
@@ -80,7 +80,8 @@ func reset_player() -> void:
 	if stun_counter <= 0:
 		animator.play("RESET")
 		scale_pulser.enabled = true
-	_sprite.self_modulate = Color.WHITE
+	#_sprite.self_modulate = Color.WHITE
+	_sprite.modulate = Color.WHITE
 	_answering = false
 	_sprite.texture = hub.get_character().idle_sprite
 	_answer_sign.visible = false
