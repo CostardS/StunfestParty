@@ -14,6 +14,7 @@ script = ExtResource("1_3hxt8")
 player_prefab = ExtResource("2_wxs55")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 music = ExtResource("3_l5vmu")
+start_countdown_on_beat = true
 metadata/_custom_type_script = "uid://ff7sc7bijvlc"
 
 [node name="MazeManager" type="Node3D" parent="." unique_id=520634819 node_paths=PackedStringArray("minigame", "viewports", "portraits", "portraits_BG")]

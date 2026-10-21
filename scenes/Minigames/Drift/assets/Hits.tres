@@ -4,6 +4,6 @@
 
 [resource]
 random_pitch = 1.122462
-random_volume_offset_db = 5.0
+random_volume_offset_db = 2.0
 streams_count = 1
 stream_0/stream = ExtResource("1_sbteo")

@@ -38,7 +38,7 @@ func _on_load_game_pressed() -> void:
 func _initiate_game_start()-> void :
 	if _current_game_instance != null :
 		if !_current_game_instance.auto_start : _current_game_instance.game_start_request.disconnect(_initiate_game_start)
-		minigame_ui.show_start(_current_game_instance.start_countdown)
+		minigame_ui.show_start(_current_game_instance.start_countdown, _current_game_instance.start_countdown_on_beat)
 		pass
 
 

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cexd37xt5r65t" path="res://scenes/Minigames/soapRace/Script/soapRace_Manager.gd" id="3_10d2n"]
 [ext_resource type="PackedScene" uid="uid://c1cu7yhn2v5h7" path="res://scenes/Minigames/soapRace/Scenes/soapRace_playerMat.tscn" id="4_4g67m"]
 [ext_resource type="Texture2D" uid="uid://bbpvjhh6h30d8" path="res://scenes/Minigames/BBQMasterDX/Assets/grass_tile.png" id="5_4g67m"]
-[ext_resource type="AudioStream" uid="uid://bc7qbmoir1051" path="res://scenes/Minigames/soapRace/assets/Soap Kart.mp3" id="5_r0adc"]
+[ext_resource type="AudioStream" uid="uid://br4eu7xrof6ym" path="res://scenes/Minigames/soapRace/assets/Soap Kart.ogg" id="5_r0adc"]
 
 [node name="SoapRace" type="Node2D" unique_id=1830278531 node_paths=PackedStringArray("player_spawns")]
 script = ExtResource("1_axyhl")

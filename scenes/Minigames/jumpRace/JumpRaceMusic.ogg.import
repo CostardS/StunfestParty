@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/JumpRaceMusic.ogg-71c848c5952f3c4f16b7509fb39
 [params]
 
 loop=true
-loop_offset=6.136
-bpm=0.0
+loop_offset=6.386
+bpm=150.0
 beat_count=0
 bar_beats=4

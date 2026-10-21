@@ -58,8 +58,7 @@ func _on_minigame_loaded(scene: Node, _loading)-> void:
 func _initiate_game_start()-> void :
 	if _current_minigame != null :
 		if !_current_minigame.auto_start : _current_minigame.game_start_request.disconnect(_initiate_game_start)
-		minigame_ui.show_start(_current_minigame.start_countdown)
-		pass
+		minigame_ui.show_start(_current_minigame.start_countdown, _current_minigame.start_countdown_on_beat)
 
 func _on_start_animation_end() -> void:
 	if _current_minigame != null :

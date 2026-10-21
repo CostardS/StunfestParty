@@ -9,13 +9,13 @@ class_name ScorePanel
 @export var random_texts: Array[String]
 
 var _panels: Array[PlayerScorePanel] = []
-var _rng = RandomNumberGenerator.new()
 
 signal intro_ended
 signal intermission_ended(max_score_reached: bool)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	dismiss()
 	for player:PlayerInfo in PlayerManager.get_players():
 		var player_panel:PlayerScorePanel = player_score_panel_prefab.instantiate()
@@ -73,4 +73,4 @@ func _is_max_score_reached() -> bool:
 	return winners.size() == 1 || winners.size() > 1 && winners[0].global_party_score > winners[1].global_party_score
 
 func _change_text() -> void:
-	quote_text.text = random_texts[_rng.randi_range(0,random_texts.size() - 1 )]
+	quote_text.text = random_texts[randi_range(0,random_texts.size() - 1 )]

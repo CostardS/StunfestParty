@@ -1307,6 +1307,7 @@ script = ExtResource("1_fapg7")
 player_prefab = ExtResource("2_eynrd")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 music = ExtResource("3_d1lo1")
+start_countdown_on_beat = true
 minigame_duration = 30
 
 [node name="JumpRaceManager" type="Node" parent="." unique_id=2085192397 node_paths=PackedStringArray("minigame")]

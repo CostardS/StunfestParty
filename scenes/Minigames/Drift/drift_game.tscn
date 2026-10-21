@@ -18,6 +18,7 @@ script = ExtResource("1_0iyvg")
 player_prefab = ExtResource("2_beooa")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 music = ExtResource("3_8xaxm")
+start_countdown_on_beat = true
 
 [node name="DriftGameMgr" type="Node2D" parent="." unique_id=1681571043 node_paths=PackedStringArray("minigame", "npc_holder")]
 script = ExtResource("3_gl5au")
@@ -315,10 +316,15 @@ starting_line = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Start" unique_id=1890141328]
 shape = SubResource("RectangleShape2D_wmq7q")
 
-[node name="Sprite2D" type="Sprite2D" parent="Start" unique_id=1694607917]
-position = Vector2(-0.4999981, 0.5000057)
-scale = Vector2(0.14843747, 1.4609381)
+[node name="TextureRect" type="TextureRect" parent="Start" unique_id=478573644]
+custom_minimum_size = Vector2(0, 1200)
+offset_left = -9.0
+offset_top = -94.0
+offset_right = 119.0
+offset_bottom = 1152.76
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("4_u2y1h")
+stretch_mode = 1
 
 [node name="CP" type="Area2D" parent="." unique_id=77920917]
 position = Vector2(1274, 948)

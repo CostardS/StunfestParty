@@ -37,6 +37,7 @@ script = ExtResource("1_bd2v0")
 player_prefab = ExtResource("2_gk4nu")
 player_spawns = [NodePath("BBQMasterMgr/Spawns/Spawn1"), NodePath("BBQMasterMgr/Spawns/Spawn2"), NodePath("BBQMasterMgr/Spawns/Spawn3"), NodePath("BBQMasterMgr/Spawns/Spawn4")]
 music = ExtResource("3_w20i3")
+start_countdown_on_beat = true
 minigame_duration = 45
 
 [node name="BBQMasterMgr" type="Node" parent="." unique_id=1747680110 node_paths=PackedStringArray("minigame", "origin_center", "debug_label", "smokey")]

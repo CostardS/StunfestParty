@@ -8,13 +8,12 @@ var _x: int
 var _y: int
 var _playerNumber: int
 
-var rng = RandomNumberGenerator.new()
-
 var timer: float
 var lifeTimer: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	timer = 0
 
 
@@ -36,8 +35,8 @@ func _process(delta: float) -> void:
 		#print("spawn")
 		timer -= rate
 		var spawn = _fireSprite_prefab.instantiate() as PyromaneFireSprite
-		spawn.position.x += rng.randf_range(-1,1) * 7
-		spawn.position.y += rng.randf_range(-1,1) * 7
+		spawn.position.x += randf_range(-1,1) * 7
+		spawn.position.y += randf_range(-1,1) * 7
 		spawn.initSprite(_playerNumber)
 		add_child(spawn)
 	

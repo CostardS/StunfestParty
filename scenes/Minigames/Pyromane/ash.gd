@@ -8,16 +8,15 @@ var yOffset: float
 var xOffset: float
 var startPosition: Vector2
 
-var rng = RandomNumberGenerator.new()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	speed = 180
 	lifeTime = 1
 	timer = 0
-	yOffset = 60 * rng.randf_range(0,1)
-	xOffset = 8 * rng.randf_range(-1,1)
-	global_position.y += 5 * rng.randf_range(-1,1)
+	yOffset = 60 * randf_range(0,1)
+	xOffset = 8 * randf_range(-1,1)
+	global_position.y += 5 * randf_range(-1,1)
 	startPosition = global_position
 	global_position.y = startPosition.y - yOffset
 	global_position.x = startPosition.x + xOffset

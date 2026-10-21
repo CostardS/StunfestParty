@@ -195,6 +195,7 @@ player_prefab = ExtResource("2_47uwu")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 fixed_spawns = true
 music = ExtResource("3_271ia")
+start_countdown_on_beat = true
 minigame_duration = 5
 
 [node name="BGTrain" type="Sprite2D" parent="." unique_id=1112495500]

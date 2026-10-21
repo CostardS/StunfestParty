@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MinigameInfo" format=3 uid="uid://bb4dfjsghu8s4"]
+
+[ext_resource type="PackedScene" uid="uid://c0jm1g5yqy85" path="res://scenes/Minigames/InterroSurprise/interro_game.tscn" id="1_3l7ny"]
+[ext_resource type="Script" uid="uid://dkhmc06h3n7cg" path="res://scenes/Minigames/minigame_info.gd" id="1_mq7ug"]
+
+[resource]
+script = ExtResource("1_mq7ug")
+name = "Interro Surprise"
+subtitle = "C'est l'heure de faire des maths"
+authors = "Sushi"
+prefab = ExtResource("1_3l7ny")
+action_btn1 = "Répondre Vrai"
+action_btn2 = "Répondre Faux"
+metadata/_custom_type_script = "uid://dkhmc06h3n7cg"

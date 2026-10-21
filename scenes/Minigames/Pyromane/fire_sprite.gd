@@ -5,15 +5,14 @@ var rotationSpeed: float
 var verticalSpeed: float
 var timer: float
 
-var rng = RandomNumberGenerator.new()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	rotationSpeed = 0.08
 	verticalSpeed = 0.4
 	timer = 2
 
-	if rng.randi_range(0,1) == 1:
+	if randi_range(0,1) == 1:
 		rotationSpeed = -rotationSpeed
 
 func initSprite(playerIndex) -> void:

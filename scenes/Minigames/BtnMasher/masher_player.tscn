@@ -92,7 +92,7 @@ _pumps = ExtResource("4_gcdhc")
 _SFX_win = ExtResource("5_mhitb")
 _SFX_lose = ExtResource("6_ftveu")
 anim = NodePath("../AnimationPlayer")
-ignored_beats = Array[int]([33, 34, 35, 37, 38, 39, 41, 43, 45, 47])
+ignored_beats = Array[int]([33, 34, 35, 37, 38, 39, 41, 43, 45, 47, 32])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1381252570]
 self_modulate = Color(0, 0, 0, 0.39215687)

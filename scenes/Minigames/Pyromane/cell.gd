@@ -8,7 +8,6 @@ var _tree: PyromaneTree
 var _fire: PyromaneFire
 var _soil: PyromaneSoil
 
-var rng = RandomNumberGenerator.new()
 var updateTimer: float
 
 var baseGrowth = 0.003
@@ -17,11 +16,12 @@ var baseReGrowth = 0.018
 var cellTickRate = 2
 
 func _init(x: int, y: int, grid: PyromaneGrid) -> void:
+	randomize()
 	self._x = x
 	self._y = y
 	self._grid = grid
 	self._tree = null
-	updateTimer = rng.randf_range(0, 1) * cellTickRate
+	updateTimer = randf_range(0, 1) * cellTickRate
 
 func setTree(tree :PyromaneTree) -> void:
 	#print("set tree ",_x,"/",_y)
@@ -75,7 +75,7 @@ func _updateGrowth(cooldown: float) -> void:
 		if count >= 3:
 			growth = baseGrowth*4*cooldown
 		
-		var growth_rng = rng.randf_range(0.0, 1.0)
+		var growth_rng = randf_range(0.0, 1.0)
 		if growth_rng < growth:
 			#print("newtree", _x, "/", _y)
 			var newtree = _grid._tree_prefab.instantiate() as PyromaneTree
@@ -113,7 +113,7 @@ func _updateFire(cooldown: float) -> void:
 		if count >= 4:
 			spread = baseSpread*8*cooldown
 
-		var fire_rng = rng.randf_range(0.0, 1.0)
+		var fire_rng = randf_range(0.0, 1.0)
 		if fire_rng < spread:
 			#print("newfire", _x, "/", _y)
 			var newfire = _grid._fire_prefab.instantiate() as PyromaneFire
@@ -139,7 +139,7 @@ func _updateSoil(cooldown: float) -> void:
 					break
 					
 		if count == 0:
-			var growth_rng = rng.randf_range(0.0, 1.0)
+			var growth_rng = randf_range(0.0, 1.0)
 			var growth = baseReGrowth * cooldown
 			if growth_rng < growth:
 				#print("newtree", _x, "/", _y)

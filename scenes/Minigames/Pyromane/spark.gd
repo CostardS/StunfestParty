@@ -6,14 +6,13 @@ var lifeTime: float
 var timer: float
 var direction: float
 
-var rng = RandomNumberGenerator.new()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	speed = 50
 	lifeTime = 0.2
 	timer = 0
-	direction = rng.randf_range(0, PI)
+	direction = randf_range(0, PI)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -27,9 +27,9 @@ var _selected_minigame: MinigameInfo
 var _previous_minigame: MinigameInfo
 var _ready_to_start: bool
 
-var _rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	_show_panel(false)
 	_all_games = MinigameRepository.get_minigames()
 	_all_games.shuffle()
@@ -51,7 +51,7 @@ func start_roulette() -> void:
 	_update_minigame_display()
 	_show_panel(true)
 	start_text.visible = false
-	var start_index: int = _rng.randi_range(0, _all_games.size() -1)
+	var start_index: int = randi_range(0, _all_games.size() -1)
 	#TODO SFX Roulette
 	for i in 16:
 		game_name.text = _all_games[(start_index + i) % _all_games.size()].name

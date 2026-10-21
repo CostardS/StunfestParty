@@ -14,6 +14,7 @@ player_prefab = ExtResource("2_gnus4")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 fixed_spawns = true
 music = ExtResource("3_gnus4")
+start_countdown_on_beat = true
 minigame_duration = 15
 
 [node name="PumpMinigameMgr" type="Node2D" parent="." unique_id=1745122090 node_paths=PackedStringArray("minigame")]

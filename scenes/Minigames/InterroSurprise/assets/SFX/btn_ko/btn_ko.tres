@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://d3x6wst18qwj2"]
+
+[ext_resource type="AudioStream" uid="uid://b6bhensat84tb" path="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ko/BTN (1).ogg" id="1_wgqsa"]
+[ext_resource type="AudioStream" uid="uid://cj1pumgg04jsn" path="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ko/BTN (4).ogg" id="2_d647h"]
+[ext_resource type="AudioStream" uid="uid://mvuu86o1ossx" path="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ko/BTN (7).ogg" id="3_nes2p"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_wgqsa")
+stream_1/stream = ExtResource("2_d647h")
+stream_2/stream = ExtResource("3_nes2p")

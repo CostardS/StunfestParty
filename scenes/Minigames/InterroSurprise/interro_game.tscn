@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://c0jm1g5yqy85"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_y1k2j"]
+[ext_resource type="Script" uid="uid://owijsohjptw" path="res://scenes/Minigames/InterroSurprise/interro_game.gd" id="2_itgbw"]
+[ext_resource type="PackedScene" uid="uid://bxkqnf533me5" path="res://scenes/Minigames/InterroSurprise/interro_player.tscn" id="2_xb7tw"]
+[ext_resource type="AudioStream" uid="uid://jif1bhycmk63" path="res://scenes/Minigames/InterroSurprise/assets/DYMMusic.ogg" id="3_b5t3t"]
+[ext_resource type="Texture2D" uid="uid://bbpcgo2tyefq7" path="res://scenes/Minigames/InterroSurprise/assets/missGhost_0.png" id="5_ith6b"]
+[ext_resource type="Texture2D" uid="uid://lla1dghhg21u" path="res://scenes/Minigames/InterroSurprise/assets/missGhost_1.png" id="6_ildod"]
+[ext_resource type="Texture2D" uid="uid://ce4mbtqny40x1" path="res://scenes/Minigames/InterroSurprise/assets/missGhost_2.png" id="7_4u1g8"]
+[ext_resource type="Texture2D" uid="uid://chdj2xmxdmtko" path="res://scenes/Minigames/InterroSurprise/assets/missGhost_Idle.png" id="8_mnnqm"]
+[ext_resource type="AudioStream" uid="uid://do7vif3pdvmeo" path="res://scenes/Minigames/InterroSurprise/assets/SFX/BoardSlam.ogg" id="9_wrbs1"]
+[ext_resource type="AudioStream" uid="uid://culnxapq4snct" path="res://scenes/Minigames/InterroSurprise/assets/SFX/PassXL.wav" id="10_xn3q4"]
+[ext_resource type="AudioStream" uid="uid://b0vgvq7t3pqsh" path="res://scenes/Minigames/InterroSurprise/assets/SFX/FailXL.wav" id="11_5o2c8"]
+[ext_resource type="AudioStream" uid="uid://e6v1cvcy1lh7" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/punch.tres" id="12_5i7pn"]
+[ext_resource type="AudioStream" uid="uid://cn3kto0samwnr" path="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ok/btn_ok.tres" id="13_lrd2d"]
+[ext_resource type="AudioStream" uid="uid://d3x6wst18qwj2" path="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ko/btn_ko.tres" id="14_eu4tr"]
+[ext_resource type="Texture2D" uid="uid://b2haphojjji8j" path="res://scenes/Minigames/InterroSurprise/assets/DYM BG.png" id="15_hxccf"]
+[ext_resource type="Texture2D" uid="uid://cfi47wm5kiu3g" path="res://scenes/Minigames/InterroSurprise/assets/Board.png" id="16_af4hw"]
+[ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="17_nm75g"]
+[ext_resource type="FontFile" uid="uid://ux2x4w0y4y6j" path="res://assets/fonts/cheeseborger.ttf" id="18_byikn"]
+[ext_resource type="Script" uid="uid://b2hxjf8gc38xd" path="res://scenes/Shared/beat_pulse.gd" id="19_810rf"]
+[ext_resource type="Texture2D" uid="uid://crcefbjeo0ca3" path="res://scenes/Minigames/InterroSurprise/assets/MissGhostBaton.png" id="20_cvqfe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmq7q"]
+font = ExtResource("18_byikn")
+font_size = 115
+
+[node name="InterroGame" type="Node2D" unique_id=1358370248 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_y1k2j")
+player_prefab = ExtResource("2_xb7tw")
+player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
+fixed_spawns = true
+music = ExtResource("3_b5t3t")
+start_countdown = false
+start_countdown_on_beat = true
+
+[node name="InterroGameMgr" type="Node2D" parent="." unique_id=644018311 node_paths=PackedStringArray("_minigame", "_equation_text", "_miss_ghost_image", "_miss_ghost_pulse", "_ruler", "_ruler_origin", "_board")]
+script = ExtResource("2_itgbw")
+_minigame = NodePath("..")
+_equation_bounds = Vector2i(1, 15)
+_equation_error_bounds = Vector2i(1, 3)
+_equation_text = NodePath("../Equation")
+_miss_ghost_image = NodePath("../MissGhost")
+_miss_ghost_sprites = Array[Texture2D]([ExtResource("5_ith6b"), ExtResource("6_ildod"), ExtResource("7_4u1g8"), ExtResource("8_mnnqm")])
+_miss_ghost_pulse = NodePath("../MissGhost/BeatPulse2D")
+_ruler = NodePath("../Ruler")
+_ruler_origin = NodePath("../RulerOrigin")
+_board = NodePath("../Board")
+_max_points = 5
+_SFX_slam = ExtResource("9_wrbs1")
+_SFX_pass = ExtResource("10_xn3q4")
+_SFX_fail = ExtResource("11_5o2c8")
+_SFX_punch = ExtResource("12_5i7pn")
+_SFX_btn_ok = ExtResource("13_lrd2d")
+_SFX_btn_ko = ExtResource("14_eu4tr")
+
+[node name="DymBg" type="Sprite2D" parent="." unique_id=193562712]
+texture = ExtResource("15_hxccf")
+centered = false
+
+[node name="Board" type="Sprite2D" parent="." unique_id=2075594105]
+position = Vector2(960, 360)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("16_af4hw")
+
+[node name="BoardShadow" type="Sprite2D" parent="Board" unique_id=830770658]
+self_modulate = Color(0, 0, 0, 0.42745098)
+show_behind_parent = true
+position = Vector2(-8.000009, 230)
+scale = Vector2(0.85, 0.213)
+texture = ExtResource("17_nm75g")
+
+[node name="Equation" type="Label" parent="." unique_id=339484028]
+custom_minimum_size = Vector2(800, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 560.0
+offset_top = 45.0
+offset_right = 1360.0
+offset_bottom = 445.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "15+3=18"
+label_settings = SubResource("LabelSettings_wmq7q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GhostShadow" type="Sprite2D" parent="." unique_id=1096280986]
+self_modulate = Color(0, 0, 0, 0.42745098)
+position = Vector2(418.99997, 726)
+scale = Vector2(0.65000004, 0.26)
+texture = ExtResource("17_nm75g")
+
+[node name="MissGhost" type="Sprite2D" parent="." unique_id=404292347]
+position = Vector2(470, 733)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("5_ith6b")
+offset = Vector2(0, -60)
+
+[node name="BeatPulse2D" type="Node2D" parent="MissGhost" unique_id=2064376913 node_paths=PackedStringArray("target")]
+script = ExtResource("19_810rf")
+pulse_scale = Vector2(1, 0.975)
+target = NodePath("..")
+metadata/_custom_type_script = "uid://b2hxjf8gc38xd"
+
+[node name="Ruler" type="Sprite2D" parent="." unique_id=464562307]
+position = Vector2(-180, 300)
+scale = Vector2(6, 6)
+texture = ExtResource("20_cvqfe")
+
+[node name="RulerOrigin" type="Node2D" parent="." unique_id=1800717762]
+position = Vector2(604, 467)
+
+[node name="Spawners" type="Node2D" parent="." unique_id=661821765]
+position = Vector2(200, 540)
+
+[node name="Spawn1" type="Node2D" parent="Spawners" unique_id=1936422725]
+position = Vector2(100, 400)
+
+[node name="Spawn2" type="Node2D" parent="Spawners" unique_id=552248070]
+position = Vector2(520, 400)
+
+[node name="Spawn3" type="Node2D" parent="Spawners" unique_id=1362390585]
+position = Vector2(940, 400)
+
+[node name="Spawn4" type="Node2D" parent="Spawners" unique_id=920781006]
+position = Vector2(1360, 400)

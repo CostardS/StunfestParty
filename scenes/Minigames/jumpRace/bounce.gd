@@ -5,11 +5,11 @@ extends Node2D
 @export var probability: float = 1
 @onready var anim = $Area2D/Animation
 
-var _rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if _rng.randf() > probability : queue_free()
+	randomize()
+	if randf() > probability : queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

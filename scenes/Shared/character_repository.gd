@@ -13,11 +13,11 @@ func _load_characters() -> void:
 		chardir.list_dir_begin()
 		var cnt := 0
 		for file: String in chardir.get_files():
-			if(file.replace('.import', '').ends_with("png")):
+			if(file.ends_with("png.import")):
 				var texture:Texture2D = ResourceLoader.load("res://assets/characters/" + charname + "/" + file.replace('.import', ''), "Texture2D")
 				if(cnt == 0): character.idle_sprite = texture
-				else: if (cnt == 1): character.action1_sprite = texture
-				else: if(cnt >= 2): character.action2_sprites.append(texture)
+				elif (cnt == 1): character.action1_sprite = texture
+				elif(cnt >= 2): character.action2_sprites.append(texture)
 				cnt = cnt+1
 		chardir.list_dir_end()
 		if(cnt > 2): _characters.set(character.character_name, character)

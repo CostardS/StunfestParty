@@ -36,6 +36,9 @@ signal game_ended(winners: Array[int])
 ## Si true, le démarrage commencera avec un "3 2 1"
 @export var start_countdown: bool = true
 
+## Si true, le "3 2 1" se synchronisera avec la musique => la musique doit avoir un BPM
+@export var start_countdown_on_beat: bool = false
+
 ## Si > 0, un timer sera lancé. Le timer est automatiquement lié à l'ui globale de timer
 @export var minigame_duration: int = -1
 

@@ -24,6 +24,7 @@ script = ExtResource("1_vxk1e")
 player_prefab = ExtResource("2_2e3g8")
 player_spawns = [NodePath("Spawners/Spawn1"), NodePath("Spawners/Spawn2"), NodePath("Spawners/Spawn3"), NodePath("Spawners/Spawn4")]
 music = ExtResource("3_p8b85")
+start_countdown_on_beat = true
 minigame_duration = 60
 
 [node name="Manager" type="Node" parent="." unique_id=275435988 node_paths=PackedStringArray("minigame", "grid")]

@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://e6v1cvcy1lh7"]
+
+[ext_resource type="AudioStream" uid="uid://diy7bnk8xxt0r" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_kick_h.wav" id="1_aygk6"]
+[ext_resource type="AudioStream" uid="uid://bftfmhxxc35jb" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_kick_l.wav" id="2_extw3"]
+[ext_resource type="AudioStream" uid="uid://2j87u46vsjun" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_kick_m.wav" id="3_dyugi"]
+[ext_resource type="AudioStream" uid="uid://8p1fmj57tqkp" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_punch_h.wav" id="4_8udcb"]
+[ext_resource type="AudioStream" uid="uid://0pcqsm5boc8r" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_punch_l.wav" id="5_gum0s"]
+[ext_resource type="AudioStream" uid="uid://lf75c21no4ku" path="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_punch_m.wav" id="6_b640e"]
+
+[resource]
+streams_count = 6
+stream_0/stream = ExtResource("1_aygk6")
+stream_1/stream = ExtResource("2_extw3")
+stream_2/stream = ExtResource("3_dyugi")
+stream_3/stream = ExtResource("4_8udcb")
+stream_4/stream = ExtResource("5_gum0s")
+stream_5/stream = ExtResource("6_b640e")

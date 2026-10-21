@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="1_ooe52"]
 [ext_resource type="Script" uid="uid://cg0lo3a8qnd56" path="res://scenes/SceneManager/test_scene.gd" id="1_ukssr"]
-[ext_resource type="Resource" uid="uid://88x5iaqccrru" path="res://scenes/Minigames/soapRace/soapRace_info.tres" id="2_marmh"]
+[ext_resource type="Resource" uid="uid://b3yis4tcyucmy" path="res://scenes/Minigames/jumpRace/jump_race.tres" id="2_psj6b"]
 [ext_resource type="Script" uid="uid://5uenlwxv47aj" path="res://scenes/Party/shared_minigame_ui.gd" id="3_marmh"]
 [ext_resource type="PackedScene" uid="uid://bbkebvu0jfsh" path="res://scenes/Party/player_win_panel.tscn" id="4_psj6b"]
 [ext_resource type="AudioStream" uid="uid://dsxglxiph4m0y" path="res://assets/sfx/shared/Don.wav" id="5_hcjeq"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dkmpelmacm1rk" path="res://assets/sfx/shared/MinigameVictory.tres" id="8_r5vog"]
 [ext_resource type="AudioStream" uid="uid://cffyjucbcyacr" path="res://assets/sfx/shared/MinigameTie/Draw.ogg" id="9_0g2ix"]
 [ext_resource type="Script" uid="uid://b8lbiyexetigc" path="res://scenes/Party/minigame_timer.gd" id="11_lv0rg"]
+[ext_resource type="Script" uid="uid://dgsojmebkyaov" path="res://scenes/Shared/beat_pulse_control.gd" id="12_psj6b"]
 
 [sub_resource type="Animation" id="Animation_1sccy"]
 length = 0.001
@@ -61,6 +62,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(2000, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BeatPulseControl/Ready:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_1xvbk"]
@@ -187,7 +200,7 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 1.5666667),
+"times": PackedFloat32Array(0, 0.5, 1, 1.4666667, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -217,6 +230,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BeatPulseControl/Ready:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ifxeo"]
@@ -275,6 +300,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BeatPulseControl/Ready:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6j1bj"]
 _data = {
@@ -294,6 +331,13 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cniod"]
 font = ExtResource("1_ooe52")
+font_size = 150
+font_color = Color(1, 0.75, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hcjeq"]
+font = ExtResource("1_ooe52")
 font_size = 250
 font_color = Color(1, 0.75, 0, 1)
 outline_size = 10
@@ -306,25 +350,28 @@ font_size = 42
 [node name="TestScene" type="Node" unique_id=1836343042 node_paths=PackedStringArray("minigame_holder", "btn_players", "minigame_ui")]
 script = ExtResource("1_ukssr")
 minigame_holder = NodePath("MinigameHolder")
-current_game_info = ExtResource("2_marmh")
+current_game_info = ExtResource("2_psj6b")
 btn_players = NodePath("Control/VBoxContainer/Players")
 minigame_ui = NodePath("SharedMinigameUI")
 
 [node name="MinigameHolder" type="Node" parent="." unique_id=1239996762]
 
-[node name="SharedMinigameUI" type="Control" parent="." unique_id=543156785 node_paths=PackedStringArray("minigame_timer", "minigame_start_finish", "animation_player", "end_label", "end_winner_container")]
+[node name="SharedMinigameUI" type="Control" parent="." unique_id=543156785 node_paths=PackedStringArray("minigame_timer", "minigame_start_finish", "minigame_ready", "animation_player", "end_label", "end_winner_container")]
 z_index = 4096
 z_as_relative = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -16.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("3_marmh")
 minigame_timer = NodePath("Timer")
 minigame_start_finish = NodePath("StartFinish")
+minigame_ready = NodePath("BeatPulseControl/Ready")
 animation_player = NodePath("AnimationPlayer")
 end_label = NodePath("WinnersPanel/CenterContainer/Label")
 end_winner_container = NodePath("WinnersPanel/CenterContainer/HBoxContainer")
@@ -351,19 +398,50 @@ label_settings = SubResource("LabelSettings_5dhmi")
 horizontal_alignment = 1
 script = ExtResource("11_lv0rg")
 
+[node name="BeatPulseControl" type="Control" parent="SharedMinigameUI" unique_id=1326379470]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_psj6b")
+pulse_scale = Vector2(1.02, 0.98)
+metadata/_custom_type_script = "uid://dgsojmebkyaov"
+
+[node name="Ready" type="Label" parent="SharedMinigameUI/BeatPulseControl" unique_id=1035839793]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -121.5
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Ready..."
+label_settings = SubResource("LabelSettings_cniod")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_lv0rg")
+
 [node name="StartFinish" type="Label" parent="SharedMinigameUI" unique_id=1310162119]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -48.5
-offset_bottom = 48.5
+offset_top = -120.5
+offset_bottom = 120.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-label_settings = SubResource("LabelSettings_cniod")
+label_settings = SubResource("LabelSettings_hcjeq")
 horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("11_lv0rg")
 
 [node name="WinnersPanel" type="Control" parent="SharedMinigameUI" unique_id=1003460928]

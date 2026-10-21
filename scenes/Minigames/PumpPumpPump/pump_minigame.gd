@@ -11,9 +11,10 @@ var display_finishes: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	minigame.players_spawned.connect(_on_players_spawned)
 	minigame.game_timer_timeout.connect(_on_game_timeout)
-	ball_max_size = RandomNumberGenerator.new().randf_range(ball_max_sizes.x, ball_max_sizes.y)
+	ball_max_size = randf_range(ball_max_sizes.x, ball_max_sizes.y)
 
 func _on_players_spawned() -> void:
 	for player in minigame.players:

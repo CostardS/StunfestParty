@@ -8,6 +8,7 @@ signal end_banner_animation_callback
 
 @export var minigame_timer: MinigameTimer
 @export var minigame_start_finish: Label
+@export var minigame_ready: Label
 @export var animation_player: AnimationPlayer
 
 @export_group("End banner")
@@ -28,6 +29,7 @@ var is_draw: bool = false
 func assign_minigame(minigame: MinigameBase) -> void:
 	minigame_timer.assign_minigame(minigame)
 	_current_minigame = minigame
+	minigame_ready.visible = true
 	
 func disconnect_minigame() -> void:
 	minigame_timer.assign_minigame(null)
@@ -58,7 +60,28 @@ func assign_winners(winners: Array[int]):
 func show_game_end():
 	animation_player.play("game_end")
 	
-func show_start(use_countdown: bool):
+func show_start(use_countdown: bool, on_beat:bool):
+	if on_beat :
+		animation_player.speed_scale = .5 / MusicPlayer.beat_length
+		if use_countdown:
+			MusicPlayer.beat.connect(show_beat_cd)
+		else:
+			MusicPlayer.beat.connect(show_beat_nocd)
+	else :
+		animation_player.speed_scale = 1
+		_show_start(use_countdown)
+
+func show_beat_cd(beat:int)-> void:
+	if beat % 4 == 0:
+		_show_start(true)
+		MusicPlayer.beat.disconnect(show_beat_cd)
+
+func show_beat_nocd(beat:int)-> void:
+	if beat % 4 == 3:
+		_show_start(false)
+		MusicPlayer.beat.disconnect(show_beat_nocd)
+
+func _show_start(use_countdown: bool):
 	if use_countdown:
 		animation_player.play("start_cd");
 	else :
@@ -73,6 +96,7 @@ func show_finish():
 	######################
 
 func emit_start_callback():
+	animation_player.speed_scale = 1
 	start_animation_callback.emit()
 
 func emit_finish_callback():

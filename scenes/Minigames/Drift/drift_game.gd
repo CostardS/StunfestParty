@@ -9,13 +9,13 @@ var finished: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	minigame.players_spawned.connect(_on_players_spawned)
 	
 	var characters = CharacterRepository.get_all_characters()
-	var _rng = RandomNumberGenerator.new()
 	for child in npc_holder.get_children():
 		if child is DriftNPC: 
-			(child as DriftNPC).assign_character(characters[_rng.randi_range(0,characters.size()-1)])
+			(child as DriftNPC).assign_character(characters[randi_range(0,characters.size()-1)])
 	pass # Replace with function body.
 
 func _on_players_spawned() -> void:

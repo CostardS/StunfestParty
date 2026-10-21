@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bkp1uj10ixv6v"
+path="res://.godot/imported/BTN (8).ogg-4d15e09b6e7f292fb3985d730280eb21.oggvorbisstr"
+
+[deps]
+
+source_file="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ok/BTN (8).ogg"
+dest_files=["res://.godot/imported/BTN (8).ogg-4d15e09b6e7f292fb3985d730280eb21.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

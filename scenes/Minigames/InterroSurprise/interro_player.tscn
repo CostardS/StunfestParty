@@ -1,0 +1,437 @@
+[gd_scene format=3 uid="uid://bxkqnf533me5"]
+
+[ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_22tws"]
+[ext_resource type="Script" uid="uid://n5lt0lxrl26o" path="res://scenes/Minigames/InterroSurprise/interro_player.gd" id="2_gwpw4"]
+[ext_resource type="Texture2D" uid="uid://bgrjx4hfxaaph" path="res://scenes/Minigames/InterroSurprise/assets/panneau_ok.png" id="3_05q25"]
+[ext_resource type="Texture2D" uid="uid://b6p6pkdvrokog" path="res://scenes/Minigames/InterroSurprise/assets/panneau_ko.png" id="4_oc5xq"]
+[ext_resource type="Script" uid="uid://b2hxjf8gc38xd" path="res://scenes/Shared/beat_pulse.gd" id="5_2edqs"]
+[ext_resource type="AudioStream" uid="uid://cmjwbpwn2gwg6" path="res://scenes/Minigames/Drift/assets/Hits.tres" id="5_ece41"]
+[ext_resource type="AudioStream" uid="uid://bmcyejja0rer4" path="res://scenes/Minigames/Maze3D/SFX/RandomDeath.tres" id="6_1i45k"]
+[ext_resource type="Texture2D" uid="uid://c2w7ssj1ng3nv" path="res://assets/characters/Wuki Chan/wukichan-2.png" id="6_oc5xq"]
+[ext_resource type="Texture2D" uid="uid://1ujqyl0wxsq1" path="res://assets/sprites/shapes/BGHeart.png" id="7_1i45k"]
+[ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="8_2edqs"]
+
+[sub_resource type="Animation" id="Animation_oc5xq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InterroPlayerMgr/Character:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InterroPlayerMgr/Character:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InterroPlayerMgr/Character:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2edqs"]
+resource_name = "chute"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InterroPlayerMgr:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 3),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InterroPlayerMgr/Character:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 0.20000002, 0.3, 0.4, 0.5, 0.6, 0.70000005, 0.7916111, 0.8916111),
+"transitions": PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5),
+"update": 0,
+"values": [0.0, 0.2617993877991494, -0.2617993877991494, 0.2617993877991494, -0.2617993877991494, 0.2617993877991494, -0.2617993877991494, 0.2617993877991494, -0.2617993877991494, 0.2617993877991494]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InterroPlayerMgr/Character:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.79968876, 0.961242),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 0.77666664, 0.32999998, 1), Color(1, 0, 0, 1), Color(1, 0.77666664, 0.32999998, 1), Color(1, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScoreLabel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(-165, -249), Vector2(-165, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ece41"]
+resource_name = "drowsy"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InterroPlayerMgr/Character:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.99858385, 1.5, 2),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2, 0.5),
+"update": 0,
+"values": [0.0, -0.2617993877991494, 0.0, 0.2617993877991494, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InterroPlayerMgr/Character:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(0.01666665, 1, 0, 1), Color(1, 0.9666667, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InterroPlayerMgr/Character:skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(2, 2, 1),
+"update": 0,
+"values": [0.17453292519943295, -0.17453292519943295, 0.17453292519943295]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1i45k"]
+_data = {
+&"RESET": SubResource("Animation_oc5xq"),
+&"chute": SubResource("Animation_2edqs"),
+&"drowsy": SubResource("Animation_ece41")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_oc5xq"]
+font = ExtResource("8_2edqs")
+font_size = 150
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmq7q"]
+font = ExtResource("8_2edqs")
+font_size = 120
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_1i45k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScoreUpLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScoreUpLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScoreUpLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-150, -450)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScoreLabel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ch317"]
+resource_name = "add"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScoreUpLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScoreUpLabel:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.8),
+"transitions": PackedFloat32Array(1, 1, 2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(0.05, 0.05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScoreUpLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.8),
+"transitions": PackedFloat32Array(1, 0.5, 2, 1),
+"update": 0,
+"values": [Vector2(-150, -450), Vector2(-150, -450), Vector2(-100, -500), Vector2(-300, -275)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ScoreLabel:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8, 1),
+"transitions": PackedFloat32Array(0, 1, 3),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.75, 1.75), Vector2(1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InterroPlayerMgr")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"update_score_label"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4jjgc"]
+_data = {
+&"RESET": SubResource("Animation_1i45k"),
+&"add": SubResource("Animation_ch317")
+}
+
+[node name="InterroPlayer" type="Node2D" unique_id=1909282936]
+script = ExtResource("1_22tws")
+
+[node name="InterroPlayerMgr" type="Node2D" parent="." unique_id=262285600 node_paths=PackedStringArray("hub", "root_node", "scale_pulser", "animator", "score_animator", "score_label", "score_up_label", "_sprite", "_answer_sign", "_hearts")]
+unique_name_in_owner = true
+scale = Vector2(5, 5)
+script = ExtResource("2_gwpw4")
+hub = NodePath("..")
+root_node = NodePath("..")
+scale_pulser = NodePath("BeatPulse2D")
+animator = NodePath("CharacterAnimation")
+score_animator = NodePath("../ScoreAnimation")
+score_label = NodePath("../ScoreLabel")
+score_up_label = NodePath("../ScoreUpLabel")
+_sprite = NodePath("Character")
+_answer_sign = NodePath("Sign")
+_sign_OK = ExtResource("3_05q25")
+_sign_KO = ExtResource("4_oc5xq")
+hp = 3
+_hearts = NodePath("Hearts/Fills")
+_SFX_score_change = ExtResource("5_ece41")
+_SFX_lose = ExtResource("6_1i45k")
+
+[node name="BeatPulse2D" type="Node2D" parent="InterroPlayerMgr" unique_id=2103431042 node_paths=PackedStringArray("target")]
+script = ExtResource("5_2edqs")
+pulse_scale = Vector2(1.025, 0.95)
+scale_duration_pct = 0.75
+target = NodePath("../Character")
+metadata/_custom_type_script = "uid://b2hxjf8gc38xd"
+
+[node name="Character" type="Sprite2D" parent="InterroPlayerMgr" unique_id=1631650561]
+position = Vector2(0, 40)
+texture = ExtResource("6_oc5xq")
+offset = Vector2(0, -40)
+
+[node name="Sign" type="Sprite2D" parent="InterroPlayerMgr" unique_id=1140372471]
+visible = false
+position = Vector2(14, -20)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_05q25")
+
+[node name="Hearts" type="Node2D" parent="InterroPlayerMgr" unique_id=15006815]
+
+[node name="Containers" type="Node2D" parent="InterroPlayerMgr/Hearts" unique_id=1099133804]
+position = Vector2(4.2, 6.7999997)
+scale = Vector2(0.9, 0.9)
+
+[node name="Heart1" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Containers" unique_id=1323234438]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-33, -30)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_1i45k")
+
+[node name="Heart2" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Containers" unique_id=924277427]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-33, -15)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_1i45k")
+
+[node name="Heart3" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Containers" unique_id=2084763583]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-33, 0)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("7_1i45k")
+
+[node name="Fills" type="Node2D" parent="InterroPlayerMgr/Hearts" unique_id=586044796]
+position = Vector2(4.2, 6.7999997)
+scale = Vector2(0.9, 0.9)
+
+[node name="Heart3" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Fills" unique_id=1573913322]
+self_modulate = Color(1, 0, 1, 1)
+position = Vector2(-33, 0)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("7_1i45k")
+
+[node name="Beat3" type="Node2D" parent="InterroPlayerMgr/Hearts/Fills/Heart3" unique_id=1408078672 node_paths=PackedStringArray("target")]
+script = ExtResource("5_2edqs")
+pulse_scale = Vector2(1.1, 1.1)
+scale_duration_pct = 0.5
+target = NodePath("..")
+metadata/_custom_type_script = "uid://b2hxjf8gc38xd"
+
+[node name="Heart2" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Fills" unique_id=1986434132]
+self_modulate = Color(1, 0, 1, 1)
+position = Vector2(-33, -15)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("7_1i45k")
+
+[node name="Beat2" type="Node2D" parent="InterroPlayerMgr/Hearts/Fills/Heart2" unique_id=778473906 node_paths=PackedStringArray("target")]
+script = ExtResource("5_2edqs")
+pulse_scale = Vector2(1.1, 1.1)
+scale_duration_pct = 0.5
+target = NodePath("..")
+metadata/_custom_type_script = "uid://b2hxjf8gc38xd"
+
+[node name="Heart1" type="Sprite2D" parent="InterroPlayerMgr/Hearts/Fills" unique_id=839246949]
+self_modulate = Color(1, 0, 1, 1)
+position = Vector2(-33, -30)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("7_1i45k")
+
+[node name="Beat1" type="Node2D" parent="InterroPlayerMgr/Hearts/Fills/Heart1" unique_id=1087440684 node_paths=PackedStringArray("target")]
+script = ExtResource("5_2edqs")
+pulse_scale = Vector2(1.1, 1.1)
+scale_duration_pct = 0.5
+target = NodePath("..")
+metadata/_custom_type_script = "uid://b2hxjf8gc38xd"
+
+[node name="CharacterAnimation" type="AnimationPlayer" parent="InterroPlayerMgr" unique_id=707422878]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_1i45k")
+
+[node name="ScoreUpLabel" type="Label" parent="." unique_id=1556141552]
+visible = false
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -450.0
+offset_right = 150.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+label_settings = SubResource("LabelSettings_oc5xq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1901059689]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -262.0
+offset_right = -51.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "0"
+label_settings = SubResource("LabelSettings_wmq7q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreAnimation" type="AnimationPlayer" parent="." unique_id=1444244630]
+libraries/ = SubResource("AnimationLibrary_4jjgc")
