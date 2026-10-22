@@ -1,0 +1,685 @@
+[gd_scene format=3 uid="uid://bgyoigkopmr7r"]
+
+[ext_resource type="Script" uid="uid://ff7sc7bijvlc" path="res://scenes/Minigames/minigame_base.gd" id="1_lr1iv"]
+[ext_resource type="AudioStream" uid="uid://w88w1gxoek2j" path="res://scenes/Minigames/123Voisins/assets/123Music.ogg" id="2_ny88u"]
+[ext_resource type="Script" uid="uid://bmb1tfaaolm13" path="res://scenes/Minigames/123Voisins/123voisin_game.gd" id="2_pok80"]
+[ext_resource type="PackedScene" uid="uid://bs4qh0msmwy1i" path="res://scenes/Minigames/123Voisins/123voisin_banana.tscn" id="4_e1nww"]
+[ext_resource type="Texture2D" uid="uid://btocrn55qditd" path="res://scenes/Minigames/123Voisins/assets/123S_BG.png" id="4_j735d"]
+[ext_resource type="Texture2D" uid="uid://bfs38lgxlc6sw" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (7).png" id="4_pgkci"]
+[ext_resource type="PackedScene" uid="uid://chodoigo1wrla" path="res://scenes/Minigames/123Voisins/explosion.tscn" id="5_e27cy"]
+[ext_resource type="PackedScene" uid="uid://bgvgkeuamlm2i" path="res://scenes/Minigames/123Voisins/123voisin_player.tscn" id="5_s3ovy"]
+[ext_resource type="Texture2D" uid="uid://cckc380jr2d2f" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (16).png" id="5_svwdk"]
+[ext_resource type="Texture2D" uid="uid://18tvhlfvmp6l" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (19).png" id="6_71rq2"]
+[ext_resource type="Texture2D" uid="uid://7bqoa6q260wi" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (23).png" id="7_m8ljk"]
+[ext_resource type="Texture2D" uid="uid://c7kvblvc78024" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (28).png" id="8_xd0vn"]
+[ext_resource type="Texture2D" uid="uid://bhnfp1nktvwsy" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (32).png" id="9_6hevd"]
+[ext_resource type="Texture2D" uid="uid://bhsfteg2kiv2q" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (51).png" id="10_3v275"]
+[ext_resource type="Texture2D" uid="uid://m7tp3i0wahpa" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (52).png" id="11_js8th"]
+[ext_resource type="Texture2D" uid="uid://b23bxf7fl8yq7" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (66).png" id="12_ojyu7"]
+[ext_resource type="Texture2D" uid="uid://bdegpepkrhvjj" path="res://scenes/Minigames/123Voisins/assets/posters/poster stun 09.webp" id="13_e1nww"]
+[ext_resource type="Texture2D" uid="uid://c2olxnt3bi2d5" path="res://scenes/Minigames/123Voisins/assets/posters/poster stun 10.jpg" id="14_e27cy"]
+[ext_resource type="Texture2D" uid="uid://3ile6sw3ia2a" path="res://scenes/Minigames/123Voisins/assets/posters/poster_stun11.jpg" id="15_xkrou"]
+[ext_resource type="Texture2D" uid="uid://dlbein744cm8v" path="res://scenes/Minigames/123Voisins/assets/posters/poster_stun23.jpg" id="16_2l2k6"]
+[ext_resource type="Texture2D" uid="uid://cdfsu2rwonurn" path="res://scenes/Minigames/123Voisins/assets/posters/stun14.jpg" id="17_oakv1"]
+[ext_resource type="Texture2D" uid="uid://k8exm233y13o" path="res://scenes/Minigames/123Voisins/assets/posters/stun25.jpg" id="18_hvwjs"]
+[ext_resource type="Texture2D" uid="uid://b4mfpoapqk773" path="res://scenes/Minigames/123Voisins/assets/posters/stun26.jpg" id="19_1fc1e"]
+[ext_resource type="Texture2D" uid="uid://cmbh4fw0mop8a" path="res://scenes/Minigames/123Voisins/assets/tableau/tablea stun 26.jpg" id="20_ykgen"]
+[ext_resource type="Texture2D" uid="uid://tbrvbv647vm4" path="res://scenes/Minigames/123Voisins/assets/tableau/tableau stun 14.jpg" id="21_ormd5"]
+[ext_resource type="Texture2D" uid="uid://b11ghlymnjanh" path="res://scenes/Minigames/123Voisins/assets/tableau/tableau stun 15.jpg" id="22_x5j1q"]
+[ext_resource type="Texture2D" uid="uid://ckgaiepx3btmh" path="res://scenes/Minigames/123Voisins/assets/tableau/tableau_stun18.jpg" id="23_agkxt"]
+[ext_resource type="Texture2D" uid="uid://b8k0q3syk4gkf" path="res://scenes/Minigames/123Voisins/assets/tableau/tableau_stun22.jpg" id="24_5c3t6"]
+[ext_resource type="Texture2D" uid="uid://c58cwar4deqbn" path="res://scenes/Minigames/123Voisins/assets/tableau/tablezau stun 11.jpg" id="25_tw5ox"]
+[ext_resource type="AudioStream" uid="uid://jygrnmsgfsgw" path="res://scenes/Minigames/123Voisins/assets/laser/laser.tres" id="26_iesyj"]
+[ext_resource type="AudioStream" uid="uid://kior8kk3g5fj" path="res://scenes/Minigames/123Voisins/assets/doorslam/DoorSlam.ogg" id="27_73ac5"]
+[ext_resource type="AudioStream" uid="uid://cvlba5o7y1wa0" path="res://scenes/Minigames/123Voisins/assets/knock/knock.tres" id="28_wq5u8"]
+[ext_resource type="AudioStream" uid="uid://bngg3stp410no" path="res://scenes/Minigames/123Voisins/assets/StairStep.ogg" id="29_mxkbl"]
+[ext_resource type="AudioStream" uid="uid://bs7pju5jmkcek" path="res://scenes/Minigames/123Voisins/assets/dooropen/dooropen.tres" id="30_ayd18"]
+[ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="32_fnqes"]
+[ext_resource type="Texture2D" uid="uid://c4got42wmu0n6" path="res://assets/Checker.png" id="33_et2wo"]
+[ext_resource type="Texture2D" uid="uid://cqfqoop3nuxux" path="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (38).png" id="34_w3weo"]
+[ext_resource type="Texture2D" uid="uid://duj6su61grake" path="res://scenes/Minigames/123Voisins/assets/lights_out.png" id="35_6hevd"]
+[ext_resource type="Texture2D" uid="uid://5x1jb353r2rn" path="res://scenes/Minigames/123Voisins/assets/123Eyes.png" id="36_3v275"]
+[ext_resource type="Texture2D" uid="uid://clhhjwdrm3exo" path="res://scenes/Minigames/123Voisins/assets/spark.png" id="37_js8th"]
+[ext_resource type="Texture2D" uid="uid://d3ito577g5bl2" path="res://scenes/Minigames/123Voisins/assets/white1080.png" id="38_ojyu7"]
+[ext_resource type="Script" uid="uid://c845srdtndnx" path="res://scenes/Minigames/123Voisins/LaserSpot.gd" id="39_e1nww"]
+[ext_resource type="Texture2D" uid="uid://brpvvm70pc2jy" path="res://assets/sprites/btn1.png" id="39_e27cy"]
+[ext_resource type="Texture2D" uid="uid://duk5g43oqyfct" path="res://assets/sprites/shapes/BG10Points.png" id="40_xkrou"]
+[ext_resource type="Texture2D" uid="uid://jubwyaygu375" path="res://assets/sprites/btn2.png" id="41_2l2k6"]
+
+[sub_resource type="Animation" id="Animation_oakv1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("btn_x_bg/btn_x_mash:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("btn_x_bg/btn_x:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_hvwjs"]
+resource_name = "mash"
+length = 0.06670000000000001
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("btn_x_bg/btn_x_mash:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("btn_o_bg/btn_o_mash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("btn_x_bg/btn_x:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -20)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("btn_o_bg/btn_o:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, -20), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1fc1e"]
+_data = {
+&"RESET": SubResource("Animation_oakv1"),
+&"mash": SubResource("Animation_hvwjs")
+}
+
+[sub_resource type="Curve" id="Curve_wmq7q"]
+_data = [Vector2(0.0075901337, 0.013698578), 0.0, 30.079906, 0, 0, Vector2(0.119544595, 0.99999994), -0.462768, -0.462768, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_e27cy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlScene/Eyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ControlScene/Eyes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.1274675]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ControlScene/Eyes:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ControlScene/Eyes:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1066.9999, 6.0000305)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ControlScene/LaserEye1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ControlScene/LaserEye1:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ControlScene/LaserEye2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ControlScene/LaserEye2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xkrou"]
+resource_name = "laser_eyes"
+length = 0.2667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlScene/LaserEye1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ControlScene/LaserEye1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.26666668),
+"transitions": PackedFloat32Array(0.25, 3, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(0.25, 0.25)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ControlScene/LaserEye2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ControlScene/LaserEye2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.26666668),
+"transitions": PackedFloat32Array(0.25, 3, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(0.25, 0.25)]
+}
+
+[sub_resource type="Animation" id="Animation_2l2k6"]
+resource_name = "voisin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlScene/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(900, 20), Vector2(972, 0), Vector2(1066.9999, 6.0000305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ControlScene/Eyes:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0.35, 0.35), Vector2(0.65, 0.65), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ControlScene/Eyes:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0.2617993877991494, 0.6108652381980153, 1.1274675]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ControlScene/Eyes:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameMgr")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"knock"
+}, {
+"args": [],
+"method": &"knock"
+}, {
+"args": [],
+"method": &"knock"
+}, {
+"args": [],
+"method": &"lights_on"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oakv1"]
+_data = {
+&"RESET": SubResource("Animation_e27cy"),
+&"laser_eyes": SubResource("Animation_xkrou"),
+&"voisin": SubResource("Animation_2l2k6")
+}
+
+[node name="123VoisinGame" type="Node2D" unique_id=166265635 node_paths=PackedStringArray("player_spawns")]
+script = ExtResource("1_lr1iv")
+player_prefab = ExtResource("5_s3ovy")
+player_spawns = [NodePath("Spawners/Spawner1"), NodePath("Spawners/Spawner2"), NodePath("Spawners/Spawner3"), NodePath("Spawners/Spawner4")]
+fixed_spawns = true
+music = ExtResource("2_ny88u")
+start_countdown = false
+start_countdown_on_beat = true
+
+[node name="GameMgr" type="Node2D" parent="." unique_id=144349292 node_paths=PackedStringArray("minigame", "_lights_out_images", "_banana_origin", "_press_buttons_container", "_watcher", "_poster", "_pic_frame", "_ambiance", "_anim")]
+script = ExtResource("2_pok80")
+minigame = NodePath("..")
+_lights_on_timers = Vector2(1, 3)
+_eyes_speeds = Vector2(0.4, 1.6)
+_watcher_stay_intervals = Vector2(0.5, 3)
+_banana_laser_prefab = ExtResource("4_e1nww")
+_explosion_prefab = ExtResource("5_e27cy")
+_lights_out_images = NodePath("../ControlScene/LightsOut")
+_banana_origin = NodePath("../BananaOrigin")
+_press_buttons_container = NodePath("../ControlScene/ButtonContainer")
+_all_watchers = Array[Texture2D]([ExtResource("4_pgkci"), ExtResource("5_svwdk"), ExtResource("6_71rq2"), ExtResource("7_m8ljk"), ExtResource("8_xd0vn"), ExtResource("9_6hevd"), ExtResource("10_3v275"), ExtResource("11_js8th"), ExtResource("12_ojyu7")])
+_watcher = NodePath("../BG/Mask/Watcher")
+_all_posters = Array[Texture2D]([ExtResource("13_e1nww"), ExtResource("14_e27cy"), ExtResource("15_xkrou"), ExtResource("16_2l2k6"), ExtResource("17_oakv1"), ExtResource("18_hvwjs"), ExtResource("19_1fc1e")])
+_poster = NodePath("../BG/Cadre/Poster")
+_all_pictures = Array[Texture2D]([ExtResource("20_ykgen"), ExtResource("21_ormd5"), ExtResource("22_x5j1q"), ExtResource("23_agkxt"), ExtResource("24_5c3t6"), ExtResource("25_tw5ox")])
+_pic_frame = NodePath("../BG/Tableau")
+_ambiance = NodePath("../Ambiance")
+_anim = NodePath("../AnimationPlayer")
+_target_score = 50
+_target_distance = 1675.0
+_SFX_laser = ExtResource("26_iesyj")
+_SFX_slam = ExtResource("27_73ac5")
+_SFX_knock = ExtResource("28_wq5u8")
+_SFX_stairstep = ExtResource("29_mxkbl")
+_SFX_dooropen = ExtResource("30_ayd18")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1107970365]
+texture = ExtResource("4_j735d")
+centered = false
+
+[node name="Tableau" type="TextureRect" parent="BG" unique_id=319939961]
+custom_minimum_size = Vector2(312, 174)
+custom_maximum_size = Vector2(312, 174)
+offset_left = 171.0
+offset_top = 64.0
+offset_right = 483.0
+offset_bottom = 238.0
+
+[node name="Cadre" type="TextureRect" parent="BG" unique_id=1068118152]
+self_modulate = Color(0.16862746, 0.06666667, 0, 1)
+custom_minimum_size = Vector2(253, 330)
+custom_maximum_size = Vector2(253, 330)
+offset_left = 1378.0
+offset_top = 12.0
+offset_right = 1631.0
+offset_bottom = 342.0
+texture = ExtResource("32_fnqes")
+
+[node name="Poster" type="TextureRect" parent="BG/Cadre" unique_id=2020871025]
+custom_minimum_size = Vector2(233, 304)
+custom_maximum_size = Vector2(233, 304)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -152.0
+offset_right = 116.5
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mask" type="TextureRect" parent="BG" unique_id=1490344807]
+clip_children = 1
+custom_minimum_size = Vector2(293, 410)
+custom_maximum_size = Vector2(293, 410)
+offset_left = 1059.0
+offset_right = 1352.0
+offset_bottom = 410.0
+texture = ExtResource("33_et2wo")
+
+[node name="Watcher" type="TextureRect" parent="BG/Mask" unique_id=1803179763]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(135, 135)
+layout_mode = 0
+offset_left = 96.0
+offset_top = -17.000004
+offset_right = 231.0
+offset_bottom = 118.0
+rotation = 1.2850472
+texture = ExtResource("34_w3weo")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Spawners" type="Node2D" parent="." unique_id=1744350230]
+position = Vector2(25, 0)
+
+[node name="Spawner4" type="Node2D" parent="Spawners" unique_id=1822836365]
+position = Vector2(1738, 650)
+
+[node name="Spawner3" type="Node2D" parent="Spawners" unique_id=556617043]
+position = Vector2(1772, 784)
+
+[node name="Spawner2" type="Node2D" parent="Spawners" unique_id=201042787]
+position = Vector2(1806, 917)
+
+[node name="Spawner1" type="Node2D" parent="Spawners" unique_id=292360029]
+position = Vector2(1840, 1050)
+
+[node name="ControlScene" type="Control" parent="." unique_id=1865310593]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LightsOut" type="TextureRect" parent="ControlScene" unique_id=1333721140]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("35_6hevd")
+
+[node name="Eyes" type="TextureRect" parent="ControlScene" unique_id=1405412657]
+visible = false
+layout_mode = 0
+offset_left = 1066.9999
+offset_top = 6.0000305
+offset_right = 1174.9999
+offset_bottom = 114.00003
+rotation = 1.1274675
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("36_3v275")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LaserEye1" type="TextureRect" parent="ControlScene" unique_id=896598708]
+visible = false
+layout_mode = 0
+offset_left = 1099.0001
+offset_top = 42.999985
+offset_right = 1163.0001
+offset_bottom = 106.999985
+rotation = 0.55958414
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("37_js8th")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LaserEye2" type="TextureRect" parent="ControlScene" unique_id=1314373465]
+visible = false
+layout_mode = 0
+offset_left = 1083.0
+offset_top = 10.9999695
+offset_right = 1147.0
+offset_bottom = 74.99997
+rotation = 0.55958414
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("37_js8th")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ButtonContainer" type="TextureRect" parent="ControlScene" unique_id=1876175922]
+visible = false
+custom_minimum_size = Vector2(312, 174)
+custom_maximum_size = Vector2(312, 174)
+layout_mode = 0
+offset_left = 171.0
+offset_top = 77.0
+offset_right = 483.0
+offset_bottom = 251.0
+scale = Vector2(0.55, 0.55)
+
+[node name="btn_x_bg" type="TextureRect" parent="ControlScene/ButtonContainer" unique_id=682874855]
+self_modulate = Color(0.18, 0.18, 0.18, 1)
+custom_minimum_size = Vector2(200, 150)
+custom_maximum_size = Vector2(200, 150)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 200.0
+texture = ExtResource("39_e27cy")
+
+[node name="btn_x_mash" type="TextureRect" parent="ControlScene/ButtonContainer/btn_x_bg" unique_id=1733335930]
+custom_minimum_size = Vector2(220, 165)
+custom_maximum_size = Vector2(220, 165)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -82.5
+offset_right = 110.0
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("40_xkrou")
+
+[node name="btn_x" type="TextureRect" parent="ControlScene/ButtonContainer/btn_x_bg" unique_id=988249532]
+self_modulate = Color(0.2509804, 0.627451, 1, 1)
+custom_minimum_size = Vector2(200, 150)
+custom_maximum_size = Vector2(200, 150)
+layout_mode = 0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 130.0
+texture = ExtResource("39_e27cy")
+
+[node name="btn_o_bg" type="TextureRect" parent="ControlScene/ButtonContainer" unique_id=1203343477]
+self_modulate = Color(0.18, 0.18, 0.18, 1)
+custom_minimum_size = Vector2(200, 150)
+custom_maximum_size = Vector2(200, 150)
+layout_mode = 0
+offset_left = 319.0
+offset_top = 50.0
+offset_right = 519.0
+offset_bottom = 200.0
+texture = ExtResource("41_2l2k6")
+
+[node name="btn_o_mash" type="TextureRect" parent="ControlScene/ButtonContainer/btn_o_bg" unique_id=607907561]
+visible = false
+custom_minimum_size = Vector2(220, 165)
+custom_maximum_size = Vector2(220, 165)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -82.5
+offset_right = 110.0
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("40_xkrou")
+
+[node name="btn_o" type="TextureRect" parent="ControlScene/ButtonContainer/btn_o_bg" unique_id=1864527010]
+self_modulate = Color(1, 0.2509804, 0.2509804, 1)
+custom_minimum_size = Vector2(200, 150)
+custom_maximum_size = Vector2(200, 150)
+layout_mode = 0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 130.0
+texture = ExtResource("41_2l2k6")
+
+[node name="BtnMashPlayer" type="AnimationPlayer" parent="ControlScene/ButtonContainer" unique_id=1449965268]
+libraries/ = SubResource("AnimationLibrary_1fc1e")
+autoplay = &"mash"
+speed_scale = 0.75
+
+[node name="Ambiance" type="Sprite2D" parent="." unique_id=2128864917]
+self_modulate = Color(0.51, 0.98366666, 1, 0.24705882)
+texture = ExtResource("38_ojyu7")
+centered = false
+script = ExtResource("39_e1nww")
+colors = Array[Color]([Color(1, 0.25, 0.98749983, 0.24705882), Color(0.25, 0.975, 1, 0.24705882), Color(1, 0.9625, 0.25, 0.24705882), Color(0.2625, 1, 0.25, 0.24705882), Color(1, 0.58750004, 0.25, 0.24705882), Color(0.25, 0.2874998, 1, 0.24705882)])
+
+[node name="LaserSpot1" type="Sprite2D" parent="Ambiance" unique_id=1822939095]
+position = Vector2(459, -406.00006)
+rotation = 0.31828558
+scale = Vector2(0.002, 20)
+texture = ExtResource("32_fnqes")
+script = ExtResource("39_e1nww")
+rotation_value = 35.0
+colors = Array[Color]([Color(1, 0.5019608, 0.99215686, 1), Color(0.5019608, 0.9843137, 1, 1), Color(1, 0.9764706, 0.5019608, 1), Color(0.50980395, 1, 0.5019608, 1), Color(1, 0.72156864, 0.5019608, 1), Color(0.5019608, 0.5254902, 1, 1), Color(1, 1, 1, 1)])
+
+[node name="LaserSpot2" type="Sprite2D" parent="Ambiance" unique_id=956219084]
+position = Vector2(459.00006, -406)
+rotation = 0.31828558
+scale = Vector2(20, 0.002)
+texture = ExtResource("32_fnqes")
+script = ExtResource("39_e1nww")
+rotation_value = 35.0
+colors = Array[Color]([Color(1, 0.5019608, 0.99215686, 1), Color(0.5019608, 0.9843137, 1, 1), Color(1, 0.9764706, 0.5019608, 1), Color(0.50980395, 1, 0.5019608, 1), Color(1, 0.72156864, 0.5019608, 1), Color(0.5019608, 0.5254902, 1, 1), Color(1, 1, 1, 1)])
+
+[node name="LaserSpot3" type="Sprite2D" parent="Ambiance" unique_id=907059428]
+position = Vector2(1462.1484, -387.85162)
+rotation = 1.2002172
+scale = Vector2(0.002, 20)
+texture = ExtResource("32_fnqes")
+script = ExtResource("39_e1nww")
+rotation_value = -45.0
+colors = Array[Color]([Color(1, 0.5019608, 0.99215686, 1), Color(0.5019608, 0.9843137, 1, 1), Color(1, 0.9764706, 0.5019608, 1), Color(0.50980395, 1, 0.5019608, 1), Color(1, 0.72156864, 0.5019608, 1), Color(0.5019608, 0.5254902, 1, 1), Color(1, 1, 1, 1)])
+
+[node name="LaserSpot4" type="Sprite2D" parent="Ambiance" unique_id=1970139855]
+position = Vector2(1462.1484, -387.85156)
+rotation = 1.2002172
+scale = Vector2(20, 0.002)
+texture = ExtResource("32_fnqes")
+script = ExtResource("39_e1nww")
+rotation_value = -45.0
+colors = Array[Color]([Color(1, 0.5019608, 0.99215686, 1), Color(0.5019608, 0.9843137, 1, 1), Color(1, 0.9764706, 0.5019608, 1), Color(0.50980395, 1, 0.5019608, 1), Color(1, 0.72156864, 0.5019608, 1), Color(0.5019608, 0.5254902, 1, 1), Color(1, 1, 1, 1)])
+
+[node name="Particles" type="CPUParticles2D" parent="Ambiance" unique_id=61432171]
+position = Vector2(960, 540)
+amount = 10
+texture = ExtResource("37_js8th")
+lifetime = 0.25
+randomness = 0.25
+emission_shape = 3
+emission_rect_extents = Vector2(960, 540)
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_wmq7q")
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=433571388]
+libraries/ = SubResource("AnimationLibrary_oakv1")
+
+[node name="BananaOrigin" type="Node2D" parent="." unique_id=851290466]
+position = Vector2(1122, 49)

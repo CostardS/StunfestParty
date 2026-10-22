@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bs4qh0msmwy1i"]
+
+[ext_resource type="Texture2D" uid="uid://dlxqbncbn1sgk" path="res://scenes/Minigames/123Voisins/assets/Banane1.png" id="1_ji0v1"]
+[ext_resource type="Script" uid="uid://c845srdtndnx" path="res://scenes/Minigames/123Voisins/LaserSpot.gd" id="2_h0abc"]
+
+[node name="123VoisinBanana" type="Node2D" unique_id=197404248]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037821418]
+texture = ExtResource("1_ji0v1")
+script = ExtResource("2_h0abc")
+rotation_value = 1500.0
+colors = Array[Color]([Color(1, 1, 1, 1)])

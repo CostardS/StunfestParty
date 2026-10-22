@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MinigameInfo" format=3 uid="uid://du5a45xk1wpqo"]
+
+[ext_resource type="Script" uid="uid://dkhmc06h3n7cg" path="res://scenes/Minigames/minigame_info.gd" id="1_1rjgu"]
+[ext_resource type="PackedScene" uid="uid://bgyoigkopmr7r" path="res://scenes/Minigames/123Voisins/123voisin_game.tscn" id="1_t2qms"]
+
+[resource]
+script = ExtResource("1_1rjgu")
+name = "1 2 3 ... Voisin !"
+subtitle = "Avancez quand le voisin n'est pas la !"
+authors = "Sushi"
+prefab = ExtResource("1_t2qms")
+action_btn1 = "Courir"
+action_btn2 = "Courir"
+metadata/_custom_type_script = "uid://dkhmc06h3n7cg"

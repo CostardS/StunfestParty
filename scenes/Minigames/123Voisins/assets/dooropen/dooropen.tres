@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bs7pju5jmkcek"]
+
+[ext_resource type="AudioStream" uid="uid://c2v27ghavdpt5" path="res://scenes/Minigames/123Voisins/assets/dooropen/DoorOpen1.ogg" id="1_ehr0l"]
+[ext_resource type="AudioStream" uid="uid://kxlhmgflkqid" path="res://scenes/Minigames/123Voisins/assets/dooropen/DoorOpen2.ogg" id="2_fh6ft"]
+[ext_resource type="AudioStream" uid="uid://ck8vld2h04d0v" path="res://scenes/Minigames/123Voisins/assets/dooropen/DoorOpen3.ogg" id="3_1mst0"]
+[ext_resource type="AudioStream" uid="uid://c26u28qaau31d" path="res://scenes/Minigames/123Voisins/assets/dooropen/DoorOpen4.ogg" id="4_u78et"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_ehr0l")
+stream_1/stream = ExtResource("2_fh6ft")
+stream_2/stream = ExtResource("3_1mst0")
+stream_3/stream = ExtResource("4_u78et")

@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cvlba5o7y1wa0"]
+
+[ext_resource type="AudioStream" uid="uid://wgxs3mkeq4g5" path="res://scenes/Minigames/123Voisins/assets/knock/123Knock1.ogg" id="1_u2nb6"]
+[ext_resource type="AudioStream" uid="uid://cr2xkg6foytdj" path="res://scenes/Minigames/123Voisins/assets/knock/123Knock2.ogg" id="2_kwfar"]
+[ext_resource type="AudioStream" uid="uid://p0uijtar5tfn" path="res://scenes/Minigames/123Voisins/assets/knock/123Knock3.ogg" id="3_56igj"]
+[ext_resource type="AudioStream" uid="uid://d4dcvywmjj60e" path="res://scenes/Minigames/123Voisins/assets/knock/123Knock4.ogg" id="4_l0x1a"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_u2nb6")
+stream_1/stream = ExtResource("2_kwfar")
+stream_2/stream = ExtResource("3_56igj")
+stream_3/stream = ExtResource("4_l0x1a")

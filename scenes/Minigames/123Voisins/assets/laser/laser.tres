@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://jygrnmsgfsgw"]
+
+[ext_resource type="AudioStream" uid="uid://b5s6eg16020yb" path="res://scenes/Minigames/123Voisins/assets/laser/laser.ogg" id="1_i1t8a"]
+[ext_resource type="AudioStream" uid="uid://bkagyjklks0hh" path="res://scenes/Minigames/123Voisins/assets/laser/laser2.ogg" id="2_w1nh4"]
+[ext_resource type="AudioStream" uid="uid://bwbqxkmkepwc3" path="res://scenes/Minigames/123Voisins/assets/laser/laser3.ogg" id="3_yaqjl"]
+[ext_resource type="AudioStream" uid="uid://dv364efw5ec7c" path="res://scenes/Minigames/123Voisins/assets/laser/laser4.ogg" id="4_1qnu3"]
+[ext_resource type="AudioStream" uid="uid://fmayy0w2krvy" path="res://scenes/Minigames/123Voisins/assets/laser/laser5.ogg" id="5_suyky"]
+[ext_resource type="AudioStream" uid="uid://bopd3yxlpsu3i" path="res://scenes/Minigames/123Voisins/assets/laser/laser6.ogg" id="6_awwy8"]
+
+[resource]
+streams_count = 6
+stream_0/stream = ExtResource("1_i1t8a")
+stream_1/stream = ExtResource("2_w1nh4")
+stream_2/stream = ExtResource("3_yaqjl")
+stream_3/stream = ExtResource("4_1qnu3")
+stream_4/stream = ExtResource("5_suyky")
+stream_5/stream = ExtResource("6_awwy8")

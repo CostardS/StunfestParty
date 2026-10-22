@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://chodoigo1wrla"]
+
+[ext_resource type="Texture2D" uid="uid://dbmql8gew6ryc" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00004.png" id="1_gbj4x"]
+[ext_resource type="Texture2D" uid="uid://beyw64haj852o" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00007.png" id="2_jts0w"]
+[ext_resource type="Texture2D" uid="uid://cvyivyobrunxq" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00010.png" id="3_ky8ls"]
+[ext_resource type="Texture2D" uid="uid://btpo16ti2njef" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00013.png" id="4_qcwgd"]
+[ext_resource type="Texture2D" uid="uid://bt3ole83culif" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00016.png" id="5_3euun"]
+[ext_resource type="Texture2D" uid="uid://ce137361f28df" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00019.png" id="6_1um04"]
+[ext_resource type="Texture2D" uid="uid://cn82fwsrxlkx0" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00022.png" id="7_054ba"]
+[ext_resource type="Texture2D" uid="uid://bgbe0feadp0o3" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00025.png" id="8_fv1dc"]
+[ext_resource type="Texture2D" uid="uid://dnj2et643gbty" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00028.png" id="9_3dshm"]
+[ext_resource type="Texture2D" uid="uid://8y2qwqj5vu6u" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00031.png" id="10_46v5k"]
+[ext_resource type="Texture2D" uid="uid://bkqqrncvw1tbs" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00034.png" id="11_7vcfv"]
+[ext_resource type="Texture2D" uid="uid://deokk0enrd5wh" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00037.png" id="12_g1ide"]
+[ext_resource type="Texture2D" uid="uid://be7hqx20tqdoh" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00040.png" id="13_fw54v"]
+[ext_resource type="Texture2D" uid="uid://581f5vea2udu" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00043.png" id="14_hx4bm"]
+[ext_resource type="Texture2D" uid="uid://un0vyfnarc2n" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00046.png" id="15_8lnxn"]
+[ext_resource type="Texture2D" uid="uid://cugitnj20rwqv" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00049.png" id="16_jywrg"]
+[ext_resource type="Texture2D" uid="uid://dwccfdxl4e2p" path="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00052.png" id="17_b4ech"]
+[ext_resource type="Script" uid="uid://efs2kyn223d0" path="res://scenes/Minigames/123Voisins/sprite_anim_free.gd" id="18_yqo7y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmq7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gbj4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jts0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ky8ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qcwgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3euun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1um04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_054ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fv1dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3dshm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46v5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7vcfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g1ide")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fw54v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hx4bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8lnxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jywrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_b4ech")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Explosion" type="Node2D" unique_id=46791391]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1760319527 node_paths=PackedStringArray("root")]
+sprite_frames = SubResource("SpriteFrames_wmq7q")
+autoplay = "default"
+frame = 16
+frame_progress = 1.0
+script = ExtResource("18_yqo7y")
+root = NodePath("..")

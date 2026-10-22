@@ -322,7 +322,7 @@ func _stream_is_playing():
 	return audio_stream_player != null and audio_stream_player.playing
 
 func pause() -> void:
-	audio_stream_player.pause()
+	audio_stream_player.stop()
 
 func resume() -> void:
 	audio_stream_player.play()

@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://bgvgkeuamlm2i"]
+
+[ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_ti6bd"]
+[ext_resource type="Script" uid="uid://hk1rvohktslw" path="res://scenes/Minigames/123Voisins/123voisin_player.gd" id="2_usdqi"]
+[ext_resource type="AudioStream" uid="uid://b8umyrwy0143u" path="res://scenes/Minigames/BtnMasher/steps/steps.tres" id="3_qtnnx"]
+[ext_resource type="AudioStream" uid="uid://bre6jgufy3cr" path="res://scenes/Minigames/PumpPumpPump/assets/explosion.mp3" id="4_dpbh5"]
+[ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="5_4245m"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="6_2ajnk"]
+
+[sub_resource type="Animation" id="Animation_qtnnx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Character:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -40)]
+}
+
+[sub_resource type="Animation" id="Animation_dpbh5"]
+resource_name = "explode"
+length = 1.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 0.75, 1.0016303, 1.1, 1.25),
+"transitions": PackedFloat32Array(0.2, 2, 1, 0.25, 3, 1),
+"update": 0,
+"values": [Vector2(0, -120), Vector2(0, -450), Vector2(0, 0), Vector2(0, 0), Vector2(0, -50), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75, 1, 1.25),
+"transitions": PackedFloat32Array(0.25, 1, 1, 1),
+"update": 0,
+"values": [12.566370614359172, -1.5707963267948966, -1.5707963267948966, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Character:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5331258),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, -40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4245m"]
+_data = {
+&"RESET": SubResource("Animation_qtnnx"),
+&"explode": SubResource("Animation_dpbh5")
+}
+
+[node name="123VoisinPlayer" type="Node2D" unique_id=224360536]
+script = ExtResource("1_ti6bd")
+
+[node name="PlayerMgr" type="Node2D" parent="." unique_id=1245746607 node_paths=PackedStringArray("_hub", "root_node", "_sprite", "_anim")]
+unique_name_in_owner = true
+script = ExtResource("2_usdqi")
+_hub = NodePath("..")
+root_node = NodePath("..")
+_sprite = NodePath("Character")
+_anim = NodePath("AnimationPlayer")
+_angles = Array[float]([5.0, 0.0, -5.0, 0.0])
+_SFX_steps = ExtResource("3_qtnnx")
+_SFX_explosion = ExtResource("4_dpbh5")
+
+[node name="Shadow" type="Sprite2D" parent="PlayerMgr" unique_id=1530390317]
+self_modulate = Color(0, 0, 0, 0.39215687)
+position = Vector2(0, -8)
+scale = Vector2(0.18, 0.078)
+texture = ExtResource("5_4245m")
+
+[node name="Character" type="Sprite2D" parent="PlayerMgr" unique_id=549193676]
+scale = Vector2(3, 3)
+texture = ExtResource("6_2ajnk")
+offset = Vector2(0, -40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerMgr" unique_id=54703929]
+libraries/ = SubResource("AnimationLibrary_4245m")
