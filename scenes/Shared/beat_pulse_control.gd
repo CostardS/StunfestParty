@@ -10,7 +10,6 @@ var tween: Tween = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicPlayer.beat.connect(animate)
-	pivot_offset_ratio = Vector2(.5,.5)
 
 func animate(_beat: int) -> void:
 	if !enabled: return

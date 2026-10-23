@@ -132,7 +132,6 @@ func _on_game_ended(_winners: Array[int]) -> void:
 		_anim.play("RESET")
 		await get_tree().create_timer(1).timeout
 		lights_on()
-		_timer.timeout.disconnect(timer_elapsed)
 		_timer.stop()
 		_anim.play("RESET")
 		_press_buttons_container.visible = false

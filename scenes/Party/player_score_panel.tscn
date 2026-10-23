@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dkslaf4hu785a" path="res://scenes/Party/player_score_panel.gd" id="1_w2bgu"]
 [ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="2_7tirx"]
+[ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="2_86y1f"]
+[ext_resource type="AudioStream" uid="uid://culnxapq4snct" path="res://scenes/Minigames/InterroSurprise/assets/SFX/PassXL.wav" id="2_f5hcb"]
 [ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="3_86y1f"]
+[ext_resource type="AudioStream" uid="uid://b1ctyy0cj4th6" path="res://scenes/Minigames/Drift/assets/Hit.wav" id="3_ltykw"]
+[ext_resource type="Script" uid="uid://dgsojmebkyaov" path="res://scenes/Shared/beat_pulse_control.gd" id="4_73t1f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8hvnx"]
 font = ExtResource("3_86y1f")
@@ -12,27 +16,235 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kffgf"]
 font = ExtResource("3_86y1f")
-font_size = 60
+font_size = 90
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ggfcw"]
 font = ExtResource("3_86y1f")
-font_size = 60
+font_size = 75
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
-[node name="PlayerScorePanel" type="Control" unique_id=513240173 node_paths=PackedStringArray("index_text", "score_text", "add_score_text", "portrait")]
+[sub_resource type="Animation" id="Animation_f5hcb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ScoreAdd:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/ScoreAdd:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, 200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/TextureRect:pivot_offset_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/TextureRect:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/TextureRect:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-130, -152)]
+}
+
+[sub_resource type="Animation" id="Animation_ltykw"]
+resource_name = "score_up"
+length = 2.5000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ScoreAdd:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/ScoreAdd:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 0.5, 2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(0.05, 0.05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/Score:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.2),
+"transitions": PackedFloat32Array(0, 1, 3),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.75, 1.75), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/ScoreAdd:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 0.73333335, 1),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(-38, 200), Vector2(-38, 275), Vector2(-50, 100)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"update_score"
+}, {
+"args": [],
+"method": &"animation_end"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/TextureRect:pivot_offset_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0.5, 1), Vector2(0.5, 0.5), Vector2(0.5, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Control/TextureRect:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Control/TextureRect:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 1.3666667, 1.5),
+"transitions": PackedFloat32Array(0.25, 2, 1),
+"update": 0,
+"values": [Vector2(-130, -152), Vector2(-130, -250), Vector2(-130, -152)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6k7mp"]
+_data = {
+&"RESET": SubResource("Animation_f5hcb"),
+&"score_up": SubResource("Animation_ltykw")
+}
+
+[node name="PlayerScorePanel" type="Control" unique_id=513240173 node_paths=PackedStringArray("index_text", "score_text", "portrait", "anim")]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_w2bgu")
-index_text = NodePath("PlayerLabel")
-score_text = NodePath("Score")
-add_score_text = NodePath("ScoreAdd")
-portrait = NodePath("TextureRect")
+index_text = NodePath("Control/PlayerLabel")
+score_text = NodePath("Control/Score")
+portrait = NodePath("Control/TextureRect")
+anim = NodePath("AnimationPlayer")
+sfx_point = ExtResource("2_f5hcb")
+sfx_point_hit = ExtResource("3_ltykw")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1512847875]
+[node name="Control" type="Control" parent="." unique_id=180137148]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shadow" type="TextureRect" parent="Control" unique_id=1569540734]
+self_modulate = Color(0, 0, 0, 0.49803922)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 56.0
+offset_right = 50.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_86y1f")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1512847875]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,58 +252,72 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -152.0
+offset_top = -172.0
 offset_right = 150.0
-offset_bottom = 100.0
+offset_bottom = 80.00009
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 1)
 texture = ExtResource("2_7tirx")
 stretch_mode = 5
+script = ExtResource("4_73t1f")
+pulse_scale = Vector2(1, 0.9)
 
-[node name="PlayerLabel" type="Label" parent="." unique_id=1019856252]
+[node name="PlayerLabel" type="Label" parent="Control" unique_id=1019856252]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -32.5
-offset_right = 32.5
-offset_bottom = 59.0
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -169.0
+offset_right = 75.0
+offset_bottom = -69.0
 grow_horizontal = 2
+grow_vertical = 2
 text = "P1"
 label_settings = SubResource("LabelSettings_8hvnx")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Score" type="Label" parent="." unique_id=1148347344]
+[node name="Score" type="Label" parent="Control" unique_id=1148347344]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -58.0
-offset_top = -65.2
+offset_top = 67.0
 offset_right = 58.0
-offset_bottom = -6.199646
+offset_bottom = 154.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "5"
 label_settings = SubResource("LabelSettings_kffgf")
 horizontal_alignment = 1
 
-[node name="ScoreAdd" type="Label" parent="." unique_id=405294057]
+[node name="ScoreAdd" type="Label" parent="Control" unique_id=405294057]
+visible = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -58.0
-offset_top = 55.0
+offset_top = 180.0
 offset_right = 58.0
-offset_bottom = 114.00037
+offset_bottom = 253.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "+1"
 label_settings = SubResource("LabelSettings_ggfcw")
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1306735219]
+libraries/ = SubResource("AnimationLibrary_6k7mp")

@@ -163,10 +163,10 @@ flip_v = true
 [node name="GridManager" type="Node2D" parent="." unique_id=25414212]
 position = Vector2(36, 271)
 script = ExtResource("2_xb6ow")
-row_length = 13
+row_length = 8
 row_offset = Vector2(0, 538)
 column_offset = Vector2(538, -75)
-offset_scale = 0.25
+offset_scale = 0.43
 slot_prefab = ExtResource("8_12gv0")
 
 [node name="PlayerPanel4" parent="." unique_id=1300144085 instance=ExtResource("9_12gv0")]

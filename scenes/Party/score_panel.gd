@@ -56,7 +56,7 @@ func _show_scores(is_show: bool) -> void:
 func _add_score_display(winners: Array[int]) -> void :
 	for panel:PlayerScorePanel in _panels:
 		if winners.has(panel.get_player_index()):
-			panel.set_add_score_text("+1")
+			panel.animate_score_up()
 
 func _add_scores(winners: Array[int]) -> void :
 	for player:PlayerInfo in PlayerManager.get_players():

@@ -8,6 +8,7 @@ signal roulette_ended(minigame:MinigameInfo)
 @export var game_name: Label
 @export var game_subtitle: Label
 @export var start_text: Label
+@export var anim: AnimationPlayer
 
 @export var panel_btn_hori: Control
 @export var panel_btn_vert: Control
@@ -21,6 +22,8 @@ signal roulette_ended(minigame:MinigameInfo)
 @export var panel_txt_act1: Label
 @export var panel_txt_act2: Label
 
+@export var _SFX_roulette: AudioStream
+
 var _all_games: Array[MinigameInfo] = []
 var _minigame_indexes: Array[int] = []
 var _selected_minigame: MinigameInfo
@@ -33,17 +36,16 @@ func _ready() -> void:
 	_show_panel(false)
 	_all_games = MinigameRepository.get_minigames()
 	_all_games.shuffle()
+	anim.play("RESET")
 	_reset_game_indexes()
 
 func dismiss() -> void:
 	_show_panel(false)
 	
 func _show_panel(is_show: bool) -> void:
-	roulette_root.scale = Vector2.ZERO
-	roulette_root.visible = is_show
 	if(is_show):
-		roulette_root.scale = Vector2.ONE
-		#TODO Animate
+		anim.play("roulette_open")
+	else : anim.play("RESET")
 
 func start_roulette() -> void:
 	_previous_minigame = _selected_minigame
@@ -52,7 +54,7 @@ func start_roulette() -> void:
 	_show_panel(true)
 	start_text.visible = false
 	var start_index: int = randi_range(0, _all_games.size() -1)
-	#TODO SFX Roulette
+	SFXPlayer.play(_SFX_roulette)
 	for i in 16:
 		game_name.text = _all_games[(start_index + i) % _all_games.size()].name
 		await get_tree().create_timer(1.25 / 16).timeout
@@ -64,7 +66,7 @@ func start_roulette() -> void:
 	_minigame_indexes.remove_at(index)
 	
 	_update_minigame_display()
-	#TODO Animate punch scale
+	anim.play("roulette_punch")
 	if _minigame_indexes.size() == 0: _reset_game_indexes()
 	await get_tree().create_timer(1).timeout
 	_ready_to_start = true

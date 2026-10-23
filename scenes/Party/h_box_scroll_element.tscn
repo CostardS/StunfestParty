@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b04fs7sa2j0rl"]
+
+[ext_resource type="Script" uid="uid://culgfuppcq3ha" path="res://scenes/Shared/hbox_scroller.gd" id="1_x6uf1"]
+[ext_resource type="PackedScene" uid="uid://bo24w2mfib1wj" path="res://scenes/Party/bg_scroll_element.tscn" id="2_ct62m"]
+
+[sub_resource type="Animation" id="Animation_8m7t5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scroller:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(148, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_5koh6"]
+resource_name = "scroll"
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"slide_elements"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scroller:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(148, 128), Vector2(0, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykhcm"]
+_data = {
+&"RESET": SubResource("Animation_8m7t5"),
+&"scroll": SubResource("Animation_5koh6")
+}
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=328560339 node_paths=PackedStringArray("scroller", "anim")]
+custom_minimum_size = Vector2(2500, 128)
+custom_maximum_size = Vector2(2500, 128)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_constants/separation = 20
+script = ExtResource("1_x6uf1")
+amount = 16
+bg_scroll_element = ExtResource("2_ct62m")
+scroller = NodePath("Scroller")
+speeds = Vector2(-2, 2)
+anim = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=50814913]
+libraries/ = SubResource("AnimationLibrary_ykhcm")
+autoplay = &"scroll"
+
+[node name="Scroller" type="Control" parent="." unique_id=133550828]
+custom_minimum_size = Vector2(148, 100)
+custom_maximum_size = Vector2(148, 128)
+layout_mode = 2

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bo24w2mfib1wj"]
+
+[ext_resource type="Texture2D" uid="uid://ecxjlqsxtpip" path="res://assets/sprites/shapes/BGSquare.png" id="1_cbm0u"]
+[ext_resource type="Script" uid="uid://byts14jddyu48" path="res://scenes/Shared/rect_pulse_random_color.gd" id="2_xl4p0"]
+
+[node name="BGScrollElement" type="Control" unique_id=1962941845]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1597073984]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_cbm0u")
+script = ExtResource("2_xl4p0")
+colors = Array[Color]([Color(0.65, 1, 0.9825, 0.15686275), Color(0.7025, 1, 0.65, 0.15686275), Color(1, 0.65, 0.9941666, 0.15686275), Color(1, 0.9941667, 0.65, 0.15686275)])
