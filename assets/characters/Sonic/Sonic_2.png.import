@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1pomqgldama0"
-path="res://.godot/imported/Frog-win.png-c64c1d085cf8a34471a2b465692bafbf.ctex"
+uid="uid://m87j18b14dvc"
+path="res://.godot/imported/Sonic_2.png-3b424cc757e58953f3d9dd293e23a2d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Frog/Frog-win.png"
-dest_files=["res://.godot/imported/Frog-win.png-c64c1d085cf8a34471a2b465692bafbf.ctex"]
+source_file="res://assets/characters/Sonic/Sonic_2.png"
+dest_files=["res://.godot/imported/Sonic_2.png-3b424cc757e58953f3d9dd293e23a2d8.ctex"]
 
 [params]
 

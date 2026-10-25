@@ -5,7 +5,6 @@ extends Node
 @export var grid_manager: LobbyGridManager
 @export var player_panels: Array[PlayerPanel]
 @export var cursor_prefab: PackedScene
-@export var party_scene: PackedScene
 @export var animator: AnimationPlayer
 
 @export var sfx_join: AudioStreamPlayer
@@ -43,7 +42,7 @@ func _process(_delta: float) -> void:
 				await get_tree().create_timer(.15).timeout
 		
 		await get_tree().create_timer(.5).timeout
-		SceneManager.swap_scenes(party_scene.resource_path,null,self)
+		SceneManager.swap_scenes("res://scenes/Party/Party.tscn",null,self)
 
 func join(device: int) -> void:
 	var player = next_player()

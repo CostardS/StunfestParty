@@ -18,4 +18,3 @@ func update_display() -> void:
 	index_text.self_modulate = _player_info.get_player_color()
 	name_text.self_modulate = _player_info.get_player_color()
 	portrait.texture = _player_info.character_info.idle_sprite
-

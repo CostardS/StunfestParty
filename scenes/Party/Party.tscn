@@ -9,7 +9,6 @@
 [ext_resource type="FontFile" uid="uid://cptlmfreyyfup" path="res://assets/fonts/Dish Out.ttf" id="3_xjrt0"]
 [ext_resource type="Shader" uid="uid://dwr2l2dyndl8a" path="res://assets/shaders/texture_scroll.gdshader" id="3_y4j0i"]
 [ext_resource type="Texture2D" uid="uid://3vjtcr8xypx5" path="res://assets/sprites/btnHor.png" id="4_86x1l"]
-[ext_resource type="PackedScene" uid="uid://b87m5rygs0rgt" path="res://scenes/Lobby/Lobby.tscn" id="4_d83rp"]
 [ext_resource type="Texture2D" uid="uid://bwkanpy1umce1" path="res://assets/sprites/HexagonalMetal.jpg" id="4_wo7mk"]
 [ext_resource type="Texture2D" uid="uid://dl4yjp4eys814" path="res://assets/sprites/btnVert.png" id="5_8hvnx"]
 [ext_resource type="Script" uid="uid://jrywqlsjgpr5" path="res://scenes/Party/game_roulette.gd" id="5_kffgf"]
@@ -604,7 +603,6 @@ anim = NodePath("PartyUI/Panel/GameRoulette/AnimationPlayer")
 winner_name_label = NodePath("PartyUI/WinPanel/Name")
 winner_texture = NodePath("PartyUI/WinPanel/Character")
 music_win = ExtResource("3_7s6r3")
-lobby_scene = ExtResource("4_d83rp")
 
 [node name="PartyUI" type="Control" parent="." unique_id=1986730598]
 layout_mode = 3
@@ -870,7 +868,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="PartyUI/Panel/GameRoulette/VBoxContainer/HBoxContainer/Btn1" unique_id=1331486297]
-self_modulate = Color(0.65, 0.88333327, 1, 1)
+self_modulate = Color(0.6908334, 1, 0.65, 1)
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture = ExtResource("7_ggfcw")

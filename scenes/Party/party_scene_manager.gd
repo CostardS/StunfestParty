@@ -14,7 +14,6 @@ class_name PartySceneManager
 @export var winner_texture: TextureRect
 
 @export var music_win:AudioStream
-@export var lobby_scene: PackedScene
 
 
 var winner_character: CharacterInfo = null
@@ -145,8 +144,14 @@ func _clean_game_holder() -> void:
 	for node in minigame_holder.get_children():
 		node.queue_free()
 
-func _process(_delta: float) -> void:
-	if can_restart && someone_wants_to_start() :
+var reset_time = 0
+
+func _process(delta: float) -> void:
+	if someone_wants_to_reset()  && reset_time >= 0: 
+		reset_time += delta
+	else : reset_time = 0
+	if can_restart && someone_wants_to_start() || reset_time > 1.5:
+		reset_time = -1
 		#TODO SFX Lobby Start
 		can_restart = false
 		SceneManager.swap_scenes("res://scenes/Lobby/Lobby.tscn",null,self)
@@ -154,6 +159,12 @@ func _process(_delta: float) -> void:
 func someone_wants_to_start() -> bool:
 	for player in PlayerManager.get_players():
 		if MultiplayerInput.is_action_just_pressed(player.device_number, "start"):
+			return true
+	return false
+
+func someone_wants_to_reset() -> bool:
+	for player in PlayerManager.get_players():
+		if MultiplayerInput.is_action_pressed(player.device_number, "select"):
 			return true
 	return false
 

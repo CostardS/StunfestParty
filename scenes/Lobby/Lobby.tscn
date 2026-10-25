@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cb6bj5li6nqxo" path="res://scenes/Lobby/lobby_manager.gd" id="1_2vvvf"]
 [ext_resource type="AudioStream" uid="uid://dilqybq7mji3s" path="res://assets/music/Lobby/Lobby.ogg" id="2_reyjo"]
 [ext_resource type="Script" uid="uid://khkdpeu8glxi" path="res://scenes/Lobby/lobby_grid_manager.gd" id="2_xb6ow"]
-[ext_resource type="PackedScene" uid="uid://66bp3jmkfkpb" path="res://scenes/Party/Party.tscn" id="4_12gv0"]
 [ext_resource type="PackedScene" uid="uid://cogpbjc0uohsq" path="res://scenes/Lobby/cursor.tscn" id="4_hruur"]
 [ext_resource type="Shader" uid="uid://dwr2l2dyndl8a" path="res://assets/shaders/texture_scroll.gdshader" id="5_32td6"]
 [ext_resource type="Texture2D" uid="uid://c4got42wmu0n6" path="res://assets/Checker.png" id="6_nt74c"]
@@ -108,7 +107,6 @@ music = ExtResource("2_reyjo")
 grid_manager = NodePath("GridManager")
 player_panels = [NodePath("PlayerPanel1"), NodePath("PlayerPanel2"), NodePath("PlayerPanel3"), NodePath("PlayerPanel4")]
 cursor_prefab = ExtResource("4_hruur")
-party_scene = ExtResource("4_12gv0")
 animator = NodePath("AnimationPlayer")
 sfx_join = NodePath("SFXJoin")
 sfx_leave = NodePath("SFXLeave")
@@ -249,9 +247,17 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nt74c")
 stretch_mode = 1
 
-[node name="Label" type="Label" parent="Begin/CenterContainer" unique_id=235383322]
+[node name="Control" type="Control" parent="Begin/CenterContainer" unique_id=1587405871]
 layout_mode = 2
-text = "Start pour commencer"
+
+[node name="Label" type="Label" parent="Begin/CenterContainer/Control" unique_id=235383322]
+layout_mode = 0
+offset_left = -612.00006
+offset_top = -57.0
+offset_right = 610.99994
+offset_bottom = 57.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Start  pour commencer"
 label_settings = SubResource("LabelSettings_fw2bl")
 script = ExtResource("11_reyjo")
 pulse_scale = Vector2(1.1, 1.025)

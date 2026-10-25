@@ -570,7 +570,7 @@ grow_vertical = 2
 texture = ExtResource("40_xkrou")
 
 [node name="btn_x" type="TextureRect" parent="ControlScene/ButtonContainer/btn_x_bg" unique_id=988249532]
-self_modulate = Color(0.2509804, 0.627451, 1, 1)
+self_modulate = Color(0.29999995, 1, 0.25, 1)
 custom_minimum_size = Vector2(200, 150)
 custom_maximum_size = Vector2(200, 150)
 layout_mode = 0

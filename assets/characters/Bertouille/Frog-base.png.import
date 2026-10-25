@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7cdmsvdvknw"
-path="res://.godot/imported/Frog-fail.png-868a63297d13f4cb5949f4fee8ec07c9.ctex"
+uid="uid://bu7t3l5eol5y2"
+path="res://.godot/imported/Frog-base.png-4e3a26bbb6de13e23ea149981a2aacd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Frog/Frog-fail.png"
-dest_files=["res://.godot/imported/Frog-fail.png-868a63297d13f4cb5949f4fee8ec07c9.ctex"]
+source_file="res://assets/characters/Bertouille/Frog-base.png"
+dest_files=["res://.godot/imported/Frog-base.png-4e3a26bbb6de13e23ea149981a2aacd2.ctex"]
 
 [params]
 

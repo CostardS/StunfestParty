@@ -251,7 +251,7 @@ rotation = -0.13962635
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="BeatPulse2D" type="Node2D" parent="LabelContainer" unique_id=209526836]
-position = Vector2(257.24487, 124.00842)
+position = Vector2(256.74707, 91.62398)
 scale = Vector2(1.0000001, 1.0000001)
 script = ExtResource("5_xyoyv")
 pulse_scale = Vector2(1.025, 1.1)
@@ -264,7 +264,8 @@ offset_top = -50.0
 offset_right = 250.0
 offset_bottom = 50.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "start pour rejoindre"
+text = "start / + 
+pour rejoindre"
 label_settings = SubResource("LabelSettings_xyoyv")
 horizontal_alignment = 1
 vertical_alignment = 1
