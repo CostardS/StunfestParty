@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cj313a0us4wlp"
-path="res://.godot/imported/sfx counter success.wav-f46d57511e9f4f66d0b2326e09cc13c6.sample"
+path="res://godot/imported/sfx counter success.wav-f46d57511e9f4f66d0b2326e09cc13c6.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Pyromane/Sound/sfx counter success.wav"
-dest_files=["res://.godot/imported/sfx counter success.wav-f46d57511e9f4f66d0b2326e09cc13c6.sample"]
+dest_files=["res://godot/imported/sfx counter success.wav-f46d57511e9f4f66d0b2326e09cc13c6.sample"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0cp0vsj2s57b"
-path="res://.godot/imported/Ball.png-0a0859e17575087afb091f77fa8081c5.ctex"
+path="res://godot/imported/Ball.png-0a0859e17575087afb091f77fa8081c5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/PumpPumpPump/assets/Ball.png"
-dest_files=["res://.godot/imported/Ball.png-0a0859e17575087afb091f77fa8081c5.ctex"]
+dest_files=["res://godot/imported/Ball.png-0a0859e17575087afb091f77fa8081c5.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d2vckbq1vc7x8"
-path="res://.godot/imported/jump1.mp3-8314a45693c659d425240ac87913d77e.mp3str"
+path="res://godot/imported/jump1.mp3-8314a45693c659d425240ac87913d77e.mp3str"
 
 [deps]
 
 source_file="res://scenes/Minigames/jumpRace/jumps/jump1.mp3"
-dest_files=["res://.godot/imported/jump1.mp3-8314a45693c659d425240ac87913d77e.mp3str"]
+dest_files=["res://godot/imported/jump1.mp3-8314a45693c659d425240ac87913d77e.mp3str"]
 
 [params]
 

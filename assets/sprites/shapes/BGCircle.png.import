@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8fhyeptkdvb8"
-path.s3tc="res://.godot/imported/BGCircle.png-0ae5d1262979fb8bbad0eaf2bd52cc11.s3tc.ctex"
+path.s3tc="res://godot/imported/BGCircle.png-0ae5d1262979fb8bbad0eaf2bd52cc11.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://assets/sprites/shapes/BGCircle.png"
-dest_files=["res://.godot/imported/BGCircle.png-0ae5d1262979fb8bbad0eaf2bd52cc11.s3tc.ctex"]
+dest_files=["res://godot/imported/BGCircle.png-0ae5d1262979fb8bbad0eaf2bd52cc11.s3tc.ctex"]
 
 [params]
 

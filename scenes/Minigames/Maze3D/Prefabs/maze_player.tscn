@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_8so6y"]
 [ext_resource type="Script" uid="uid://cskot1f61nxaa" path="res://scenes/Minigames/Maze3D/Scripts/maze_player.gd" id="1_ujjdm"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="2_8so6y"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="2_8so6y"]
 [ext_resource type="PackedScene" uid="uid://fd2s8ut1jwa4" path="res://scenes/Minigames/Maze3D/Prefabs/maze_bullet.tscn" id="3_yauor"]
 [ext_resource type="AudioStream" uid="uid://cgndsq1a60nn2" path="res://scenes/Minigames/Maze3D/SFX/RandomShoot.tres" id="4_ytg25"]
 [ext_resource type="AudioStream" uid="uid://bmcyejja0rer4" path="res://scenes/Minigames/Maze3D/SFX/RandomDeath.tres" id="5_1mnla"]
@@ -40,8 +40,9 @@ _hub = NodePath("../..")
 _sprite = NodePath("../Sprite3D")
 _charaBody = NodePath("..")
 _camera = NodePath("../Camera3D")
+_speed = 8.0
 _bulletSpeed = 20.0
-_turningSpeed = 7.0
+_turningSpeed = 6.0
 _shootCooldown = 0.3
 _bulletPrefab = ExtResource("3_yauor")
 _deadLabel = NodePath("../Label")

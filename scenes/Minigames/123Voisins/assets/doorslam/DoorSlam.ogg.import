@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://kior8kk3g5fj"
-path="res://.godot/imported/DoorSlam.ogg-0af9de6522ed02d13027d71cad7aae76.oggvorbisstr"
+path="res://godot/imported/DoorSlam.ogg-0af9de6522ed02d13027d71cad7aae76.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/doorslam/DoorSlam.ogg"
-dest_files=["res://.godot/imported/DoorSlam.ogg-0af9de6522ed02d13027d71cad7aae76.oggvorbisstr"]
+dest_files=["res://godot/imported/DoorSlam.ogg-0af9de6522ed02d13027d71cad7aae76.oggvorbisstr"]
 
 [params]
 

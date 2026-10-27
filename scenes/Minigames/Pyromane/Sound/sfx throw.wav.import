@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bso0kmtsro5lm"
-path="res://.godot/imported/sfx throw.wav-9c39137ca33ac2104306222f183d3014.sample"
+path="res://godot/imported/sfx throw.wav-9c39137ca33ac2104306222f183d3014.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Pyromane/Sound/sfx throw.wav"
-dest_files=["res://.godot/imported/sfx throw.wav-9c39137ca33ac2104306222f183d3014.sample"]
+dest_files=["res://godot/imported/sfx throw.wav-9c39137ca33ac2104306222f183d3014.sample"]
 
 [params]
 

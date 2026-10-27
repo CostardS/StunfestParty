@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://wgxs3mkeq4g5"
-path="res://.godot/imported/123Knock1.ogg-493d86222f6ddda62d1af8e5601664f8.oggvorbisstr"
+path="res://godot/imported/123Knock1.ogg-493d86222f6ddda62d1af8e5601664f8.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/knock/123Knock1.ogg"
-dest_files=["res://.godot/imported/123Knock1.ogg-493d86222f6ddda62d1af8e5601664f8.oggvorbisstr"]
+dest_files=["res://godot/imported/123Knock1.ogg-493d86222f6ddda62d1af8e5601664f8.oggvorbisstr"]
 
 [params]
 

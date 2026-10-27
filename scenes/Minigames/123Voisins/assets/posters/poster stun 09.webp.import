@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdegpepkrhvjj"
-path="res://.godot/imported/poster stun 09.webp-41eaa179bfe5b38d58ebd7983f2cc0bf.ctex"
+path="res://godot/imported/poster stun 09.webp-41eaa179bfe5b38d58ebd7983f2cc0bf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/posters/poster stun 09.webp"
-dest_files=["res://.godot/imported/poster stun 09.webp-41eaa179bfe5b38d58ebd7983f2cc0bf.ctex"]
+dest_files=["res://godot/imported/poster stun 09.webp-41eaa179bfe5b38d58ebd7983f2cc0bf.ctex"]
 
 [params]
 

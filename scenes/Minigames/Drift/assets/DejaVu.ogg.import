@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://omyeduqtef8x"
-path="res://.godot/imported/DejaVu.ogg-2a7d9eb982cb737cc2b8999838b8a43a.oggvorbisstr"
+path="res://godot/imported/DejaVu.ogg-2a7d9eb982cb737cc2b8999838b8a43a.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/Drift/assets/DejaVu.ogg"
-dest_files=["res://.godot/imported/DejaVu.ogg-2a7d9eb982cb737cc2b8999838b8a43a.oggvorbisstr"]
+dest_files=["res://godot/imported/DejaVu.ogg-2a7d9eb982cb737cc2b8999838b8a43a.oggvorbisstr"]
 
 [params]
 

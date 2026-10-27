@@ -6,7 +6,7 @@ var action1_sprite: Texture2D ## Sprite
 var action2_sprite: Texture2D:
 	get: return action2_sprites[randi_range(0, action2_sprites.size() - 1 )]
 var action2_sprites: Array[Texture2D] = []
-var select_offset: Vector2
+var portrait_offset: int
 
 func _ready() -> void:
 	randomize()
@@ -26,3 +26,16 @@ func get_random_sprite(exclusion :Array[Texture2D] = []) -> Texture2D :
 	var r_index = randi_range(0,texs.size() - 1)
 	return texs[r_index]
 	
+func build_select_offset():
+	var columns:Vector2i = Vector2(idle_sprite.get_width() / 2 - 6, idle_sprite.get_width() / 2 + 6)
+	var found: bool = false
+	var img = idle_sprite.get_image()
+	for y in idle_sprite.get_height():
+		for x in range(columns.x, columns.y):
+			if img.get_pixel(x, y).a > 0.5: 
+				found = true
+				portrait_offset = idle_sprite.get_height() / 4 - y + 5
+				break
+		if found: break
+
+	pass

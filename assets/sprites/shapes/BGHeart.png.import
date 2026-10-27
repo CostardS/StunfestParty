@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1ujqyl0wxsq1"
-path="res://.godot/imported/BGHeart.png-7268e7f938193a266074442248b47791.ctex"
+path="res://godot/imported/BGHeart.png-7268e7f938193a266074442248b47791.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/sprites/shapes/BGHeart.png"
-dest_files=["res://.godot/imported/BGHeart.png-7268e7f938193a266074442248b47791.ctex"]
+dest_files=["res://godot/imported/BGHeart.png-7268e7f938193a266074442248b47791.ctex"]
 
 [params]
 

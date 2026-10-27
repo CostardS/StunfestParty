@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhlnkkgm574u8"
-path="res://.godot/imported/Grassland_tileset_basic.png-6a263217e2024e7a195cab1fe928b68a.ctex"
+path="res://godot/imported/Grassland_tileset_basic.png-6a263217e2024e7a195cab1fe928b68a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/Assets/Grassland_tileset_basic.png"
-dest_files=["res://.godot/imported/Grassland_tileset_basic.png-6a263217e2024e7a195cab1fe928b68a.ctex"]
+dest_files=["res://godot/imported/Grassland_tileset_basic.png-6a263217e2024e7a195cab1fe928b68a.ctex"]
 
 [params]
 

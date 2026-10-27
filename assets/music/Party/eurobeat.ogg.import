@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://7fo76a55t7e2"
-path="res://.godot/imported/eurobeat.ogg-f11141d30954157881a963e7dc9ec860.oggvorbisstr"
+path="res://godot/imported/eurobeat.ogg-f11141d30954157881a963e7dc9ec860.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/music/Party/eurobeat.ogg"
-dest_files=["res://.godot/imported/eurobeat.ogg-f11141d30954157881a963e7dc9ec860.oggvorbisstr"]
+dest_files=["res://godot/imported/eurobeat.ogg-f11141d30954157881a963e7dc9ec860.oggvorbisstr"]
 
 [params]
 

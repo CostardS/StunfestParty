@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fauyaxtexc1c"
-path="res://.godot/imported/counter.png-c72d2e31c2e6ce5f83ff769b2f3cb604.ctex"
+path="res://godot/imported/counter.png-c72d2e31c2e6ce5f83ff769b2f3cb604.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/Pyromane/Sprites/counter.png"
-dest_files=["res://.godot/imported/counter.png-c72d2e31c2e6ce5f83ff769b2f3cb604.ctex"]
+dest_files=["res://godot/imported/counter.png-c72d2e31c2e6ce5f83ff769b2f3cb604.ctex"]
 
 [params]
 

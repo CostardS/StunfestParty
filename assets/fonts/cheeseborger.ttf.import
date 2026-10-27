@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ux2x4w0y4y6j"
-path="res://.godot/imported/cheeseborger.ttf-9b27824321b1dd05230844c58957f4a5.fontdata"
+path="res://godot/imported/cheeseborger.ttf-9b27824321b1dd05230844c58957f4a5.fontdata"
 
 [deps]
 
 source_file="res://assets/fonts/cheeseborger.ttf"
-dest_files=["res://.godot/imported/cheeseborger.ttf-9b27824321b1dd05230844c58957f4a5.fontdata"]
+dest_files=["res://godot/imported/cheeseborger.ttf-9b27824321b1dd05230844c58957f4a5.fontdata"]
 
 [params]
 

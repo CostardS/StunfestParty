@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nbrh342lbpby"
-path="res://.godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex"
+path="res://godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://addons/rhythm_notifier/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex"]
+dest_files=["res://godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex"]
 
 [params]
 

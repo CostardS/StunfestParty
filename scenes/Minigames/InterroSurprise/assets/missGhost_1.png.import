@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lla1dghhg21u"
-path="res://.godot/imported/missGhost_1.png-ee7ea6e884a1bf94d50438e809b879d5.ctex"
+path="res://godot/imported/missGhost_1.png-ee7ea6e884a1bf94d50438e809b879d5.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/missGhost_1.png"
-dest_files=["res://.godot/imported/missGhost_1.png-ee7ea6e884a1bf94d50438e809b879d5.ctex"]
+dest_files=["res://godot/imported/missGhost_1.png-ee7ea6e884a1bf94d50438e809b879d5.ctex"]
 
 [params]
 

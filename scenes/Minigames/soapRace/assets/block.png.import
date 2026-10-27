@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp828oplme4ee"
-path="res://.godot/imported/block.png-c3dc1517e6437f6dd5136c3c6334fb87.ctex"
+path="res://godot/imported/block.png-c3dc1517e6437f6dd5136c3c6334fb87.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/soapRace/assets/block.png"
-dest_files=["res://.godot/imported/block.png-c3dc1517e6437f6dd5136c3c6334fb87.ctex"]
+dest_files=["res://godot/imported/block.png-c3dc1517e6437f6dd5136c3c6334fb87.ctex"]
 
 [params]
 

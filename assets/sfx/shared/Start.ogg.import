@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dx8m6et5ov4jw"
-path="res://.godot/imported/Start.ogg-f64471f3bc928be2a172707da3fb5388.oggvorbisstr"
+path="res://godot/imported/Start.ogg-f64471f3bc928be2a172707da3fb5388.oggvorbisstr"
 
 [deps]
 
 source_file="res://assets/sfx/shared/Start.ogg"
-dest_files=["res://.godot/imported/Start.ogg-f64471f3bc928be2a172707da3fb5388.oggvorbisstr"]
+dest_files=["res://godot/imported/Start.ogg-f64471f3bc928be2a172707da3fb5388.oggvorbisstr"]
 
 [params]
 

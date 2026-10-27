@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cno5t0x7kpnxf"
-path="res://.godot/imported/bear_zzz.png-6decd312674a8a43ffd3b1b8771e0525.ctex"
+path="res://godot/imported/bear_zzz.png-6decd312674a8a43ffd3b1b8771e0525.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/Assets/bear_zzz.png"
-dest_files=["res://.godot/imported/bear_zzz.png-6decd312674a8a43ffd3b1b8771e0525.ctex"]
+dest_files=["res://godot/imported/bear_zzz.png-6decd312674a8a43ffd3b1b8771e0525.ctex"]
 
 [params]
 

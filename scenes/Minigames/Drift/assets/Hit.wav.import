@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b1ctyy0cj4th6"
-path="res://.godot/imported/Hit.wav-337e4e8d0cedc7ae869f394ee38c01dc.sample"
+path="res://godot/imported/Hit.wav-337e4e8d0cedc7ae869f394ee38c01dc.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Drift/assets/Hit.wav"
-dest_files=["res://.godot/imported/Hit.wav-337e4e8d0cedc7ae869f394ee38c01dc.sample"]
+dest_files=["res://godot/imported/Hit.wav-337e4e8d0cedc7ae869f394ee38c01dc.sample"]
 
 [params]
 

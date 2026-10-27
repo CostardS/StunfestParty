@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qo6sg8xrlb3x"
-path="res://.godot/imported/world_tileset.png-6a3193febc2ee5e665ad1efb7f6ddff7.ctex"
+path="res://godot/imported/world_tileset.png-6a3193febc2ee5e665ad1efb7f6ddff7.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/jumpRace/world_tileset.png"
-dest_files=["res://.godot/imported/world_tileset.png-6a3193febc2ee5e665ad1efb7f6ddff7.ctex"]
+dest_files=["res://godot/imported/world_tileset.png-6a3193febc2ee5e665ad1efb7f6ddff7.ctex"]
 
 [params]
 

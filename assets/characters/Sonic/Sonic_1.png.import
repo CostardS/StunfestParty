@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7lhfppbu4vfd"
-path="res://.godot/imported/Sonic_1.png-7286ecfffbba749933b15753ee933b78.ctex"
+path="res://godot/imported/Sonic_1.png-7286ecfffbba749933b15753ee933b78.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Sonic/Sonic_1.png"
-dest_files=["res://.godot/imported/Sonic_1.png-7286ecfffbba749933b15753ee933b78.ctex"]
+dest_files=["res://godot/imported/Sonic_1.png-7286ecfffbba749933b15753ee933b78.ctex"]
 
 [params]
 

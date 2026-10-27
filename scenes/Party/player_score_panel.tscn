@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1r50r87sm1m8"]
 
 [ext_resource type="Script" uid="uid://dkslaf4hu785a" path="res://scenes/Party/player_score_panel.gd" id="1_w2bgu"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="2_7tirx"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="2_7tirx"]
 [ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="2_86y1f"]
 [ext_resource type="AudioStream" uid="uid://culnxapq4snct" path="res://scenes/Minigames/InterroSurprise/assets/SFX/PassXL.wav" id="2_f5hcb"]
 [ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="3_86y1f"]

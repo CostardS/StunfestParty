@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bwbqxkmkepwc3"
-path="res://.godot/imported/laser3.ogg-653c39a16d26f6c95fc3bec4e8c58018.oggvorbisstr"
+path="res://godot/imported/laser3.ogg-653c39a16d26f6c95fc3bec4e8c58018.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/laser/laser3.ogg"
-dest_files=["res://.godot/imported/laser3.ogg-653c39a16d26f6c95fc3bec4e8c58018.oggvorbisstr"]
+dest_files=["res://godot/imported/laser3.ogg-653c39a16d26f6c95fc3bec4e8c58018.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cptlmfreyyfup"
-path="res://.godot/imported/Dish Out.ttf-e177d05ecaa18ad1e26c654490785cb7.fontdata"
+path="res://godot/imported/Dish Out.ttf-e177d05ecaa18ad1e26c654490785cb7.fontdata"
 
 [deps]
 
 source_file="res://assets/fonts/Dish Out.ttf"
-dest_files=["res://.godot/imported/Dish Out.ttf-e177d05ecaa18ad1e26c654490785cb7.fontdata"]
+dest_files=["res://godot/imported/Dish Out.ttf-e177d05ecaa18ad1e26c654490785cb7.fontdata"]
 
 [params]
 

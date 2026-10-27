@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://18tvhlfvmp6l"
-path="res://.godot/imported/EMOTE (19).png-28aa4c9e8d87f84f9da08af99d4fdcbc.ctex"
+path="res://godot/imported/EMOTE (19).png-28aa4c9e8d87f84f9da08af99d4fdcbc.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/voisin/EMOTE (19).png"
-dest_files=["res://.godot/imported/EMOTE (19).png-28aa4c9e8d87f84f9da08af99d4fdcbc.ctex"]
+dest_files=["res://godot/imported/EMOTE (19).png-28aa4c9e8d87f84f9da08af99d4fdcbc.ctex"]
 
 [params]
 

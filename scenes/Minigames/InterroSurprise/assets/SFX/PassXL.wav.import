@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://culnxapq4snct"
-path="res://.godot/imported/PassXL.wav-08049db628397be8a0317f9aaf15e00c.sample"
+path="res://godot/imported/PassXL.wav-08049db628397be8a0317f9aaf15e00c.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/SFX/PassXL.wav"
-dest_files=["res://.godot/imported/PassXL.wav-08049db628397be8a0317f9aaf15e00c.sample"]
+dest_files=["res://godot/imported/PassXL.wav-08049db628397be8a0317f9aaf15e00c.sample"]
 
 [params]
 

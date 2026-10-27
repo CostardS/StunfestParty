@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5wopo317vkna"
-path="res://.godot/imported/tree_color.png-59739ae6c29eee4d1e73eb2fb854cb57.ctex"
+path="res://godot/imported/tree_color.png-59739ae6c29eee4d1e73eb2fb854cb57.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/Pyromane/Sprites/tree_color.png"
-dest_files=["res://.godot/imported/tree_color.png-59739ae6c29eee4d1e73eb2fb854cb57.ctex"]
+dest_files=["res://godot/imported/tree_color.png-59739ae6c29eee4d1e73eb2fb854cb57.ctex"]
 
 [params]
 

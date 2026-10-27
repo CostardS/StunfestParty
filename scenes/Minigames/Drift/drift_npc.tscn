@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxa6dcr7pwu6t"]
 
 [ext_resource type="Script" uid="uid://bkqp3pym1seah" path="res://scenes/Minigames/Drift/npc.gd" id="1_f6hif"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="2_of325"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="2_of325"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wmq7q"]
 radius = 250.0

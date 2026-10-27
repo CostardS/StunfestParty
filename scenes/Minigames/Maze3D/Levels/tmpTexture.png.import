@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvdbliv0m4hts"
-path="res://.godot/imported/tmpTexture.png-2a79297b64d8ec63fb040eebe9e8971d.ctex"
+path="res://godot/imported/tmpTexture.png-2a79297b64d8ec63fb040eebe9e8971d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/Maze3D/Levels/tmpTexture.png"
-dest_files=["res://.godot/imported/tmpTexture.png-2a79297b64d8ec63fb040eebe9e8971d.ctex"]
+dest_files=["res://godot/imported/tmpTexture.png-2a79297b64d8ec63fb040eebe9e8971d.ctex"]
 
 [params]
 

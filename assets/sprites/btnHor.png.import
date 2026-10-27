@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3vjtcr8xypx5"
-path="res://.godot/imported/btnHor.png-169312548547ec0816bf469d6a4b7f5a.ctex"
+path="res://godot/imported/btnHor.png-169312548547ec0816bf469d6a4b7f5a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/sprites/btnHor.png"
-dest_files=["res://.godot/imported/btnHor.png-169312548547ec0816bf469d6a4b7f5a.ctex"]
+dest_files=["res://godot/imported/btnHor.png-169312548547ec0816bf469d6a4b7f5a.ctex"]
 
 [params]
 

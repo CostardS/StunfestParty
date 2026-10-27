@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://jif1bhycmk63"
-path="res://.godot/imported/DYMMusic.ogg-8b5a82f5ba7496f2cffb7907235d5b8e.oggvorbisstr"
+path="res://godot/imported/DYMMusic.ogg-8b5a82f5ba7496f2cffb7907235d5b8e.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/DYMMusic.ogg"
-dest_files=["res://.godot/imported/DYMMusic.ogg-8b5a82f5ba7496f2cffb7907235d5b8e.oggvorbisstr"]
+dest_files=["res://godot/imported/DYMMusic.ogg-8b5a82f5ba7496f2cffb7907235d5b8e.oggvorbisstr"]
 
 [params]
 

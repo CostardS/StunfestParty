@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c3jf70d5yq02y"
-path="res://.godot/imported/Whistle.ogg-2c18f67aed6cb3fa4cb59f1f2c0bca1d.oggvorbisstr"
+path="res://godot/imported/Whistle.ogg-2c18f67aed6cb3fa4cb59f1f2c0bca1d.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/BtnMasher/Whistle.ogg"
-dest_files=["res://.godot/imported/Whistle.ogg-2c18f67aed6cb3fa4cb59f1f2c0bca1d.oggvorbisstr"]
+dest_files=["res://godot/imported/Whistle.ogg-2c18f67aed6cb3fa4cb59f1f2c0bca1d.oggvorbisstr"]
 
 [params]
 

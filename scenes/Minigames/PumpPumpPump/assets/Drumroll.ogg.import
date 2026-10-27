@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://wlcfcbc8c1nw"
-path="res://.godot/imported/Drumroll.ogg-c836633938903c94238e365a463c5cc5.oggvorbisstr"
+path="res://godot/imported/Drumroll.ogg-c836633938903c94238e365a463c5cc5.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/PumpPumpPump/assets/Drumroll.ogg"
-dest_files=["res://.godot/imported/Drumroll.ogg-c836633938903c94238e365a463c5cc5.oggvorbisstr"]
+dest_files=["res://godot/imported/Drumroll.ogg-c836633938903c94238e365a463c5cc5.oggvorbisstr"]
 
 [params]
 

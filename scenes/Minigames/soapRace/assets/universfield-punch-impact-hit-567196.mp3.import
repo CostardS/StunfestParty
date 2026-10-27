@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b5pn6axkxojuj"
-path="res://.godot/imported/universfield-punch-impact-hit-567196.mp3-d6bf8d8551f69dd5d500918aaf186026.mp3str"
+path="res://godot/imported/universfield-punch-impact-hit-567196.mp3-d6bf8d8551f69dd5d500918aaf186026.mp3str"
 
 [deps]
 
 source_file="res://scenes/Minigames/soapRace/assets/universfield-punch-impact-hit-567196.mp3"
-dest_files=["res://.godot/imported/universfield-punch-impact-hit-567196.mp3-d6bf8d8551f69dd5d500918aaf186026.mp3str"]
+dest_files=["res://godot/imported/universfield-punch-impact-hit-567196.mp3-d6bf8d8551f69dd5d500918aaf186026.mp3str"]
 
 [params]
 

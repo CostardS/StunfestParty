@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b4t2f7fejbq68"
-path="res://.godot/imported/testMaze.glb-42c505ac1608ca015b1dec968fef7860.scn"
+path="res://godot/imported/testMaze.glb-42c505ac1608ca015b1dec968fef7860.scn"
 
 [deps]
 
 source_file="res://scenes/Minigames/Maze3D/Levels/testMaze.glb"
-dest_files=["res://.godot/imported/testMaze.glb-42c505ac1608ca015b1dec968fef7860.scn"]
+dest_files=["res://godot/imported/testMaze.glb-42c505ac1608ca015b1dec968fef7860.scn"]
 
 [params]
 

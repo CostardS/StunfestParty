@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c1l872xkvd2up"
-path="res://.godot/imported/Stunfest2025.otf-93021af5d8e93a7bfb0e6d9e9bb0db3a.fontdata"
+path="res://godot/imported/Stunfest2025.otf-93021af5d8e93a7bfb0e6d9e9bb0db3a.fontdata"
 
 [deps]
 
 source_file="res://assets/fonts/Stunfest2025.otf"
-dest_files=["res://.godot/imported/Stunfest2025.otf-93021af5d8e93a7bfb0e6d9e9bb0db3a.fontdata"]
+dest_files=["res://godot/imported/Stunfest2025.otf-93021af5d8e93a7bfb0e6d9e9bb0db3a.fontdata"]
 
 [params]
 

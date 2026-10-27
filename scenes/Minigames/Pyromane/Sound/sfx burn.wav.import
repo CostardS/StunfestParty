@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://caxtbiuu7487g"
-path="res://.godot/imported/sfx burn.wav-554b3c2cb95f24c3045b580e43e31a21.sample"
+path="res://godot/imported/sfx burn.wav-554b3c2cb95f24c3045b580e43e31a21.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Pyromane/Sound/sfx burn.wav"
-dest_files=["res://.godot/imported/sfx burn.wav-554b3c2cb95f24c3045b580e43e31a21.sample"]
+dest_files=["res://godot/imported/sfx burn.wav-554b3c2cb95f24c3045b580e43e31a21.sample"]
 
 [params]
 

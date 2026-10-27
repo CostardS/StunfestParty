@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://brqmloblaww17"
-path="res://.godot/imported/Laser_Shoot5.wav-d11ded36c755b78525f0af50618af2d7.sample"
+path="res://godot/imported/Laser_Shoot5.wav-d11ded36c755b78525f0af50618af2d7.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Maze3D/SFX/Laser_Shoot5.wav"
-dest_files=["res://.godot/imported/Laser_Shoot5.wav-d11ded36c755b78525f0af50618af2d7.sample"]
+dest_files=["res://godot/imported/Laser_Shoot5.wav-d11ded36c755b78525f0af50618af2d7.sample"]
 
 [params]
 

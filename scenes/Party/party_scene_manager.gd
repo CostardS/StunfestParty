@@ -9,6 +9,7 @@ class_name PartySceneManager
 @export var party_ui: Control
 @export var minigame_ui: SharedMinigameUI;
 @export var anim: AnimationPlayer
+@export var reset_anim: AnimationPlayer
 
 @export var winner_name_label: Label
 @export var winner_texture: TextureRect
@@ -147,9 +148,12 @@ func _clean_game_holder() -> void:
 var reset_time = 0
 
 func _process(delta: float) -> void:
-	if someone_wants_to_reset()  && reset_time >= 0: 
+	if (someone_wants_to_reset() || Input.is_key_pressed(Key.KEY_ESCAPE))  && reset_time >= 0: 
+		if reset_time == 0: reset_anim.play("show")
 		reset_time += delta
-	else : reset_time = 0
+	else : 
+		if reset_time > 0 : reset_anim.play("hide")
+		reset_time = 0
 	if can_restart && someone_wants_to_start() || reset_time > 1.5:
 		reset_time = -1
 		#TODO SFX Lobby Start

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://btghqkbnxym2r"
-path="res://.godot/imported/Pump4.ogg-dde8f910f758b2da99725a1c6610c42b.oggvorbisstr"
+path="res://godot/imported/Pump4.ogg-dde8f910f758b2da99725a1c6610c42b.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/PumpPumpPump/assets/PumpSfx/Pump4.ogg"
-dest_files=["res://.godot/imported/Pump4.ogg-dde8f910f758b2da99725a1c6610c42b.oggvorbisstr"]
+dest_files=["res://godot/imported/Pump4.ogg-dde8f910f758b2da99725a1c6610c42b.oggvorbisstr"]
 
 [params]
 

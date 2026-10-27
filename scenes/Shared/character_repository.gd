@@ -20,6 +20,7 @@ func _load_characters() -> void:
 				elif(cnt >= 2): character.action2_sprites.append(texture)
 				cnt = cnt+1
 		chardir.list_dir_end()
+		character.build_select_offset()
 		if(cnt > 2): _characters.set(character.character_name, character)
 	dir.list_dir_end()
 

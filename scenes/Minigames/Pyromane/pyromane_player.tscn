@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_1usry"]
 [ext_resource type="Script" uid="uid://kgslxgn8t30y" path="res://scenes/Minigames/Pyromane/pyromane_player.gd" id="2_143o3"]
 [ext_resource type="PackedScene" uid="uid://kkchokc0fopf" path="res://scenes/Minigames/Pyromane/power.tscn" id="3_143o3"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="3_ovbqo"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="3_ovbqo"]
 [ext_resource type="PackedScene" uid="uid://xpbv2vy2y0bk" path="res://scenes/Minigames/Pyromane/clope.tscn" id="4_ovbqo"]
 [ext_resource type="PackedScene" uid="uid://be645yb1a4bgd" path="res://scenes/Minigames/Pyromane/counter.tscn" id="5_tgnj1"]
 [ext_resource type="AudioStream" uid="uid://bso0kmtsro5lm" path="res://scenes/Minigames/Pyromane/Sound/sfx throw.wav" id="6_75pq5"]

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmbh4fw0mop8a"
-path="res://.godot/imported/tablea stun 26.jpg-a8c7364a90d493bcfaa50b8603b5d275.ctex"
+path="res://godot/imported/tablea stun 26.jpg-a8c7364a90d493bcfaa50b8603b5d275.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/tableau/tablea stun 26.jpg"
-dest_files=["res://.godot/imported/tablea stun 26.jpg-a8c7364a90d493bcfaa50b8603b5d275.ctex"]
+dest_files=["res://godot/imported/tablea stun 26.jpg-a8c7364a90d493bcfaa50b8603b5d275.ctex"]
 
 [params]
 

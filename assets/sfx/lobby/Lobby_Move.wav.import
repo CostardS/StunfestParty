@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://6ot4mqerejdr"
-path="res://.godot/imported/Lobby_Move.wav-9c912356437d60b73e011ffbbc8f3c32.sample"
+path="res://godot/imported/Lobby_Move.wav-9c912356437d60b73e011ffbbc8f3c32.sample"
 
 [deps]
 
 source_file="res://assets/sfx/lobby/Lobby_Move.wav"
-dest_files=["res://.godot/imported/Lobby_Move.wav-9c912356437d60b73e011ffbbc8f3c32.sample"]
+dest_files=["res://godot/imported/Lobby_Move.wav-9c912356437d60b73e011ffbbc8f3c32.sample"]
 
 [params]
 

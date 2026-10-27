@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhynlasfko7l8"
-path="res://.godot/imported/error.wav-f075431862835b99eb083c496d1d6909.sample"
+path="res://godot/imported/error.wav-f075431862835b99eb083c496d1d6909.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/sounds/error.wav"
-dest_files=["res://.godot/imported/error.wav-f075431862835b99eb083c496d1d6909.sample"]
+dest_files=["res://godot/imported/error.wav-f075431862835b99eb083c496d1d6909.sample"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gor6q7m3q8uw"
-path="res://.godot/imported/Broco_2.png-9f4b31e6d1c44d55a20875fb8c600132.ctex"
+path="res://godot/imported/Broco_2.png-9f4b31e6d1c44d55a20875fb8c600132.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Brocoli Maské/Broco_2.png"
-dest_files=["res://.godot/imported/Broco_2.png-9f4b31e6d1c44d55a20875fb8c600132.ctex"]
+dest_files=["res://godot/imported/Broco_2.png-9f4b31e6d1c44d55a20875fb8c600132.ctex"]
 
 [params]
 

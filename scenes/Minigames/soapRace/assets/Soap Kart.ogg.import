@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://br4eu7xrof6ym"
-path="res://.godot/imported/Soap Kart.ogg-7aa69fc4c7483e65bbb3bf60f9d70858.oggvorbisstr"
+path="res://godot/imported/Soap Kart.ogg-7aa69fc4c7483e65bbb3bf60f9d70858.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/soapRace/assets/Soap Kart.ogg"
-dest_files=["res://.godot/imported/Soap Kart.ogg-7aa69fc4c7483e65bbb3bf60f9d70858.oggvorbisstr"]
+dest_files=["res://godot/imported/Soap Kart.ogg-7aa69fc4c7483e65bbb3bf60f9d70858.oggvorbisstr"]
 
 [params]
 

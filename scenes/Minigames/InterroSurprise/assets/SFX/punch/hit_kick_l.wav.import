@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bftfmhxxc35jb"
-path="res://.godot/imported/hit_kick_l.wav-52df72590fb0ca0295d34d623a80ff68.sample"
+path="res://godot/imported/hit_kick_l.wav-52df72590fb0ca0295d34d623a80ff68.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/SFX/punch/hit_kick_l.wav"
-dest_files=["res://.godot/imported/hit_kick_l.wav-52df72590fb0ca0295d34d623a80ff68.sample"]
+dest_files=["res://godot/imported/hit_kick_l.wav-52df72590fb0ca0295d34d623a80ff68.sample"]
 
 [params]
 

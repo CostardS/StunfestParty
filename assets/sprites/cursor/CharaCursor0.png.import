@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwuao87f1ktl"
-path="res://.godot/imported/CharaCursor0.png-6a841fa5955ffd85a5aa3fa019ccbb54.ctex"
+path="res://godot/imported/CharaCursor0.png-6a841fa5955ffd85a5aa3fa019ccbb54.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/sprites/cursor/CharaCursor0.png"
-dest_files=["res://.godot/imported/CharaCursor0.png-6a841fa5955ffd85a5aa3fa019ccbb54.ctex"]
+dest_files=["res://godot/imported/CharaCursor0.png-6a841fa5955ffd85a5aa3fa019ccbb54.ctex"]
 
 [params]
 

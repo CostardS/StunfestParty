@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ben22wkv5wh8n"
-path="res://.godot/imported/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav-1eb724a595821680215781c98a37ab79.sample"
+path="res://godot/imported/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav-1eb724a595821680215781c98a37ab79.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/Assets/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav"
-dest_files=["res://.godot/imported/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav-1eb724a595821680215781c98a37ab79.sample"]
+dest_files=["res://godot/imported/665183__el_boss__item-or-material-pickup-pop-1-of-3.wav-1eb724a595821680215781c98a37ab79.sample"]
 
 [params]
 

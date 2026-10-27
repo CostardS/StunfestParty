@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://dqa7y8c7hq27a"
-path="res://.godot/imported/DanceMusic.ogg-f4b7b64972d67716c47491538b39bf85.oggvorbisstr"
+path="res://godot/imported/DanceMusic.ogg-f4b7b64972d67716c47491538b39bf85.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/BtnMasher/DanceMusic.ogg"
-dest_files=["res://.godot/imported/DanceMusic.ogg-f4b7b64972d67716c47491538b39bf85.oggvorbisstr"]
+dest_files=["res://godot/imported/DanceMusic.ogg-f4b7b64972d67716c47491538b39bf85.oggvorbisstr"]
 
 [params]
 

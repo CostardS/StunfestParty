@@ -20,6 +20,7 @@ func assign_character(character: CharacterInfo) -> void:
 	else:
 		modulate = Color.WHITE
 		portrait.texture = character.idle_sprite
+		portrait.offset = Vector2(0, character.portrait_offset)
 		
 func lock(player_index:int) -> void:
 	background.self_modulate = selected_color

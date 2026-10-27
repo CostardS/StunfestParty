@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0srpfwmkqb1u"
-path="res://.godot/imported/Lap.wav-06f3665e765ffeef408156159044da66.sample"
+path="res://godot/imported/Lap.wav-06f3665e765ffeef408156159044da66.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Drift/assets/Lap.wav"
-dest_files=["res://.godot/imported/Lap.wav-06f3665e765ffeef408156159044da66.sample"]
+dest_files=["res://godot/imported/Lap.wav-06f3665e765ffeef408156159044da66.sample"]
 
 [params]
 

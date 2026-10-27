@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drl1yufqan0p1"
-path="res://.godot/imported/amogus-pose-3.png-6feb01b7c316ad62b6c1ef6f08611b38.ctex"
+path="res://godot/imported/amogus-pose-3.png-6feb01b7c316ad62b6c1ef6f08611b38.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Bernard/amogus-pose-3.png"
-dest_files=["res://.godot/imported/amogus-pose-3.png-6feb01b7c316ad62b6c1ef6f08611b38.ctex"]
+dest_files=["res://godot/imported/amogus-pose-3.png-6feb01b7c316ad62b6c1ef6f08611b38.ctex"]
 
 [params]
 

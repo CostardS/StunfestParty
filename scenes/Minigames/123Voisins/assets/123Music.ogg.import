@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://w88w1gxoek2j"
-path="res://.godot/imported/123Music.ogg-d18bdc9c102539bad07e29ebfcb7af60.oggvorbisstr"
+path="res://godot/imported/123Music.ogg-d18bdc9c102539bad07e29ebfcb7af60.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/123Voisins/assets/123Music.ogg"
-dest_files=["res://.godot/imported/123Music.ogg-d18bdc9c102539bad07e29ebfcb7af60.oggvorbisstr"]
+dest_files=["res://godot/imported/123Music.ogg-d18bdc9c102539bad07e29ebfcb7af60.oggvorbisstr"]
 
 [params]
 

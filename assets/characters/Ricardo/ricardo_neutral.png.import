@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh4d6dmynwnmh"
-path="res://.godot/imported/ricardo_neutral.png-4d71b96befb5d2e48513fb0009fa4f4b.ctex"
+path="res://godot/imported/ricardo_neutral.png-4d71b96befb5d2e48513fb0009fa4f4b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Ricardo/ricardo_neutral.png"
-dest_files=["res://.godot/imported/ricardo_neutral.png-4d71b96befb5d2e48513fb0009fa4f4b.ctex"]
+dest_files=["res://godot/imported/ricardo_neutral.png-4d71b96befb5d2e48513fb0009fa4f4b.ctex"]
 
 [params]
 

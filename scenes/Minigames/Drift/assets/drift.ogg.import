@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cn0fv6582vjpc"
-path="res://.godot/imported/drift.ogg-bca9eed2a1b312d8f89f0bbce5f93c0b.oggvorbisstr"
+path="res://godot/imported/drift.ogg-bca9eed2a1b312d8f89f0bbce5f93c0b.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/Drift/assets/drift.ogg"
-dest_files=["res://.godot/imported/drift.ogg-bca9eed2a1b312d8f89f0bbce5f93c0b.oggvorbisstr"]
+dest_files=["res://godot/imported/drift.ogg-bca9eed2a1b312d8f89f0bbce5f93c0b.oggvorbisstr"]
 
 [params]
 

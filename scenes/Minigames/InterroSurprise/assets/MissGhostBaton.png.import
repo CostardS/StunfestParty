@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crcefbjeo0ca3"
-path="res://.godot/imported/MissGhostBaton.png-64f2a39481c8dfa9ffe3983265b8b443.ctex"
+path="res://godot/imported/MissGhostBaton.png-64f2a39481c8dfa9ffe3983265b8b443.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/MissGhostBaton.png"
-dest_files=["res://.godot/imported/MissGhostBaton.png-64f2a39481c8dfa9ffe3983265b8b443.ctex"]
+dest_files=["res://godot/imported/MissGhostBaton.png-64f2a39481c8dfa9ffe3983265b8b443.ctex"]
 
 [params]
 

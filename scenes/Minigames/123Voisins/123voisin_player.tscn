@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://b8umyrwy0143u" path="res://scenes/Minigames/BtnMasher/steps/steps.tres" id="3_qtnnx"]
 [ext_resource type="AudioStream" uid="uid://bre6jgufy3cr" path="res://scenes/Minigames/PumpPumpPump/assets/explosion.mp3" id="4_dpbh5"]
 [ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="5_4245m"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="6_2ajnk"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="6_2ajnk"]
 
 [sub_resource type="Animation" id="Animation_qtnnx"]
 length = 0.001

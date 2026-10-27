@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cu434de054b4x"
-path="res://.godot/imported/BTN (5).ogg-08e54e58ee68e300f2f477a15b8dd394.oggvorbisstr"
+path="res://godot/imported/BTN (5).ogg-08e54e58ee68e300f2f477a15b8dd394.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/InterroSurprise/assets/SFX/btn_ok/BTN (5).ogg"
-dest_files=["res://.godot/imported/BTN (5).ogg-08e54e58ee68e300f2f477a15b8dd394.oggvorbisstr"]
+dest_files=["res://godot/imported/BTN (5).ogg-08e54e58ee68e300f2f477a15b8dd394.oggvorbisstr"]
 
 [params]
 

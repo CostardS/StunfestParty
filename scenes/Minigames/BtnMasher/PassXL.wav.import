@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://duwu7y4ratrq"
-path="res://.godot/imported/PassXL.wav-62740b6576aa8a61f2044d7411d1a0f0.sample"
+path="res://godot/imported/PassXL.wav-62740b6576aa8a61f2044d7411d1a0f0.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/BtnMasher/PassXL.wav"
-dest_files=["res://.godot/imported/PassXL.wav-62740b6576aa8a61f2044d7411d1a0f0.sample"]
+dest_files=["res://godot/imported/PassXL.wav-62740b6576aa8a61f2044d7411d1a0f0.sample"]
 
 [params]
 

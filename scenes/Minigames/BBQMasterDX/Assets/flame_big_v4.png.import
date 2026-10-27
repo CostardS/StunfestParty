@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cce8vn1soipda"
-path="res://.godot/imported/flame_big_v4.png-01d44178d4d7dad0e849058bac748706.ctex"
+path="res://godot/imported/flame_big_v4.png-01d44178d4d7dad0e849058bac748706.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/Assets/flame_big_v4.png"
-dest_files=["res://.godot/imported/flame_big_v4.png-01d44178d4d7dad0e849058bac748706.ctex"]
+dest_files=["res://godot/imported/flame_big_v4.png-01d44178d4d7dad0e849058bac748706.ctex"]
 
 [params]
 

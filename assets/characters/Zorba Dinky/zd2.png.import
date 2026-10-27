@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcg5mfd7enqmm"
-path="res://.godot/imported/zd2.png-b75d9977c66c781d3c8b87b28c6cba69.ctex"
+path="res://godot/imported/zd2.png-b75d9977c66c781d3c8b87b28c6cba69.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Zorba Dinky/zd2.png"
-dest_files=["res://.godot/imported/zd2.png-b75d9977c66c781d3c8b87b28c6cba69.ctex"]
+dest_files=["res://godot/imported/zd2.png-b75d9977c66c781d3c8b87b28c6cba69.ctex"]
 
 [params]
 

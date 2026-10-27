@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmekxaph1jt3n"
-path="res://.godot/imported/MaxParapluie_1.png-f43940a45f209a75269b927dc048fb7d.ctex"
+path="res://godot/imported/MaxParapluie_1.png-f43940a45f209a75269b927dc048fb7d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Yrfgjxghfgxc/MaxParapluie_1.png"
-dest_files=["res://.godot/imported/MaxParapluie_1.png-f43940a45f209a75269b927dc048fb7d.ctex"]
+dest_files=["res://godot/imported/MaxParapluie_1.png-f43940a45f209a75269b927dc048fb7d.ctex"]
 
 [params]
 

@@ -20,11 +20,15 @@ var player_data: Dictionary[int, PlayerInfo] = {}
 var _num_ready:int = 0
 var _all_ready:bool = false
 var busy:bool
+var can_exit=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicPlayer.play(music)
 	grid_manager.init()
+	await get_tree().create_timer(1.5).timeout
+	can_exit = true
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _process(_delta: float) -> void:
 	if busy: return
@@ -35,7 +39,9 @@ func _process(_delta: float) -> void:
 		sfx_start2.play()
 		busy = true
 		SignalBus.lock_inputs.emit()
-		PlayerManager.register_players(player_data.values())
+		var players = player_data.values()
+		players.sort_custom(func(a:PlayerInfo,b:PlayerInfo): return a.player_index < b.player_index)
+		PlayerManager.register_players(players)
 		for p in player_panels:
 			if p.has_player:
 				p.start_animation()
@@ -43,6 +49,10 @@ func _process(_delta: float) -> void:
 		
 		await get_tree().create_timer(.5).timeout
 		SceneManager.swap_scenes("res://scenes/Party/Party.tscn",null,self)
+	if can_exit and Input.is_key_pressed(Key.KEY_ESCAPE) and OS.get_name() != "Web":
+		can_exit = false
+		get_tree().quit()
+		
 
 func join(device: int) -> void:
 	var player = next_player()

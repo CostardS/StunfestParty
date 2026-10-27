@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bagfxqurfa4bv" path="res://scenes/Minigames/player_hub.gd" id="1_am8cf"]
 [ext_resource type="Script" uid="uid://bnu0i5eida78g" path="res://scenes/Minigames/BtnMasher/masher_player.gd" id="2_drp1k"]
 [ext_resource type="AudioStream" uid="uid://b8umyrwy0143u" path="res://scenes/Minigames/BtnMasher/steps/steps.tres" id="3_am8cf"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="4_am8cf"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="4_am8cf"]
 [ext_resource type="FontFile" uid="uid://k0fbsf50dhgc" path="res://assets/fonts/Mario-Party-Hudson-Font.ttf" id="4_drp1k"]
 [ext_resource type="AudioStream" uid="uid://biyx2heq08nly" path="res://scenes/Minigames/BtnMasher/pumps.tres" id="4_gcdhc"]
 [ext_resource type="AudioStream" uid="uid://duwu7y4ratrq" path="res://scenes/Minigames/BtnMasher/PassXL.wav" id="5_mhitb"]

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://un0vyfnarc2n"
-path="res://.godot/imported/00046.png-ea2650c2d813afda1977f968383607eb.ctex"
+path="res://godot/imported/00046.png-ea2650c2d813afda1977f968383607eb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/PumpPumpPump/assets/Explosion/00046.png"
-dest_files=["res://.godot/imported/00046.png-ea2650c2d813afda1977f968383607eb.ctex"]
+dest_files=["res://godot/imported/00046.png-ea2650c2d813afda1977f968383607eb.ctex"]
 
 [params]
 

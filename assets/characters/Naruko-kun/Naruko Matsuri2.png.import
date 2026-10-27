@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://creyq8joi4te5"
-path="res://.godot/imported/Naruko Matsuri2.png-d372c3a71b1709ce37c597043a0044f2.ctex"
+path="res://godot/imported/Naruko Matsuri2.png-d372c3a71b1709ce37c597043a0044f2.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://assets/characters/Naruko-kun/Naruko Matsuri2.png"
-dest_files=["res://.godot/imported/Naruko Matsuri2.png-d372c3a71b1709ce37c597043a0044f2.ctex"]
+dest_files=["res://godot/imported/Naruko Matsuri2.png-d372c3a71b1709ce37c597043a0044f2.ctex"]
 
 [params]
 

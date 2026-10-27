@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu4rcsaruyoge"
-path="res://.godot/imported/raw.png-a18ff6548ff7bceee1d544d13546489d.ctex"
+path="res://godot/imported/raw.png-a18ff6548ff7bceee1d544d13546489d.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://scenes/Minigames/BBQMasterDX/Sprites/raw.png"
-dest_files=["res://.godot/imported/raw.png-a18ff6548ff7bceee1d544d13546489d.ctex"]
+dest_files=["res://godot/imported/raw.png-a18ff6548ff7bceee1d544d13546489d.ctex"]
 
 [params]
 

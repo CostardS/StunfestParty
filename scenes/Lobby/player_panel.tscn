@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chqvphrcofg7d" path="res://scenes/Lobby/player_panel.gd" id="1_mixjw"]
 [ext_resource type="Texture2D" uid="uid://1xc2pxxnng1a" path="res://assets/sprites/hornet.png" id="3_6hv7v"]
-[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/Wuki Chan/wukichan-0.png" id="4_1coio"]
+[ext_resource type="Texture2D" uid="uid://drvwpm6fpc3yc" path="res://assets/characters/placeholder.png" id="4_1coio"]
 [ext_resource type="Shader" uid="uid://bs4s2nyr0nfg3" path="res://assets/shaders/hue_shift_shake.gdshader" id="4_mixjw"]
 [ext_resource type="Script" uid="uid://b2hxjf8gc38xd" path="res://scenes/Shared/beat_pulse.gd" id="5_xyoyv"]
 [ext_resource type="Texture2D" uid="uid://8fhyeptkdvb8" path="res://assets/sprites/shapes/BGCircle.png" id="6_m2e41"]

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c0mlbolnmsm6j"
-path="res://.godot/imported/death2.mp3-8634794d1b00ee03373bd08e3695b24e.mp3str"
+path="res://godot/imported/death2.mp3-8634794d1b00ee03373bd08e3695b24e.mp3str"
 
 [deps]
 
 source_file="res://scenes/Minigames/Maze3D/SFX/death2.mp3"
-dest_files=["res://.godot/imported/death2.mp3-8634794d1b00ee03373bd08e3695b24e.mp3str"]
+dest_files=["res://godot/imported/death2.mp3-8634794d1b00ee03373bd08e3695b24e.mp3str"]
 
 [params]
 

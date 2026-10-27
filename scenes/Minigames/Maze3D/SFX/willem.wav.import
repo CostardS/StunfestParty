@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://2sluvkmuygls"
-path="res://.godot/imported/willem.wav-6e722487cfa53e216f2239c46aef346b.sample"
+path="res://godot/imported/willem.wav-6e722487cfa53e216f2239c46aef346b.sample"
 
 [deps]
 
 source_file="res://scenes/Minigames/Maze3D/SFX/willem.wav"
-dest_files=["res://.godot/imported/willem.wav-6e722487cfa53e216f2239c46aef346b.sample"]
+dest_files=["res://godot/imported/willem.wav-6e722487cfa53e216f2239c46aef346b.sample"]
 
 [params]
 

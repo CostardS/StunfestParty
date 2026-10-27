@@ -24,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://cp8b6tltt8epm" path="res://assets/sfx/shared/Finish.wav" id="15_mb05c"]
 [ext_resource type="AudioStream" uid="uid://dkmpelmacm1rk" path="res://assets/sfx/shared/MinigameVictory.tres" id="16_v5gsv"]
 [ext_resource type="AudioStream" uid="uid://cffyjucbcyacr" path="res://assets/sfx/shared/MinigameTie/Draw.ogg" id="17_x60e8"]
+[ext_resource type="FontFile" uid="uid://c1l872xkvd2up" path="res://assets/fonts/Stunfest2025.otf" id="21_82j7b"]
 [ext_resource type="Texture2D" uid="uid://d3ito577g5bl2" path="res://scenes/Minigames/123Voisins/assets/white1080.png" id="21_d83rp"]
 [ext_resource type="Script" uid="uid://dgsojmebkyaov" path="res://scenes/Shared/beat_pulse_control.gd" id="21_v5gsv"]
 [ext_resource type="Script" uid="uid://c845srdtndnx" path="res://scenes/Minigames/123Voisins/LaserSpot.gd" id="22_82j7b"]
@@ -591,7 +592,130 @@ outline_color = Color(0, 0, 0, 1)
 font = ExtResource("2_fbl6d")
 font_size = 42
 
-[node name="PartyScene" type="Node" unique_id=1758917780 node_paths=PackedStringArray("score_panel_mgr", "roulette", "minigame_holder", "party_ui", "minigame_ui", "anim", "winner_name_label", "winner_texture")]
+[sub_resource type="LabelSettings" id="LabelSettings_wti3a"]
+font = ExtResource("21_82j7b")
+font_size = 40
+font_color = Color(1, 1, 1, 0.5882353)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.39215687)
+
+[sub_resource type="Animation" id="Animation_d83rp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_82j7b"]
+resource_name = "hide"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cyiux"]
+resource_name = "show"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [0.0, 100.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gjth"]
+_data = {
+&"RESET": SubResource("Animation_d83rp"),
+&"hide": SubResource("Animation_82j7b"),
+&"show": SubResource("Animation_cyiux")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kojx4"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.1, 0.1, 0.1, 0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo45b"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.36862746, 0, 1, 0.4)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="PartyScene" type="Node" unique_id=1758917780 node_paths=PackedStringArray("score_panel_mgr", "roulette", "minigame_holder", "party_ui", "minigame_ui", "anim", "reset_anim", "winner_name_label", "winner_texture")]
 script = ExtResource("1_kcr7i")
 music = ExtResource("2_mb05c")
 score_panel_mgr = NodePath("PartyUI/Panel/Scores")
@@ -600,6 +724,7 @@ minigame_holder = NodePath("CurrentGame/MinigameHolder")
 party_ui = NodePath("PartyUI")
 minigame_ui = NodePath("CurrentGame/SharedMinigameUI")
 anim = NodePath("PartyUI/Panel/GameRoulette/AnimationPlayer")
+reset_anim = NodePath("Label/AnimationPlayer")
 winner_name_label = NodePath("PartyUI/WinPanel/Name")
 winner_texture = NodePath("PartyUI/WinPanel/Character")
 music_win = ExtResource("3_7s6r3")
@@ -1167,3 +1292,45 @@ layout_mode = 2
 text = "Gagnants"
 label_settings = SubResource("LabelSettings_mb05c")
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1774553040]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -739.0
+offset_top = -42.0
+offset_right = -6.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(1, 0.65)
+theme_override_font_sizes/font_size = 64
+text = "Maintenir Select / - / Esc Pour redémarrer"
+label_settings = SubResource("LabelSettings_wti3a")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=1890566539]
+libraries/ = SubResource("AnimationLibrary_0gjth")
+
+[node name="ProgressBar" type="ProgressBar" parent="Label" unique_id=644686941]
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.162
+anchor_top = 0.48000002
+anchor_right = 1.023
+anchor_bottom = 0.5
+offset_left = -9.746002
+offset_top = -22.0
+offset_right = 0.14099121
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_kojx4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lo45b")
+show_percentage = false

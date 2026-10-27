@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bre6jgufy3cr"
-path="res://.godot/imported/explosion.mp3-1136835c653f682579d9ffd7d3f25ddc.mp3str"
+path="res://godot/imported/explosion.mp3-1136835c653f682579d9ffd7d3f25ddc.mp3str"
 
 [deps]
 
 source_file="res://scenes/Minigames/PumpPumpPump/assets/explosion.mp3"
-dest_files=["res://.godot/imported/explosion.mp3-1136835c653f682579d9ffd7d3f25ddc.mp3str"]
+dest_files=["res://godot/imported/explosion.mp3-1136835c653f682579d9ffd7d3f25ddc.mp3str"]
 
 [params]
 

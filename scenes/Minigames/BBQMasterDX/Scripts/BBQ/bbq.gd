@@ -98,7 +98,7 @@ func stop_current_sausage() -> void:
 		add_ui_feedback_anim("add_text", sausage_state.score)
 	else: 
 		_debug_score += sausage_state.score
-		print("Score +" + str(sausage_state.score))
+		#print("Score +" + str(sausage_state.score))
 	
 func add_ui_feedback_anim(anim:String, score):
 	var ui_feedback = ui_item_feedback.instantiate()

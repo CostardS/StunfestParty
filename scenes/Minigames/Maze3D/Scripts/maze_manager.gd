@@ -27,17 +27,16 @@ func _on_players_spawned() -> void:
 func _onPlayerDeath() -> void:
 	if finished:
 		return
-	var lastAlive = 0
+	var lastAlive = -1
 	var countDead = 0
-	var i = 0
 	for player in minigame.players:
 		for child in player.get_child(0).get_children():
 			if child is MazePlayer:
 				if child.isDead:
 					countDead += 1
 				else:
-					lastAlive = i
-		i += 1
-	if countDead == minigame.players.size() - 1:
-		minigame.end_game([lastAlive])
+					lastAlive = player.get_player_index()
+	if countDead >= minigame.players.size() - 1:
+		if lastAlive < 0: minigame.end_game([]) 
+		else: minigame.end_game([lastAlive])
 		finished = true

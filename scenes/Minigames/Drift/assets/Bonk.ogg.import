@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://bktei7vsewng8"
-path="res://.godot/imported/Bonk.ogg-c7638f63ffd90ffcfb0f51231d9c1014.oggvorbisstr"
+path="res://godot/imported/Bonk.ogg-c7638f63ffd90ffcfb0f51231d9c1014.oggvorbisstr"
 
 [deps]
 
 source_file="res://scenes/Minigames/Drift/assets/Bonk.ogg"
-dest_files=["res://.godot/imported/Bonk.ogg-c7638f63ffd90ffcfb0f51231d9c1014.oggvorbisstr"]
+dest_files=["res://godot/imported/Bonk.ogg-c7638f63ffd90ffcfb0f51231d9c1014.oggvorbisstr"]
 
 [params]
 
